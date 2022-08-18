@@ -21,7 +21,6 @@ const config = {
 		},
 		browser: {
 			router: false,
-			hydrate: false,
 		},
 		trailingSlash: "always",
 	},

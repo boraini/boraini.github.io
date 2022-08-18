@@ -1,0 +1,62 @@
+<svelte:head>
+    <title>boraini.com - CV</title>
+    <meta name="description" content="Mert Bora İnevi's CV">
+</svelte:head>
+
+<main>
+<section id="header" class="span-horizontal">
+    
+    <img src="/images/cv-profile.png" alt="Mert Bora İnevi" />
+
+    # Mert Bora İnevi
+
+    [github.com/boraini](https://github.com/boraini)
+
+</section>
+<section id="education">
+
+    # Education
+
+    - **American Robert College of Istanbul** 2016-2021
+    - **Delft University of Technology** BSc in Computer Science and Engineering, Systems Variant, 2021 - 2024
+    - **Oxbridge Advanced Studies Programme** Engineering and Marketing Electives, 2018 Summer
+
+</section>
+<section id="experience">
+
+    # Non-Academic Experience and Voluntary Work
+
+    - **Antalya Coding Community Involvement Project** We taught two groups of middle school students how to design and write computer programs and games. We used Scratch as our coding platform.
+    - **Kırşehir Coding Community Involvement Project** We taught couples of middle school students how to design and write website front-ends.
+    - **RC Makers** I have been a part of Robert College's maker subculture club between 2016 and 2020.
+
+</section>
+<section id="skills" class="span-vertical">
+
+    # Skills
+
+    ## Web Development
+    
+    Webdev is my main computer science interest. I am especially proficient in Javascript and front-end development in general. You can find the source code of this website (which is developed with SvelteKit) and my other web projects on my Github account.
+
+    ## Embedded Systems Programming
+
+    In high school I've gained experience with working with hardware, electronics, and some robotics. I know how to make advanced devices using Arduino and its C++ dialect. In high school I have participated in the Robomasters AI Challenge as the engineer in charge of all the motion planning stuff and we worked with the ROS (Robot Operating System), programming in Python.
+
+    ## Game Development
+
+    I have plenty of experience with Three.js and some with Unity 3D. Moreover, I am able to produce visual assets for my games using programs like Blender 3D, Krita, Inkscape. You can visit my DeviantArt account to see some of my especially character design work (Also see the relevant blog page on this website for character designs, adoptables etc.)
+
+    ## Language
+
+    - Turkish - Native
+    - English - C1 (IELTS, 2021)
+    - German - A2 (Goethe Institut Fit-in-Deutsch, 2015. I also took B2 classes but could not certificate it.)
+    - Dutch - not certificated but around A2-B1, similar level to my actual German level
+
+</section>
+
+<style lang="sass">
+    @use "src/lib/stylesheets/cv.sass" with ($grid-cells: 6)
+</style>
+</main>

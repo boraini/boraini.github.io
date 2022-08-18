@@ -1,5 +1,5 @@
 ---
-nickmane: boraini
+nickname: boraini
 name: "Mert Bora İnevi"
 ---
 

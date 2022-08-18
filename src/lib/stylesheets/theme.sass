@@ -1,0 +1,13 @@
+@use "./theme-light.sass"
+@use "./theme-dark.sass"
+
+:root
+    @extend %theme-light
+
+:root.dark-mode
+    @extend %theme-dark
+
+:root
+    --navigation-foreground: var(--page-foreground)
+    --navigation-background: var(--page-background-spectacle)
+    --page-background: var(--page-background-field)

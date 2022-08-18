@@ -1,14 +1,25 @@
 <script context="module" lang="ts">
+    export const hydrate = false;
+
     import path from "node:path/posix";
 
     import { dummyMetadata } from './articles';
 
     const pageImport = import.meta.glob("./**/*.(md|png|jpg|svg|webp|gif)", { eager: true });
 
-    function preprocessMetadata(metadata) {
+    async function preprocessMetadata(metadata2, fetch) {
+        const metadata = {...metadata2};
+
         if (metadata.thumbnail) {
             metadata.thumbnail = pageImport["./" + path.join(metadata.assetPath, metadata.thumbnail)].default;
         }
+        
+        if (metadata.authors && typeof metadata.authors[0] == "string") {
+            metadata.authors = await Promise.all(metadata.authors.map(name => fetch(`/blog/authorInfo?nickname=${name}`).then(r => r.json())));
+            console.log(metadata.authors);
+        }
+
+        return metadata;
     }
 
 	export async function load({ fetch }) {
@@ -21,19 +32,19 @@
 
             metadata.assetPath = index.pages[item].assetPath;
 
-            preprocessMetadata(metadata);
-
-			index.pages[item] = metadata;
+			index.pages[item] = await preprocessMetadata(metadata, fetch);
 		}
 
         for (let item in index.subdirectories) {
             const metadata = index.subdirectories[item];
-            
-            preprocessMetadata(metadata);
+
+            index.subdirectories[item] = await preprocessMetadata(metadata, fetch);
         }
 
+        index.metadata.title = "Blog";
+
 		return {
-			props: { data: { index } }
+			props: { data: { index, title: "Blog" } }
 		};
 	}
 </script>

@@ -12,9 +12,9 @@ tags:
     import HiddenSurfaceRemovalApplet from "./_hidden-surface-removal/HiddenSurfaceRemovalApplet.svelte";
 </script>
 
-Hidden surface removal is one of the most fundamental problems to solve before rendering almost any 3D scene.
-
-![triangle](./triangle.png)
+Hidden surface removal is one of the most fundamental problems to solve before rendering almost any 3D scene. 
+Not only that you get better performance by rendering less objects, you can also end up with a non-intersecting
+set of polygons to simply render.
 
 ## Hiding Based on Turning Direction of Projected Triangles
 

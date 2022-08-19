@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content=""><title>boraini.com - CV</title><script src="/scripts/dark-mode.js" data-svelte="svelte-1svid1p"></script><meta name="description" content="Mert Bora İnevi's CV" data-svelte="svelte-1ssk2ga">
+	<link rel="stylesheet" href="/_app/immutable/assets/__layout-19a8a3c3.css">
+	<link rel="modulepreload" href="/_app/immutable/start-8aa4e4f6.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-85b98948.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-b9d3d189.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/cv.svx-a3b0b012.js">
+	</head>
+	<body>
+		<div>
+
+
+
+
+
+
+<div class="app"><nav class="navbar svelte-1oyffn2"><a class="flex-grow svelte-1oyffn2" href="/"><img class="logo dark svelte-1oyffn2" src="/images/logo-full-dark.svg" alt="logo">
+		<img class="logo light svelte-1oyffn2" src="/images/logo-full-light.svg" alt="logo"></a>
+	<label for="dark-mode-toggle" class="svelte-1oyffn2">toggle between light and dark mode</label>
+	<input id="dark-mode-toggle" class="dark-mode-toggle svelte-1oyffn2" type="checkbox">
+	<label for="links-button" class="svelte-1oyffn2">show or hide links pop-up</label>
+	<input id="links-button" class="links-button svelte-1oyffn2" type="checkbox">
+	<ul class="links svelte-1oyffn2"><li class="svelte-1oyffn2"><a href="/" class="svelte-1oyffn2">HOME</a></li>
+		<li class="svelte-1oyffn2"><a href="/cv/" class="svelte-1oyffn2">CV</a></li>
+		<li class="svelte-1oyffn2"><a href="/blog/" class="svelte-1oyffn2">BLOG</a></li>
+		<li class="svelte-1oyffn2"><a href="./.." class="svelte-1oyffn2">PARENT</a></li></ul>
+</nav>
+
+
+
+<main><section id="header" class="span-horizontal"><img src="/images/cv-profile.png" alt="Mert Bora İnevi">
+<h1>Mert Bora İnevi</h1>
+<p><a href="https://github.com/boraini" rel="nofollow">github.com/boraini</a></p></section>
+<section id="education"><h1>Education</h1>
+<ul><li><strong>American Robert College of Istanbul</strong> 2016-2021</li>
+<li><strong>Delft University of Technology</strong> BSc in Computer Science and Engineering, Systems Variant, 2021 - 2024</li>
+<li><strong>Oxbridge Advanced Studies Programme</strong> Engineering and Marketing Electives, 2018 Summer</li></ul></section>
+<section id="experience"><h1>Non-Academic Experience and Voluntary Work</h1>
+<ul><li><strong>Antalya Coding Community Involvement Project</strong> We taught two groups of middle school students how to design and write computer programs and games. We used Scratch as our coding platform.</li>
+<li><strong>Kırşehir Coding Community Involvement Project</strong> We taught couples of middle school students how to design and write website front-ends.</li>
+<li><strong>RC Makers</strong> I have been a part of Robert College’s maker subculture club between 2016 and 2020.</li></ul></section>
+<section id="skills" class="span-vertical"><h1>Skills</h1>
+<h2>Web Development</h2>
+<p>Webdev is my main computer science interest. I am especially proficient in Javascript and front-end development in general. You can find the source code of this website (which is developed with SvelteKit) and my other web projects on my Github account.</p>
+<h2>Embedded Systems Programming</h2>
+<p>In high school I’ve gained experience with working with hardware, electronics, and some robotics. I know how to make advanced devices using Arduino and its C++ dialect. In high school I have participated in the Robomasters AI Challenge as the engineer in charge of all the motion planning stuff and we worked with the ROS (Robot Operating System), programming in Python.</p>
+<h2>Game Development</h2>
+<p>I have plenty of experience with Three.js and some with Unity 3D. Moreover, I am able to produce visual assets for my games using programs like Blender 3D, Krita, Inkscape. You can visit my DeviantArt account to see some of my especially character design work (Also see the relevant blog page on this website for character designs, adoptables etc.)</p>
+<h2>Language</h2>
+<ul><li>Turkish - Native</li>
+<li>English - C1 (IELTS, 2021)</li>
+<li>German - A2 (Goethe Institut Fit-in-Deutsch, 2015. I also took B2 classes but could not certificate it.)</li>
+<li>Dutch - not certificated but around A2-B1, similar level to my actual German level</li></ul></section>
+<style lang="sass">main {
+  display: grid;
+  max-width: 80em;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, minmax(30em, 1fr));
+  grid-template-rows: repeat(3, auto);
+  margin: auto;
+}
+@media (max-width: 60em) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+  }
+}
+main section {
+  margin: 1em;
+  border: 1px solid var(--page-foreground);
+  padding: 1em;
+  background-color: var(--page-background-spectacle);
+}
+main section.span-horizontal {
+  grid-column: 1/-1;
+}
+main section.span-vertical {
+  grid-row-end: span 2;
+}
+main section h1 {
+  font-size: 1.5em;
+}
+main section h2 {
+  font-size: 1.2em;
+}
+main section#header img {
+  float: right;
+  height: 8em;
+  width: auto;
+}
+main section#header img::after {
+  display: block;
+}</style></main>
+</div>
+
+
+		<script type="module" data-sveltekit-hydrate="cr893g">
+		import { set_public_env, start } from "/_app/immutable/start-8aa4e4f6.js";
+
+		set_public_env({});
+
+		start({
+			target: document.querySelector('[data-sveltekit-hydrate="cr893g"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: false,
+			spa: false,
+			trailing_slash: "always",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [0, 7],
+				params: {},
+				routeId: "cv"
+			}
+		});
+	</script></div>
+	</body>
+</html>

@@ -1,4 +1,4 @@
-<p class="author-card">{author.name}</p>
+<span class="author-card">{author.name}</span>
 
 <script>
     export let author;

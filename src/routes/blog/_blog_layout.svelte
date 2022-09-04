@@ -18,6 +18,7 @@
 	<title>boraini.com - {title}</title>
 	<meta name="description" content={excerpt}>
 	<link rel="stylesheet" href="/stylesheets/prism-duotone-dark.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" />
 </svelte:head>
 
 <div class="post-margin">

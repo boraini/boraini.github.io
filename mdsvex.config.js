@@ -1,6 +1,10 @@
 import relativeImages from "mdsvex-relative-images";
 import yaml from "yaml";
 import fs from "node:fs";
+import katex from "katex";
+import math from 'remark-math';
+import rehype_katex from 'rehype-katex';
+import { visit } from 'unist-util-visit';
 
 const authorInfo = {};
 
@@ -42,6 +46,37 @@ const parseFrontmatter = (source, messages) => {
     }
 }
 
+/* start of code from github.com/pngwn/mdsvex-math/blob/main/mdsvex.config.js */
+const correct_hast_tree = () => (tree) => {
+	visit(tree, 'text', (node) => {
+		if (node.value.trim().startsWith('<')) {
+			node.type = 'raw';
+		}
+	});
+};
+
+const katex_blocks = () => (tree) => {
+	visit(tree, 'code', (node) => {
+		if (node.lang === 'math') {
+			const str = katex.renderToString(node.value, {
+				displayMode: true,
+				leqno: false,
+				fleqn: false,
+				throwOnError: true,
+				errorColor: '#cc0000',
+				strict: 'warn',
+				output: 'html',
+				trust: false,
+				macros: { '\\f': '#1f(#2)' }
+			});
+
+			node.type = 'raw';
+			node.value = '{@html `' + str + '`}';
+		}
+	});
+};
+/* end of code from github.com/pngwn/mdsvex-math/blob/main/mdsvex.config.js */
+
 /** @type {import('mdsvex').MdsvexOptions} */
 export default {
     extensions: [".md", ".svx"],
@@ -52,11 +87,14 @@ export default {
     },
     remarkPlugins: [
         relativeImages,
+				katex_blocks,
     ],
+		rehypePlugins: [
+		    correct_hast_tree,
+		    rehype_katex,
+		],
     layout: {
         authors: "src/routes/blog/_author_layout.svelte",
         blog: "src/routes/blog/_blog_layout.svelte",
     },
 };
-
-console.log(yaml.parse("AAA: x\nBBB: y"));

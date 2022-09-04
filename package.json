@@ -34,5 +34,11 @@
 		"vite": "^3.0.4",
 		"yaml": "^2.1.1"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"katex": "^0.16.2",
+		"rehype-katex": "^6.0.2",
+		"remark-math": "^5.1.1",
+		"unist-util-visit": "^4.1.1"
+	}
 }

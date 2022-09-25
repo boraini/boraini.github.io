@@ -1,7 +1,10 @@
 <script context="module">
+    const ownerNickname = "boraini";
+
 	export async function load({ fetch }) {
 		return {
 			props: {
+                ownerInfo: await fetch(`/blog/authorInfo?nickname=${ownerNickname}`).then(r => r.json()),
                 newArticle: await fetch("/blog/articles?trait=newest").then(r => r.json())
             }
 		};
@@ -11,11 +14,12 @@
 <script>
 	import CarouselPageCard from '$lib/components/blog/CarouselPageCard.svelte';
 	import Carousel from '$lib/components/Carousel.svelte';
-	import Boraini from './blog/authors/boraini.md';
+	import WebsiteIntroduction from './_website-introduction.md';
 
-    export let newsScroll = true;
+    export let newsScroll = false;
 
     export let newArticle;
+    export let ownerInfo;
 
     function onMouseInNews(e) {
         newsScroll = false;
@@ -32,16 +36,14 @@
 </svelte:head>
 
 <main>
+    <section id="about">
+        <WebsiteIntroduction ownerInfo={ownerInfo}/>
+    </section>
 	<section id="news">
-        <h1>News</h1>
+        <h1>What is New</h1>
 		<div class="news-container" on:mouseenter={onMouseInNews} on:mouseleave={onMouseOutNews}>
 			<div class="news">
-				<Carousel numberOfPages={2} autoScroll={newsScroll}>
-					<a href="/blog/authors/boraini/" class="profile-container">
-						<section class="profile">
-							<Boraini />
-						</section>
-					</a>
+				<Carousel numberOfPages={1} autoScroll={newsScroll}>
 					<CarouselPageCard index={newArticle}/>
 				</Carousel>
 			</div>
@@ -52,8 +54,8 @@
 <style scoped lang="sass">
     main
         margin: 2em auto
-        padding: 1em
-        max-width: 80rem
+        padding: 1.5em
+        max-width: 60rem
         background-color: var(--page-background-spectacle)
 
         .news-container

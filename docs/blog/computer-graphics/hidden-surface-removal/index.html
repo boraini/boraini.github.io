@@ -5,15 +5,15 @@
 		<link rel="icon" href="../../../favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content=""><title>boraini.com - Hidden Surface Removal</title><script src="/scripts/dark-mode.js" data-svelte="svelte-1svid1p"></script><meta name="description" content="Introduction to methods of hidden surface removal in contemporary 3D computer graphics" data-svelte="svelte-15wtgav"><link rel="stylesheet" href="/stylesheets/prism-duotone-dark.css" data-svelte="svelte-15wtgav"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" data-svelte="svelte-15wtgav">
-	<link rel="stylesheet" href="/_app/immutable/assets/__layout-19a8a3c3.css">
-	<link rel="stylesheet" href="/_app/immutable/assets/_blog_layout-2e4ceb9c.css">
+	<link rel="stylesheet" href="/_app/immutable/assets/__layout-ba7a1ff5.css">
+	<link rel="stylesheet" href="/_app/immutable/assets/_blog_layout-717ea743.css">
 	<link rel="stylesheet" href="/_app/immutable/assets/hidden-surface-removal-81e92fff.css">
-	<link rel="modulepreload" href="/_app/immutable/start-84576d2c.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/index-37fab3a0.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-5d753e1f.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/blog/computer-graphics/hidden-surface-removal.md-7bd62f72.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/_blog_layout-5b4a7cfd.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/hidden-surface-removal-afb40599.js">
+	<link rel="modulepreload" href="/_app/immutable/start-8cf1fd85.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-d73a3999.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-e7d45010.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/blog/computer-graphics/hidden-surface-removal.md-d4955982.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/_blog_layout-7d607f8c.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/hidden-surface-removal-7efe131f.js">
 	</head>
 	<body>
 		<div>
@@ -23,20 +23,20 @@
 
 
 
-<div class="app"><nav class="navbar svelte-1oyffn2"><a class="flex-grow svelte-1oyffn2" href="/"><img class="logo dark svelte-1oyffn2" src="/images/logo-full-dark.svg" alt="logo">
-		<img class="logo light svelte-1oyffn2" src="/images/logo-full-light.svg" alt="logo"></a>
-	<label for="dark-mode-toggle" class="svelte-1oyffn2">toggle between light and dark mode</label>
-	<input id="dark-mode-toggle" class="dark-mode-toggle svelte-1oyffn2" type="checkbox">
-	<label for="links-button" class="svelte-1oyffn2">show or hide links pop-up</label>
-	<input id="links-button" class="links-button svelte-1oyffn2" type="checkbox">
-	<ul class="links svelte-1oyffn2"><li class="svelte-1oyffn2"><a href="/" class="svelte-1oyffn2">HOME</a></li>
-		<li class="svelte-1oyffn2"><a href="/cv/" class="svelte-1oyffn2">CV</a></li>
-		<li class="svelte-1oyffn2"><a href="/blog/" class="svelte-1oyffn2">BLOG</a></li>
-		<li class="svelte-1oyffn2"><a href="./.." class="svelte-1oyffn2">PARENT</a></li></ul>
+<div class="app"><nav class="navbar svelte-d780kh"><a class="flex-grow svelte-d780kh" href="/"><img class="logo dark svelte-d780kh" src="/images/logo-full-dark.svg" alt="logo">
+		<img class="logo light svelte-d780kh" src="/images/logo-full-light.svg" alt="logo"></a>
+	<label for="dark-mode-toggle" class="svelte-d780kh">toggle between light and dark mode</label>
+	<input id="dark-mode-toggle" class="dark-mode-toggle svelte-d780kh" type="checkbox">
+	<label for="links-button" class="svelte-d780kh">show or hide links pop-up</label>
+	<input id="links-button" class="links-button svelte-d780kh" type="checkbox">
+	<ul class="links svelte-d780kh"><li class="svelte-d780kh"><a href="/" class="svelte-d780kh">HOME</a></li>
+		<li class="svelte-d780kh"><a href="/cv/" class="svelte-d780kh">CV</a></li>
+		<li class="svelte-d780kh"><a href="/blog/" class="svelte-d780kh">BLOG</a></li>
+		<li class="svelte-d780kh"><a href="./.." class="svelte-d780kh">PARENT</a></li></ul>
 </nav>
 
 
-<div class="post-margin svelte-1skmhio"><main class="post svelte-1skmhio"><h1 class="post-title svelte-1skmhio">Hidden Surface Removal</h1>
+<div class="post-margin svelte-onu0gz"><article class="post svelte-onu0gz"><h1 class="post-title svelte-onu0gz">Hidden Surface Removal</h1>
 		<h2 class="post-description">Introduction to methods of hidden surface removal in contemporary 3D computer graphics</h2>
 		<p>on 2022-07-30
 		by <a href="/blog/authors/boraini/"><span class="author-card svelte-1pnfsom">Mert Bora İnevi</span></a></p>
@@ -121,18 +121,18 @@ triangles<span class="token punctuation">.</span><span class="token function">so
 <span class="token comment">//rasterize needs to be implemented</span>
 <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> <span class="token literal-property property">triangle</span> <span class="token operator">:</span> triangles<span class="token punctuation">)</span> <span class="token function">rasterize</span><span class="token punctuation">(</span>triangle<span class="token punctuation">)</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
 <p>The other way is to rasterising triangles the order they appear, but also onto a depth buffer of the render. After efficiently finding the depth value of each pixel of the triangle, we compose each pixel onto the final image if the depth of the pixel is closer to the camera than anything before.</p>
-<p>OpenGL pretty much does the depth-buffering for us, so no example code will be given here. It can be fraud at best.</p></main>
+<p>OpenGL pretty much does the depth-buffering for us, so no example code will be given here. It can be fraud at best.</p></article>
 </div>
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="3r81jb">
-		import { set_public_env, start } from "/_app/immutable/start-84576d2c.js";
+		<script type="module" data-sveltekit-hydrate="2pl0bb">
+		import { set_public_env, start } from "/_app/immutable/start-8cf1fd85.js";
 
 		set_public_env({});
 
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="3r81jb"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="2pl0bb"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: false,

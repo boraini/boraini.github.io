@@ -7,6 +7,7 @@
     max-width: 60em
     margin: auto
     padding: 0.5em
+    line-height: 1.35em
 
     &-title
         color: var(--page-foreground)
@@ -16,3 +17,10 @@
     
     &-body
         color: var(--page-foreground)
+
+    :global(blockquote)
+        margin: 1em 0
+        border-style: solid
+        border-color: var(--page-background-highlight-lighter)
+        border-width: 0 0 0 0.3em
+        padding: 0 0 0 1em

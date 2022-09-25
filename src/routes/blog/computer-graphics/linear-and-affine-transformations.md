@@ -29,7 +29,7 @@ Implementing this like this everywhere would produce ugly code and would’t be 
 Computer graphics gods had a very simple solution to this. They would just have one more dimension in the vector than the dimension of the space in context, to store an arbitrary constant to be employed in some clever math.
 
 
-In the case of 3D affine transformations, the fourth component of the vec4 is kept at 0
+In the case of 3D affine transformations, the fourth component of the vec4 is kept at 1.
 
 ```glsl
 vec4 vertex = vec4(x, y, z, 1.0);
@@ -79,7 +79,7 @@ Combining this with other types of transformations is also dead simple. You just
 
 These don’t go beyond the LA course but the other 4x4 3D transformation matrices would be:
 
-## Linear scaling parallel to principal axes
+## Linear scaling
 
 ```math
 \begin{pmatrix}
@@ -90,7 +90,7 @@ s_x&0&0&0\\
 \end{pmatrix}
 ```
 
-## Linear right-handed rotations around principal axes
+## Linear right-handed rotations
 
 Add the identity matrix column and row to the following 2D matrix at the index of the rotation axis:
 
@@ -115,9 +115,9 @@ Rotation around +x
 Rotation around +y
 ```math
 \begin{pmatrix}
-\cos \theta&0&-\sin \theta&0\\
+\cos \theta&0&\sin \theta&0\\
 0&1&0&0\\
-\sin \theta&0&\cos \theta&0\\
+-\sin \theta&0&\cos \theta&0\\
 0&0&0&1\\
 \end{pmatrix}
 ```

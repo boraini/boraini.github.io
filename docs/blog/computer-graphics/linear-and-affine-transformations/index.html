@@ -5,14 +5,14 @@
 		<link rel="icon" href="../../../favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content=""><title>boraini.com - Linear and Affine Transformations</title><script src="/scripts/dark-mode.js" data-svelte="svelte-1svid1p"></script><meta name="description" content="Cheatsheet about affine transformation matrices" data-svelte="svelte-15wtgav"><link rel="stylesheet" href="/stylesheets/prism-duotone-dark.css" data-svelte="svelte-15wtgav"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" data-svelte="svelte-15wtgav">
-	<link rel="stylesheet" href="/_app/immutable/assets/__layout-19a8a3c3.css">
-	<link rel="stylesheet" href="/_app/immutable/assets/_blog_layout-2e4ceb9c.css">
-	<link rel="modulepreload" href="/_app/immutable/start-2463a266.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/index-de7e00d5.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-9cbb5e2c.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/blog/computer-graphics/linear-and-affine-transformations.md-53ed9f1b.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/_blog_layout-9daa0adc.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/linear-and-affine-transformations-ad53c064.js">
+	<link rel="stylesheet" href="/_app/immutable/assets/__layout-ba7a1ff5.css">
+	<link rel="stylesheet" href="/_app/immutable/assets/_blog_layout-717ea743.css">
+	<link rel="modulepreload" href="/_app/immutable/start-3535b8fe.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-d73a3999.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-e7d45010.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/blog/computer-graphics/linear-and-affine-transformations.md-8c648137.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/_blog_layout-7d607f8c.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/linear-and-affine-transformations-81a1177c.js">
 	</head>
 	<body>
 		<div>
@@ -22,20 +22,20 @@
 
 
 
-<div class="app"><nav class="navbar svelte-1oyffn2"><a class="flex-grow svelte-1oyffn2" href="/"><img class="logo dark svelte-1oyffn2" src="/images/logo-full-dark.svg" alt="logo">
-		<img class="logo light svelte-1oyffn2" src="/images/logo-full-light.svg" alt="logo"></a>
-	<label for="dark-mode-toggle" class="svelte-1oyffn2">toggle between light and dark mode</label>
-	<input id="dark-mode-toggle" class="dark-mode-toggle svelte-1oyffn2" type="checkbox">
-	<label for="links-button" class="svelte-1oyffn2">show or hide links pop-up</label>
-	<input id="links-button" class="links-button svelte-1oyffn2" type="checkbox">
-	<ul class="links svelte-1oyffn2"><li class="svelte-1oyffn2"><a href="/" class="svelte-1oyffn2">HOME</a></li>
-		<li class="svelte-1oyffn2"><a href="/cv/" class="svelte-1oyffn2">CV</a></li>
-		<li class="svelte-1oyffn2"><a href="/blog/" class="svelte-1oyffn2">BLOG</a></li>
-		<li class="svelte-1oyffn2"><a href="./.." class="svelte-1oyffn2">PARENT</a></li></ul>
+<div class="app"><nav class="navbar svelte-d780kh"><a class="flex-grow svelte-d780kh" href="/"><img class="logo dark svelte-d780kh" src="/images/logo-full-dark.svg" alt="logo">
+		<img class="logo light svelte-d780kh" src="/images/logo-full-light.svg" alt="logo"></a>
+	<label for="dark-mode-toggle" class="svelte-d780kh">toggle between light and dark mode</label>
+	<input id="dark-mode-toggle" class="dark-mode-toggle svelte-d780kh" type="checkbox">
+	<label for="links-button" class="svelte-d780kh">show or hide links pop-up</label>
+	<input id="links-button" class="links-button svelte-d780kh" type="checkbox">
+	<ul class="links svelte-d780kh"><li class="svelte-d780kh"><a href="/" class="svelte-d780kh">HOME</a></li>
+		<li class="svelte-d780kh"><a href="/cv/" class="svelte-d780kh">CV</a></li>
+		<li class="svelte-d780kh"><a href="/blog/" class="svelte-d780kh">BLOG</a></li>
+		<li class="svelte-d780kh"><a href="./.." class="svelte-d780kh">PARENT</a></li></ul>
 </nav>
 
 
-<div class="post-margin svelte-1skmhio"><main class="post svelte-1skmhio"><h1 class="post-title svelte-1skmhio">Linear and Affine Transformations</h1>
+<div class="post-margin svelte-onu0gz"><article class="post svelte-onu0gz"><h1 class="post-title svelte-onu0gz">Linear and Affine Transformations</h1>
 		<h2 class="post-description">Cheatsheet about affine transformation matrices</h2>
 		<p>on 2022-08-30
 		by <a href="/blog/authors/boraini/"><span class="author-card svelte-1pnfsom">Mert Bora İnevi</span></a></p>
@@ -188,18 +188,18 @@ c0,7.3,5.7,11,17,11c0,0,11,0,11,0c9.3,0,14.3,-0.3,15,-1c5.3,-5.3,10.3,-11,15,-17
 c242.7,-294.7,395.3,-681.7,458,-1161c21.3,-164.7,33.3,-350.7,36,-558
 l0,-1344c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
 -470,-1265c-4.7,-6,-9.7,-11.7,-15,-17c-0.7,-0.7,-6.7,-1,-18,-1z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.15em;"><span></span></span></span></span></span></span></span></span></span></span></span><!-- HTML_TAG_END -->
-<p>Notice that all these matrices are orthogonal.</p></main>
+<p>Notice that all these matrices are orthogonal.</p></article>
 </div>
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="o62ylb">
-		import { set_public_env, start } from "/_app/immutable/start-2463a266.js";
+		<script type="module" data-sveltekit-hydrate="ggiazz">
+		import { set_public_env, start } from "/_app/immutable/start-3535b8fe.js";
 
 		set_public_env({});
 
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="o62ylb"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="ggiazz"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: false,

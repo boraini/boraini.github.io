@@ -21,11 +21,11 @@
 
 {#if Object.keys(data.index.pages).length != 0}
 <h1>Pages</h1>
-<sectipn class="index-section">
+<section class="index-section">
 {#each Object.entries(data.index.pages) as entry}
 <a href={entry[0]}><PageCard data={entry[1]} /></a>
 {/each}
-</sectipn>
+</section>
 {/if}
 </main>
 

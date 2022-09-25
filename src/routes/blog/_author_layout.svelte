@@ -1,6 +1,9 @@
 <script>
+	import SocialLinks from "$lib/components/SocialLinks.svelte";
+
 	export let nickname;
     export let name;
+	export let social;
 </script>
 
 <svelte:head>
@@ -9,13 +12,18 @@
 </svelte:head>
 
 <div class="post-margin">
-	<main class="post">
+	<article class="post">
 		<h1 class="post-title">{name}</h1>
         <h2 class="post-description">{nickname}</h2>
+		<span class="social-links"><SocialLinks social={social} /></span>
 		<slot />
-	</main>
+	</article>
 </div>
 
-<style lang="sass">
-    @use "src/lib/stylesheets/blog"
+<style scoped lang="scss">
+    @use "src/lib/stylesheets/blog";
+
+    .social-links {
+      font-size: 2rem;
+    }
 </style>

@@ -22,7 +22,7 @@
 </svelte:head>
 
 <div class="post-margin">
-	<main class="post">
+	<article class="post">
 		<h1 class="post-title">{title}</h1>
 		{#if excerpt}
 		<h2 class="post-description">{excerpt}</h2>
@@ -36,7 +36,7 @@
 		{/if}
 		</p>
 		<slot />
-	</main>
+	</article>
 </div>
 
 <style lang="sass">

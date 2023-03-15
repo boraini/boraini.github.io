@@ -138,5 +138,4 @@ draw segment(current, 0.2, 0.7)
 
 <style>
     :global(code[class*="language-undefined"]) { color: white; }
-    :global(.post img) { display: block; margin: auto; width: 80%; height: auto; }
 </style>

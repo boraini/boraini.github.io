@@ -1,13 +1,16 @@
 .post-margin
-    padding: 1em
+    margin-top: 1em
+    padding: 0
     
 .post
     background-color: var(--page-background-spectacle)
     color: var(--page-foreground)
     max-width: 60em
     margin: auto
-    padding: 0.5em
-    line-height: 1.35em
+    padding: 1em
+
+    p
+        line-height: 1.35em
 
     &-title
         color: var(--page-foreground)
@@ -20,6 +23,9 @@
 
     h1
         font-size: 2.5em
+    
+    :global(.katex-display)
+        overflow-x: scroll
 
     :global(blockquote)
         margin: 1em 0
@@ -30,3 +36,9 @@
 
     :global(code[class*="language-undefined"])
         color: white
+
+    :global(img)
+        display: block
+        margin: auto
+        width: 80%
+        height: auto

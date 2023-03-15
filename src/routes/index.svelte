@@ -53,7 +53,7 @@
 
 <style scoped lang="sass">
     main
-        margin: 2em auto
+        margin: 1em auto
         padding: 1.5em
         max-width: 60rem
         background-color: var(--page-background-spectacle)

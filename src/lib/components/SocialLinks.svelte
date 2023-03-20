@@ -41,7 +41,8 @@
 
             a
                 display: block
-                padding: 0 0.5em
+                padding: 0
+                text-decoration: none
 
     @mixin social-icon($w, $h, $x, $y)
         @include icon($w, $h, $x, $y, $size, $size)

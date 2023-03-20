@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../../../favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content=""><title>boraini.com - Hidden Surface Removal</title><script src="/scripts/dark-mode.js" data-svelte="svelte-1svid1p"></script><meta name="description" content="Introduction to methods of hidden surface removal in contemporary 3D computer graphics" data-svelte="svelte-15wtgav"><link rel="stylesheet" href="/stylesheets/prism-duotone-dark.css" data-svelte="svelte-15wtgav"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" data-svelte="svelte-15wtgav">
+	<link rel="stylesheet" href="/_app/immutable/assets/__layout-b987f6a3.css">
+	<link rel="stylesheet" href="/_app/immutable/assets/_blog_layout-5741a32b.css">
+	<link rel="stylesheet" href="/_app/immutable/assets/hidden-surface-removal-81e92fff.css">
+	<link rel="modulepreload" href="/_app/immutable/start-00b1d136.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-8e6002e7.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-2b157ca7.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/blog/computer-graphics/hidden-surface-removal.md-3fba512a.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/_blog_layout-7e7a0e1d.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/hidden-surface-removal-31c81a28.js">
+	</head>
+	<body>
+		<div>
+
+
+
+
+
+
+<div class="app"><nav class="navbar svelte-i9ah0n"><a class="flex-grow svelte-i9ah0n" href="/"><img class="logo dark svelte-i9ah0n" src="/images/logo-full-dark.svg" alt="logo">
+		<img class="logo light svelte-i9ah0n" src="/images/logo-full-light.svg" alt="logo"></a>
+	<label for="dark-mode-toggle" class="svelte-i9ah0n">toggle between light and dark mode</label>
+	<input id="dark-mode-toggle" class="dark-mode-toggle svelte-i9ah0n" type="checkbox">
+	<label for="links-button" class="svelte-i9ah0n">show or hide links pop-up</label>
+	<input id="links-button" class="links-button svelte-i9ah0n" type="checkbox">
+	<ul class="links svelte-i9ah0n"><li class="svelte-i9ah0n"><a href="/" class="svelte-i9ah0n">HOME</a></li>
+		<li class="svelte-i9ah0n"><a href="/cv/" class="svelte-i9ah0n">CV</a></li>
+		<li class="svelte-i9ah0n"><a href="/blog/" class="svelte-i9ah0n">BLOG</a></li>
+		<li class="svelte-i9ah0n"><a href="./.." class="svelte-i9ah0n">PARENT</a></li></ul>
+</nav>
+
+
+<div class="post-margin svelte-13i6uah"><article class="post svelte-13i6uah"><h1 class="post-title svelte-13i6uah">Hidden Surface Removal</h1>
+		<h2 class="post-description svelte-13i6uah">Introduction to methods of hidden surface removal in contemporary 3D computer graphics</h2>
+		<p class="svelte-13i6uah">on 2022-07-30
+		by <a href="/blog/authors/boraini/"><span class="author-card svelte-1pnfsom">Mert Bora İnevi</span></a></p>
+		<p>Hidden surface removal is one of the most fundamental problems to solve before rendering almost any 3D scene.
+Not only that you get better performance by rendering less objects, you can also end up with a non-intersecting
+set of polygons to simply render.</p>
+<h2>Hiding Based on Turning Direction of Projected Triangles</h2>
+<p>3D objects in contemporary applications are usually composed of 3D triangles whose edges are coinciding with
+each other to produce a closed form. In simple triangle-rasterising rendering, these triangles are first
+projected onto the camera frustum’s near plane using perspective or orthographic projection. When this is done,
+the vertices either appear in clockwise or anticlockwise order. Usually if the triangle appears clockwise, we
+say we are seeing the front side of it and render.</p>
+<p>Which side we are on can easily be figured out by taking the cross product of two edges.</p>
+<pre class="language-glsl"><!-- HTML_TAG_START --><code class="language-glsl"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">extension</span> <span class="token expression">GL_OES_standard_derivatives <span class="token operator">:</span> enable</span></span>
+
+<span class="token keyword">precision</span> <span class="token keyword">highp</span> <span class="token keyword">float</span><span class="token punctuation">;</span>
+
+<span class="token comment">//GLSL Sandbox Uniform</span>
+<span class="token keyword">uniform</span> <span class="token keyword">vec2</span> resolution<span class="token punctuation">;</span>
+
+<span class="token comment">//Clockwise order has to be a, b, c. a, b, c have already been projected.</span>
+<span class="token keyword">bool</span> <span class="token function">isFront</span><span class="token punctuation">(</span><span class="token keyword">vec4</span> a<span class="token punctuation">,</span> <span class="token keyword">vec4</span> b<span class="token punctuation">,</span> <span class="token keyword">vec4</span> c<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+	<span class="token keyword">vec3</span> atob <span class="token operator">=</span> <span class="token punctuation">(</span>b <span class="token operator">-</span> a<span class="token punctuation">)</span><span class="token punctuation">.</span>xyz<span class="token punctuation">;</span>
+	<span class="token keyword">vec3</span> atoc <span class="token operator">=</span> <span class="token punctuation">(</span>c <span class="token operator">-</span> a<span class="token punctuation">)</span><span class="token punctuation">.</span>xyz<span class="token punctuation">;</span>
+	atob<span class="token punctuation">.</span>z <span class="token operator">=</span> <span class="token number">0.0</span><span class="token punctuation">;</span>
+	atoc<span class="token punctuation">.</span>z <span class="token operator">=</span> <span class="token number">0.0</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">return</span> <span class="token function">cross</span><span class="token punctuation">(</span>atoc<span class="token punctuation">,</span> atob<span class="token punctuation">)</span><span class="token punctuation">.</span>z <span class="token operator">></span> <span class="token number">0.0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span> <span class="token keyword">void</span> <span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+	<span class="token keyword">vec4</span> position <span class="token operator">=</span> <span class="token keyword">vec4</span><span class="token punctuation">(</span><span class="token number">0.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+	position<span class="token punctuation">.</span>xy <span class="token operator">=</span> gl_FragCoord<span class="token punctuation">.</span>xy <span class="token operator">/</span> resolution<span class="token punctuation">.</span>xy<span class="token punctuation">;</span>
+
+	<span class="token comment">//if the triangle formed by (0, 0), (1, 1), and the screen point faces front</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isFront</span><span class="token punctuation">(</span><span class="token keyword">vec4</span><span class="token punctuation">(</span><span class="token number">0.0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">vec4</span><span class="token punctuation">(</span><span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> position<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		gl_FragColor <span class="token operator">=</span>  <span class="token keyword">vec4</span><span class="token punctuation">(</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+	<span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+		gl_FragColor <span class="token operator">=</span>  <span class="token keyword">vec4</span><span class="token punctuation">(</span><span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
+<p>In the following applet, the blue vector is atoc and the red vector is atob. You can follow the direction of the right arrow to determine if the triangle is clockwise or anticlockwise.</p>
+<div class="applet"><svg class="compass-menu svelte-s9mvsj" xmlns="w3.org/2000/svg" viewBox="-12 -12 24 24"><defs><marker id="arrow1" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="50" markerHeight="25" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" style="fill: red;"></path></marker><marker id="arrow2" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="50" markerHeight="25" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" style="fill: var(--page-foreground);"></path></marker><marker id="arrow3" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="50" markerHeight="25" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" style="fill: aqua;"></path></marker></defs><g id="trianglelayer" style="transform: scaleY(-1);"><line x1="-5" y1="-5" x2="-4" y2="8" style="--stroke-color: red; stroke: var(--stroke-color); marker-end: url(#arrow1); stroke-width: 0.1"></line><line x1="-4" y1="8" x2="5" y2="-3" style="--stroke-color: var(--page-foreground); stroke: var(--stroke-color); marker-end: url(#arrow2); stroke-width: 0.1"></line><line x1="5" y1="-3" x2="-5" y2="-5" style="--stroke-color: aqua; stroke: var(--stroke-color); marker-start: url(#arrow3); stroke-width: 0.1"></line></g><text x="-10" y="10" font-size="1.6" style="fill: var(--page-foreground)">Try dragging the red dots.</text><g id="pointerlayer" style="transform: scaleY(-1);"><circle id="pointer-1" cx="-5" cy="-5" r="0.8" fill="#f00" stroke="#000" stroke-width="0.1"></circle><circle id="pointer-2" cx="-4" cy="8" r="0.8" fill="#f00" stroke="#000" stroke-width="0.1"></circle><circle id="pointer-3" cx="5" cy="-3" r="0.8" fill="#f00" stroke="#000" stroke-width="0.1"></circle></g></svg>
+</div>
+<h2>Managing Overlapping Parts</h2>
+<p>This works great to correctly hide the necessary faces of convex shapes like spheres or cubes, but struggles for shapes which have complex shapes whose parts may overlap each other when projected at certain orientations.</p>
+<p>For each overlapping part of the image, we find which object is closest to the camera. This can be done by</p>
+<ul><li>ray tracing</li>
+<li>painter’s algorithm</li>
+<li>z-buffering</li></ul>
+<p>In ray tracing, a ray is generated from the camera that contains all 3D points that would be projected to the solved pixel. Then this ray is
+traced in miniscule steps and the pixel color is determined according to which object is hit first. The ray may be reflected, branched etc.
+to simulate light even more realistically, which would bring us to physics-based rendering.</p>
+<p>But what if we want to be fast? We can be fast by handling each triangle instead of each pixel on the screen. The first way is to sort triangles
+based on the distance of their centroids to the camera, then rendering them from farthest to closest. This is called painter’s algorithm, referring
+to painters painting their paintings starting from the sky, then the background objects, and finally the closest subjects.</p>
+<p>This is usually not done in OpenGL, so I am providing JS code which does the thing.</p>
+<pre class="language-js"><!-- HTML_TAG_START --><code class="language-js"><span class="token keyword">let</span> triangles <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">[</span><span class="token punctuation">&#123;</span><span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token literal-property property">y</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token literal-property property">z</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token literal-property property">y</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token literal-property property">z</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token literal-property property">y</span><span class="token operator">:</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token literal-property property">z</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">&#125;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span><span class="token punctuation">&#123;</span><span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token literal-property property">y</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token literal-property property">z</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token literal-property property">y</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token literal-property property">z</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token literal-property property">y</span><span class="token operator">:</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token literal-property property">z</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">&#125;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span><span class="token punctuation">&#123;</span><span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token literal-property property">y</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token literal-property property">z</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token literal-property property">y</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token literal-property property">z</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token literal-property property">y</span><span class="token operator">:</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token literal-property property">z</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">&#125;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token comment">//...</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">project</span><span class="token punctuation">(</span><span class="token parameter">p</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">//project onto the z-plane</span>
+  <span class="token keyword">return</span> <span class="token punctuation">[</span>p<span class="token punctuation">.</span>x<span class="token punctuation">,</span> p<span class="token punctuation">.</span>y<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">function</span> <span class="token function">triangleComparer</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>z <span class="token operator">+</span> a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>z <span class="token operator">+</span> a<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>z<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token punctuation">(</span>b<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>z <span class="token operator">+</span> b<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>z <span class="token operator">+</span> b<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>z<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">//remove back-facing triangles</span>
+triangles <span class="token operator">=</span> triangles<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token parameter">tri</span> <span class="token operator">=></span> <span class="token function">isFront</span><span class="token punctuation">(</span><span class="token function">project</span><span class="token punctuation">(</span>tri<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">project</span><span class="token punctuation">(</span>tri<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">project</span><span class="token punctuation">(</span>tri<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//sort based on centroid z</span>
+triangles<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>triangleComparer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//rasterize needs to be implemented</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> <span class="token literal-property property">triangle</span> <span class="token operator">:</span> triangles<span class="token punctuation">)</span> <span class="token function">rasterize</span><span class="token punctuation">(</span>triangle<span class="token punctuation">)</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
+<p>The other way is to rasterising triangles the order they appear, but also onto a depth buffer of the render. After efficiently finding the depth value of each pixel of the triangle, we compose each pixel onto the final image if the depth of the pixel is closer to the camera than anything before.</p>
+<p>OpenGL pretty much does the depth-buffering for us, so no example code will be given here. It can be fraud at best.</p></article>
+</div>
+</div>
+
+
+		<script type="module" data-sveltekit-hydrate="1n0a9cz">
+		import { set_public_env, start } from "/_app/immutable/start-00b1d136.js";
+
+		set_public_env({});
+
+		start({
+			target: document.querySelector('[data-sveltekit-hydrate="1n0a9cz"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: false,
+			spa: false,
+			trailing_slash: "always",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [0, 5],
+				params: {},
+				routeId: "blog/computer-graphics/hidden-surface-removal"
+			}
+		});
+	</script></div>
+	</body>
+</html>

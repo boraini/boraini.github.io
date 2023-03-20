@@ -1,0 +1,352 @@
+{
+  "src/routes/blog/computer-graphics/_local-and-world-space/character-arm.svg": {
+    "file": "_app/immutable/assets/character-arm-f96a1a9e.svg",
+    "src": "src/routes/blog/computer-graphics/_local-and-world-space/character-arm.svg"
+  },
+  "src/routes/blog/computer-graphics/_local-and-world-space/object-hierarchy-basic.svg": {
+    "file": "_app/immutable/assets/object-hierarchy-basic-c79f0bec.svg",
+    "src": "src/routes/blog/computer-graphics/_local-and-world-space/object-hierarchy-basic.svg"
+  },
+  "src/routes/blog/computer-graphics/_local-and-world-space/object-hierarchy-complete.svg": {
+    "file": "_app/immutable/assets/object-hierarchy-complete-19fc906e.svg",
+    "src": "src/routes/blog/computer-graphics/_local-and-world-space/object-hierarchy-complete.svg"
+  },
+  "src/routes/blog/computer-graphics/_projective-space/frustum.svg": {
+    "file": "_app/immutable/assets/frustum-be4be6a3.svg",
+    "src": "src/routes/blog/computer-graphics/_projective-space/frustum.svg"
+  },
+  "src/routes/blog/authors/trilizard-sleeping.svg": {
+    "file": "_app/immutable/assets/trilizard-sleeping-a87042bc.svg",
+    "src": "src/routes/blog/authors/trilizard-sleeping.svg"
+  },
+  "src/routes/blog/computer-graphics/_texture-mapping/snowboarder_original.png": {
+    "file": "_app/immutable/assets/snowboarder_original-cab17ecb.png",
+    "src": "src/routes/blog/computer-graphics/_texture-mapping/snowboarder_original.png"
+  },
+  "src/routes/blog/computer-graphics/linear-and-affine-transformations.png": {
+    "file": "_app/immutable/assets/linear-and-affine-transformations-95adcc8c.png",
+    "src": "src/routes/blog/computer-graphics/linear-and-affine-transformations.png"
+  },
+  ".svelte-kit/runtime/client/start.js": {
+    "file": "_app/immutable/start-00b1d136.js",
+    "src": ".svelte-kit/runtime/client/start.js",
+    "isEntry": true,
+    "imports": [
+      "_index-8e6002e7.js"
+    ],
+    "dynamicImports": [
+      "src/routes/__layout.svelte",
+      ".svelte-kit/runtime/components/error.svelte",
+      "src/routes/blog/[...slug].svelte",
+      "_boraini-a8f150d1.js",
+      "src/routes/blog/authors/index.svelte",
+      "_hidden-surface-removal-31c81a28.js",
+      "_linear-and-affine-transformations-d2fb14e1.js",
+      "_local-and-world-space-eb2e15b5.js",
+      "_projective-space-1d6982d8.js",
+      "_texture-mapping-ad28a901.js",
+      "src/routes/blog/index.svelte",
+      "src/routes/cv.svx",
+      "src/routes/index.svelte",
+      "src/routes/sveltekit.svelte"
+    ]
+  },
+  "src/routes/__layout.svelte": {
+    "file": "_app/immutable/pages/__layout.svelte-2b157ca7.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-8e6002e7.js"
+    ],
+    "css": [
+      "_app/immutable/assets/__layout-b987f6a3.css"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "_app/immutable/error.svelte-364d63b7.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-8e6002e7.js"
+    ]
+  },
+  "src/routes/blog/[...slug].svelte": {
+    "file": "_app/immutable/pages/blog/_...slug_.svelte-8a87847b.js",
+    "src": "src/routes/blog/[...slug].svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_boraini-a8f150d1.js",
+      "_local-and-world-space-eb2e15b5.js",
+      "_projective-space-1d6982d8.js",
+      "__IndexPage-ffb3670d.js",
+      "_hidden-surface-removal-31c81a28.js",
+      "_linear-and-affine-transformations-d2fb14e1.js",
+      "_texture-mapping-ad28a901.js",
+      "_index-8e6002e7.js",
+      "__author_layout.svelte_svelte_type_style_lang-1d56dbad.js",
+      "__blog_layout-7e7a0e1d.js"
+    ]
+  },
+  "src/routes/blog/authors/index.svelte": {
+    "file": "_app/immutable/pages/blog/authors/index.svelte-0d5c09cf.js",
+    "src": "src/routes/blog/authors/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-8e6002e7.js"
+    ]
+  },
+  "src/routes/blog/index.svelte": {
+    "file": "_app/immutable/pages/blog/index.svelte-87695f7e.js",
+    "src": "src/routes/blog/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_boraini-a8f150d1.js",
+      "_local-and-world-space-eb2e15b5.js",
+      "_projective-space-1d6982d8.js",
+      "__IndexPage-ffb3670d.js",
+      "_hidden-surface-removal-31c81a28.js",
+      "_linear-and-affine-transformations-d2fb14e1.js",
+      "_texture-mapping-ad28a901.js",
+      "_index-8e6002e7.js",
+      "__author_layout.svelte_svelte_type_style_lang-1d56dbad.js",
+      "__blog_layout-7e7a0e1d.js"
+    ]
+  },
+  "src/routes/cv.svx": {
+    "file": "_app/immutable/pages/cv.svx-e0b0e0b4.js",
+    "src": "src/routes/cv.svx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-8e6002e7.js"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "_app/immutable/pages/index.svelte-116f0dba.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-8e6002e7.js",
+      "__author_layout.svelte_svelte_type_style_lang-1d56dbad.js"
+    ],
+    "css": [
+      "_app/immutable/assets/index-76c458cb.css"
+    ]
+  },
+  "src/routes/sveltekit.svelte": {
+    "file": "_app/immutable/pages/sveltekit.svelte-79010c35.js",
+    "src": "src/routes/sveltekit.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-8e6002e7.js"
+    ]
+  },
+  "src/routes/blog/authors/boraini.md": {
+    "file": "_app/immutable/pages/blog/authors/boraini.md-8aa452d6.js",
+    "src": "src/routes/blog/authors/boraini.md",
+    "isEntry": true,
+    "imports": [
+      "_index-8e6002e7.js",
+      "_boraini-a8f150d1.js",
+      "__author_layout.svelte_svelte_type_style_lang-1d56dbad.js"
+    ]
+  },
+  "src/routes/blog/computer-graphics/local-and-world-space.md": {
+    "file": "_app/immutable/pages/blog/computer-graphics/local-and-world-space.md-a4ce3ae2.js",
+    "src": "src/routes/blog/computer-graphics/local-and-world-space.md",
+    "isEntry": true,
+    "imports": [
+      "_index-8e6002e7.js",
+      "__blog_layout-7e7a0e1d.js",
+      "_local-and-world-space-eb2e15b5.js"
+    ]
+  },
+  "src/routes/blog/computer-graphics/projective-space.md": {
+    "file": "_app/immutable/pages/blog/computer-graphics/projective-space.md-abde446f.js",
+    "src": "src/routes/blog/computer-graphics/projective-space.md",
+    "isEntry": true,
+    "imports": [
+      "_index-8e6002e7.js",
+      "__blog_layout-7e7a0e1d.js",
+      "_projective-space-1d6982d8.js"
+    ]
+  },
+  "src/routes/blog/computer-graphics/hidden-surface-removal.md": {
+    "file": "_app/immutable/pages/blog/computer-graphics/hidden-surface-removal.md-3fba512a.js",
+    "src": "src/routes/blog/computer-graphics/hidden-surface-removal.md",
+    "isEntry": true,
+    "imports": [
+      "_index-8e6002e7.js",
+      "__blog_layout-7e7a0e1d.js",
+      "_hidden-surface-removal-31c81a28.js"
+    ]
+  },
+  "src/routes/blog/computer-graphics/linear-and-affine-transformations.md": {
+    "file": "_app/immutable/pages/blog/computer-graphics/linear-and-affine-transformations.md-d0789562.js",
+    "src": "src/routes/blog/computer-graphics/linear-and-affine-transformations.md",
+    "isEntry": true,
+    "imports": [
+      "_index-8e6002e7.js",
+      "__blog_layout-7e7a0e1d.js",
+      "_linear-and-affine-transformations-d2fb14e1.js"
+    ]
+  },
+  "src/routes/blog/computer-graphics/texture-mapping.md": {
+    "file": "_app/immutable/pages/blog/computer-graphics/texture-mapping.md-30fcc01c.js",
+    "src": "src/routes/blog/computer-graphics/texture-mapping.md",
+    "isEntry": true,
+    "imports": [
+      "_index-8e6002e7.js",
+      "__blog_layout-7e7a0e1d.js",
+      "_texture-mapping-ad28a901.js"
+    ]
+  },
+  "_index-8e6002e7.js": {
+    "file": "_app/immutable/chunks/index-8e6002e7.js"
+  },
+  "_boraini-a8f150d1.js": {
+    "file": "_app/immutable/chunks/boraini-a8f150d1.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-8e6002e7.js",
+      "__author_layout.svelte_svelte_type_style_lang-1d56dbad.js"
+    ],
+    "assets": [
+      "_app/immutable/assets/trilizard-sleeping-a87042bc.svg"
+    ]
+  },
+  "_local-and-world-space-eb2e15b5.js": {
+    "file": "_app/immutable/chunks/local-and-world-space-eb2e15b5.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-8e6002e7.js",
+      "__blog_layout-7e7a0e1d.js"
+    ],
+    "css": [
+      "_app/immutable/assets/local-and-world-space-8d2ee48f.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/character-arm-f96a1a9e.svg",
+      "_app/immutable/assets/object-hierarchy-basic-c79f0bec.svg",
+      "_app/immutable/assets/object-hierarchy-complete-19fc906e.svg"
+    ]
+  },
+  "_projective-space-1d6982d8.js": {
+    "file": "_app/immutable/chunks/projective-space-1d6982d8.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-8e6002e7.js",
+      "__blog_layout-7e7a0e1d.js"
+    ],
+    "assets": [
+      "_app/immutable/assets/frustum-be4be6a3.svg"
+    ]
+  },
+  "__IndexPage-ffb3670d.js": {
+    "file": "_app/immutable/chunks/_IndexPage-ffb3670d.js",
+    "imports": [
+      "_boraini-a8f150d1.js",
+      "_hidden-surface-removal-31c81a28.js",
+      "_linear-and-affine-transformations-d2fb14e1.js",
+      "_local-and-world-space-eb2e15b5.js",
+      "_projective-space-1d6982d8.js",
+      "_texture-mapping-ad28a901.js",
+      "_index-8e6002e7.js",
+      "__blog_layout-7e7a0e1d.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_IndexPage-0f5bb2fa.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/snowboarder_original-cab17ecb.png",
+      "_app/immutable/assets/linear-and-affine-transformations-95adcc8c.png"
+    ]
+  },
+  "_hidden-surface-removal-31c81a28.js": {
+    "file": "_app/immutable/chunks/hidden-surface-removal-31c81a28.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-8e6002e7.js",
+      "__blog_layout-7e7a0e1d.js"
+    ],
+    "css": [
+      "_app/immutable/assets/hidden-surface-removal-81e92fff.css"
+    ]
+  },
+  "_linear-and-affine-transformations-d2fb14e1.js": {
+    "file": "_app/immutable/chunks/linear-and-affine-transformations-d2fb14e1.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-8e6002e7.js",
+      "__blog_layout-7e7a0e1d.js"
+    ]
+  },
+  "_texture-mapping-ad28a901.js": {
+    "file": "_app/immutable/chunks/texture-mapping-ad28a901.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-8e6002e7.js",
+      "__blog_layout-7e7a0e1d.js"
+    ],
+    "css": [
+      "_app/immutable/assets/texture-mapping-8ab8a7e3.css"
+    ]
+  },
+  "__blog_layout-7e7a0e1d.js": {
+    "file": "_app/immutable/chunks/_blog_layout-7e7a0e1d.js",
+    "imports": [
+      "_index-8e6002e7.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_blog_layout-5741a32b.css"
+    ]
+  },
+  "__author_layout.svelte_svelte_type_style_lang-1d56dbad.js": {
+    "file": "_app/immutable/chunks/_author_layout.svelte_svelte_type_style_lang-1d56dbad.js",
+    "imports": [
+      "_index-8e6002e7.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_author_layout-81621e66.css"
+    ]
+  },
+  "src/routes/__layout.css": {
+    "file": "_app/immutable/assets/__layout-b987f6a3.css",
+    "src": "src/routes/__layout.css"
+  },
+  "hidden-surface-removal.css": {
+    "file": "_app/immutable/assets/hidden-surface-removal-81e92fff.css",
+    "src": "hidden-surface-removal.css"
+  },
+  "local-and-world-space.css": {
+    "file": "_app/immutable/assets/local-and-world-space-8d2ee48f.css",
+    "src": "local-and-world-space.css"
+  },
+  "_IndexPage.css": {
+    "file": "_app/immutable/assets/_IndexPage-0f5bb2fa.css",
+    "src": "_IndexPage.css"
+  },
+  "_blog_layout.css": {
+    "file": "_app/immutable/assets/_blog_layout-5741a32b.css",
+    "src": "_blog_layout.css"
+  },
+  "_author_layout.css": {
+    "file": "_app/immutable/assets/_author_layout-81621e66.css",
+    "src": "_author_layout.css"
+  },
+  "texture-mapping.css": {
+    "file": "_app/immutable/assets/texture-mapping-8ab8a7e3.css",
+    "src": "texture-mapping.css"
+  },
+  "src/routes/index.css": {
+    "file": "_app/immutable/assets/index-76c458cb.css",
+    "src": "src/routes/index.css"
+  }
+}

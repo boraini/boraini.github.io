@@ -1,19 +1,23 @@
 {
-  "src/routes/blog/authors/trilizard-sleeping.svg": {
-    "file": "_app/immutable/assets/trilizard-sleeping-a87042bc.svg",
-    "src": "src/routes/blog/authors/trilizard-sleeping.svg"
-  },
   "src/routes/blog/computer-graphics/_local-and-world-space/character-arm.svg": {
     "file": "_app/immutable/assets/character-arm-f96a1a9e.svg",
     "src": "src/routes/blog/computer-graphics/_local-and-world-space/character-arm.svg"
+  },
+  "src/routes/blog/computer-graphics/_local-and-world-space/object-hierarchy-complete.svg": {
+    "file": "_app/immutable/assets/object-hierarchy-complete-19fc906e.svg",
+    "src": "src/routes/blog/computer-graphics/_local-and-world-space/object-hierarchy-complete.svg"
   },
   "src/routes/blog/computer-graphics/_local-and-world-space/object-hierarchy-basic.svg": {
     "file": "_app/immutable/assets/object-hierarchy-basic-c79f0bec.svg",
     "src": "src/routes/blog/computer-graphics/_local-and-world-space/object-hierarchy-basic.svg"
   },
-  "src/routes/blog/computer-graphics/_local-and-world-space/object-hierarchy-complete.svg": {
-    "file": "_app/immutable/assets/object-hierarchy-complete-19fc906e.svg",
-    "src": "src/routes/blog/computer-graphics/_local-and-world-space/object-hierarchy-complete.svg"
+  "src/routes/blog/authors/trilizard-sleeping.svg": {
+    "file": "_app/immutable/assets/trilizard-sleeping-1bcd695b.svg",
+    "src": "src/routes/blog/authors/trilizard-sleeping.svg"
+  },
+  "src/routes/blog/computer-graphics/_projective-space/frustum.svg": {
+    "file": "_app/immutable/assets/frustum-8314cf9e.svg",
+    "src": "src/routes/blog/computer-graphics/_projective-space/frustum.svg"
   },
   "src/routes/blog/computer-graphics/_texture-mapping/snowboarder_original.png": {
     "file": "_app/immutable/assets/snowboarder_original-cab17ecb.png",
@@ -24,23 +28,23 @@
     "src": "src/routes/blog/computer-graphics/linear-and-affine-transformations.png"
   },
   ".svelte-kit/runtime/client/start.js": {
-    "file": "_app/immutable/start-60f18104.js",
+    "file": "_app/immutable/start-8ce9d86d.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_index-3043342b.js"
+      "_index-8e6002e7.js"
     ],
     "dynamicImports": [
       "src/routes/__layout.svelte",
       ".svelte-kit/runtime/components/error.svelte",
       "src/routes/blog/[...slug].svelte",
-      "_boraini-b49e5ea8.js",
+      "_boraini-0f9fd772.js",
       "src/routes/blog/authors/index.svelte",
-      "_hidden-surface-removal-57c685fb.js",
-      "_linear-and-affine-transformations-e2070230.js",
-      "_local-and-world-space-efe8d352.js",
-      "_simulating-physical-reflections-15eaa634.js",
-      "_texture-mapping-c3bc477a.js",
+      "_hidden-surface-removal-49542d09.js",
+      "_linear-and-affine-transformations-bb919e45.js",
+      "_local-and-world-space-ba559627.js",
+      "_projective-space-2d5fdc95.js",
+      "_texture-mapping-4f8e2598.js",
       "src/routes/blog/index.svelte",
       "src/routes/cv.svx",
       "src/routes/index.svelte",
@@ -48,182 +52,182 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "_app/immutable/pages/__layout.svelte-1a6afeb2.js",
+    "file": "_app/immutable/pages/__layout.svelte-4deb2496.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-3043342b.js"
+      "_index-8e6002e7.js"
     ],
     "css": [
       "_app/immutable/assets/__layout-b987f6a3.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "_app/immutable/error.svelte-2d868b3c.js",
+    "file": "_app/immutable/error.svelte-6b5d655d.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-3043342b.js"
+      "_index-8e6002e7.js"
     ]
   },
   "src/routes/blog/[...slug].svelte": {
-    "file": "_app/immutable/pages/blog/_...slug_.svelte-897885e3.js",
+    "file": "_app/immutable/pages/blog/_...slug_.svelte-1e0fa348.js",
     "src": "src/routes/blog/[...slug].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_boraini-b49e5ea8.js",
-      "_local-and-world-space-efe8d352.js",
-      "__IndexPage-e1fa8d53.js",
-      "_hidden-surface-removal-57c685fb.js",
-      "_linear-and-affine-transformations-e2070230.js",
-      "_simulating-physical-reflections-15eaa634.js",
-      "_texture-mapping-c3bc477a.js",
-      "_index-3043342b.js",
-      "__author_layout.svelte_svelte_type_style_lang-963aa9ac.js",
-      "__blog_layout-f7458fd2.js"
+      "_boraini-0f9fd772.js",
+      "_local-and-world-space-ba559627.js",
+      "_projective-space-2d5fdc95.js",
+      "__IndexPage-b6b2d5a0.js",
+      "_hidden-surface-removal-49542d09.js",
+      "_linear-and-affine-transformations-bb919e45.js",
+      "_texture-mapping-4f8e2598.js",
+      "_index-8e6002e7.js",
+      "__author_layout.svelte_svelte_type_style_lang-af98074c.js",
+      "__blog_layout-a73ee55d.js"
     ]
   },
   "src/routes/blog/authors/index.svelte": {
-    "file": "_app/immutable/pages/blog/authors/index.svelte-bbad37d8.js",
+    "file": "_app/immutable/pages/blog/authors/index.svelte-ba2ea658.js",
     "src": "src/routes/blog/authors/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-3043342b.js"
+      "_index-8e6002e7.js"
     ]
   },
   "src/routes/blog/index.svelte": {
-    "file": "_app/immutable/pages/blog/index.svelte-6a220aa2.js",
+    "file": "_app/immutable/pages/blog/index.svelte-2fdb8d51.js",
     "src": "src/routes/blog/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_boraini-b49e5ea8.js",
-      "_local-and-world-space-efe8d352.js",
-      "__IndexPage-e1fa8d53.js",
-      "_hidden-surface-removal-57c685fb.js",
-      "_linear-and-affine-transformations-e2070230.js",
-      "_simulating-physical-reflections-15eaa634.js",
-      "_texture-mapping-c3bc477a.js",
-      "_index-3043342b.js",
-      "__author_layout.svelte_svelte_type_style_lang-963aa9ac.js",
-      "__blog_layout-f7458fd2.js"
+      "_boraini-0f9fd772.js",
+      "_local-and-world-space-ba559627.js",
+      "_projective-space-2d5fdc95.js",
+      "__IndexPage-b6b2d5a0.js",
+      "_hidden-surface-removal-49542d09.js",
+      "_linear-and-affine-transformations-bb919e45.js",
+      "_texture-mapping-4f8e2598.js",
+      "_index-8e6002e7.js",
+      "__author_layout.svelte_svelte_type_style_lang-af98074c.js",
+      "__blog_layout-a73ee55d.js"
     ]
   },
   "src/routes/cv.svx": {
-    "file": "_app/immutable/pages/cv.svx-82ecface.js",
+    "file": "_app/immutable/pages/cv.svx-e424254f.js",
     "src": "src/routes/cv.svx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-3043342b.js"
+      "_index-8e6002e7.js"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "_app/immutable/pages/index.svelte-ceea5c90.js",
+    "file": "_app/immutable/pages/index.svelte-bd143b9c.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-3043342b.js",
-      "__author_layout.svelte_svelte_type_style_lang-963aa9ac.js"
+      "_index-8e6002e7.js",
+      "__author_layout.svelte_svelte_type_style_lang-af98074c.js"
     ],
     "css": [
       "_app/immutable/assets/index-98e3fc46.css"
     ]
   },
   "src/routes/sveltekit.svelte": {
-    "file": "_app/immutable/pages/sveltekit.svelte-493e8607.js",
+    "file": "_app/immutable/pages/sveltekit.svelte-72c72271.js",
     "src": "src/routes/sveltekit.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-3043342b.js"
+      "_index-8e6002e7.js"
     ]
   },
   "src/routes/blog/authors/boraini.md": {
-    "file": "_app/immutable/pages/blog/authors/boraini.md-a89f7877.js",
+    "file": "_app/immutable/pages/blog/authors/boraini.md-49703390.js",
     "src": "src/routes/blog/authors/boraini.md",
     "isEntry": true,
     "imports": [
-      "_index-3043342b.js",
-      "_boraini-b49e5ea8.js",
-      "__author_layout.svelte_svelte_type_style_lang-963aa9ac.js"
+      "_index-8e6002e7.js",
+      "_boraini-0f9fd772.js",
+      "__author_layout.svelte_svelte_type_style_lang-af98074c.js"
     ]
   },
   "src/routes/blog/computer-graphics/local-and-world-space.md": {
-    "file": "_app/immutable/pages/blog/computer-graphics/local-and-world-space.md-dbd63457.js",
+    "file": "_app/immutable/pages/blog/computer-graphics/local-and-world-space.md-f662f422.js",
     "src": "src/routes/blog/computer-graphics/local-and-world-space.md",
     "isEntry": true,
     "imports": [
-      "_index-3043342b.js",
-      "__blog_layout-f7458fd2.js",
-      "_local-and-world-space-efe8d352.js"
+      "_index-8e6002e7.js",
+      "__blog_layout-a73ee55d.js",
+      "_local-and-world-space-ba559627.js"
+    ]
+  },
+  "src/routes/blog/computer-graphics/projective-space.md": {
+    "file": "_app/immutable/pages/blog/computer-graphics/projective-space.md-69ba3c23.js",
+    "src": "src/routes/blog/computer-graphics/projective-space.md",
+    "isEntry": true,
+    "imports": [
+      "_index-8e6002e7.js",
+      "__blog_layout-a73ee55d.js",
+      "_projective-space-2d5fdc95.js"
     ]
   },
   "src/routes/blog/computer-graphics/hidden-surface-removal.md": {
-    "file": "_app/immutable/pages/blog/computer-graphics/hidden-surface-removal.md-e817c4b1.js",
+    "file": "_app/immutable/pages/blog/computer-graphics/hidden-surface-removal.md-746a4943.js",
     "src": "src/routes/blog/computer-graphics/hidden-surface-removal.md",
     "isEntry": true,
     "imports": [
-      "_index-3043342b.js",
-      "__blog_layout-f7458fd2.js",
-      "_hidden-surface-removal-57c685fb.js"
+      "_index-8e6002e7.js",
+      "__blog_layout-a73ee55d.js",
+      "_hidden-surface-removal-49542d09.js"
     ]
   },
   "src/routes/blog/computer-graphics/linear-and-affine-transformations.md": {
-    "file": "_app/immutable/pages/blog/computer-graphics/linear-and-affine-transformations.md-17267472.js",
+    "file": "_app/immutable/pages/blog/computer-graphics/linear-and-affine-transformations.md-c9edfe16.js",
     "src": "src/routes/blog/computer-graphics/linear-and-affine-transformations.md",
     "isEntry": true,
     "imports": [
-      "_index-3043342b.js",
-      "__blog_layout-f7458fd2.js",
-      "_linear-and-affine-transformations-e2070230.js"
-    ]
-  },
-  "src/routes/blog/computer-graphics/simulating-physical-reflections.md": {
-    "file": "_app/immutable/pages/blog/computer-graphics/simulating-physical-reflections.md-75521198.js",
-    "src": "src/routes/blog/computer-graphics/simulating-physical-reflections.md",
-    "isEntry": true,
-    "imports": [
-      "_index-3043342b.js",
-      "__blog_layout-f7458fd2.js",
-      "_simulating-physical-reflections-15eaa634.js"
+      "_index-8e6002e7.js",
+      "__blog_layout-a73ee55d.js",
+      "_linear-and-affine-transformations-bb919e45.js"
     ]
   },
   "src/routes/blog/computer-graphics/texture-mapping.md": {
-    "file": "_app/immutable/pages/blog/computer-graphics/texture-mapping.md-9a05ab7b.js",
+    "file": "_app/immutable/pages/blog/computer-graphics/texture-mapping.md-8604b775.js",
     "src": "src/routes/blog/computer-graphics/texture-mapping.md",
     "isEntry": true,
     "imports": [
-      "_index-3043342b.js",
-      "__blog_layout-f7458fd2.js",
-      "_texture-mapping-c3bc477a.js"
+      "_index-8e6002e7.js",
+      "__blog_layout-a73ee55d.js",
+      "_texture-mapping-4f8e2598.js"
     ]
   },
-  "_index-3043342b.js": {
-    "file": "_app/immutable/chunks/index-3043342b.js"
+  "_index-8e6002e7.js": {
+    "file": "_app/immutable/chunks/index-8e6002e7.js"
   },
-  "_boraini-b49e5ea8.js": {
-    "file": "_app/immutable/chunks/boraini-b49e5ea8.js",
+  "_boraini-0f9fd772.js": {
+    "file": "_app/immutable/chunks/boraini-0f9fd772.js",
     "isDynamicEntry": true,
     "imports": [
-      "_index-3043342b.js",
-      "__author_layout.svelte_svelte_type_style_lang-963aa9ac.js"
+      "_index-8e6002e7.js",
+      "__author_layout.svelte_svelte_type_style_lang-af98074c.js"
     ],
     "assets": [
-      "_app/immutable/assets/trilizard-sleeping-a87042bc.svg"
+      "_app/immutable/assets/trilizard-sleeping-1bcd695b.svg"
     ]
   },
-  "_local-and-world-space-efe8d352.js": {
-    "file": "_app/immutable/chunks/local-and-world-space-efe8d352.js",
+  "_local-and-world-space-ba559627.js": {
+    "file": "_app/immutable/chunks/local-and-world-space-ba559627.js",
     "isDynamicEntry": true,
     "imports": [
-      "_index-3043342b.js",
-      "__blog_layout-f7458fd2.js"
+      "_index-8e6002e7.js",
+      "__blog_layout-a73ee55d.js"
     ],
     "css": [
       "_app/immutable/assets/local-and-world-space-b338497d.css"
@@ -234,17 +238,28 @@
       "_app/immutable/assets/object-hierarchy-complete-19fc906e.svg"
     ]
   },
-  "__IndexPage-e1fa8d53.js": {
-    "file": "_app/immutable/chunks/_IndexPage-e1fa8d53.js",
+  "_projective-space-2d5fdc95.js": {
+    "file": "_app/immutable/chunks/projective-space-2d5fdc95.js",
+    "isDynamicEntry": true,
     "imports": [
-      "_boraini-b49e5ea8.js",
-      "_hidden-surface-removal-57c685fb.js",
-      "_linear-and-affine-transformations-e2070230.js",
-      "_local-and-world-space-efe8d352.js",
-      "_simulating-physical-reflections-15eaa634.js",
-      "_texture-mapping-c3bc477a.js",
-      "_index-3043342b.js",
-      "__blog_layout-f7458fd2.js"
+      "_index-8e6002e7.js",
+      "__blog_layout-a73ee55d.js"
+    ],
+    "assets": [
+      "_app/immutable/assets/frustum-8314cf9e.svg"
+    ]
+  },
+  "__IndexPage-b6b2d5a0.js": {
+    "file": "_app/immutable/chunks/_IndexPage-b6b2d5a0.js",
+    "imports": [
+      "_boraini-0f9fd772.js",
+      "_hidden-surface-removal-49542d09.js",
+      "_linear-and-affine-transformations-bb919e45.js",
+      "_local-and-world-space-ba559627.js",
+      "_projective-space-2d5fdc95.js",
+      "_texture-mapping-4f8e2598.js",
+      "_index-8e6002e7.js",
+      "__blog_layout-a73ee55d.js"
     ],
     "css": [
       "_app/immutable/assets/_IndexPage-0f5bb2fa.css"
@@ -254,57 +269,49 @@
       "_app/immutable/assets/linear-and-affine-transformations-95adcc8c.png"
     ]
   },
-  "_hidden-surface-removal-57c685fb.js": {
-    "file": "_app/immutable/chunks/hidden-surface-removal-57c685fb.js",
+  "_hidden-surface-removal-49542d09.js": {
+    "file": "_app/immutable/chunks/hidden-surface-removal-49542d09.js",
     "isDynamicEntry": true,
     "imports": [
-      "_index-3043342b.js",
-      "__blog_layout-f7458fd2.js"
+      "_index-8e6002e7.js",
+      "__blog_layout-a73ee55d.js"
     ],
     "css": [
       "_app/immutable/assets/hidden-surface-removal-81e92fff.css"
     ]
   },
-  "_linear-and-affine-transformations-e2070230.js": {
-    "file": "_app/immutable/chunks/linear-and-affine-transformations-e2070230.js",
+  "_linear-and-affine-transformations-bb919e45.js": {
+    "file": "_app/immutable/chunks/linear-and-affine-transformations-bb919e45.js",
     "isDynamicEntry": true,
     "imports": [
-      "_index-3043342b.js",
-      "__blog_layout-f7458fd2.js"
+      "_index-8e6002e7.js",
+      "__blog_layout-a73ee55d.js"
     ]
   },
-  "_simulating-physical-reflections-15eaa634.js": {
-    "file": "_app/immutable/chunks/simulating-physical-reflections-15eaa634.js",
+  "_texture-mapping-4f8e2598.js": {
+    "file": "_app/immutable/chunks/texture-mapping-4f8e2598.js",
     "isDynamicEntry": true,
     "imports": [
-      "_index-3043342b.js",
-      "__blog_layout-f7458fd2.js"
-    ]
-  },
-  "_texture-mapping-c3bc477a.js": {
-    "file": "_app/immutable/chunks/texture-mapping-c3bc477a.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "_index-3043342b.js",
-      "__blog_layout-f7458fd2.js"
+      "_index-8e6002e7.js",
+      "__blog_layout-a73ee55d.js"
     ],
     "css": [
       "_app/immutable/assets/texture-mapping-8ab8a7e3.css"
     ]
   },
-  "__blog_layout-f7458fd2.js": {
-    "file": "_app/immutable/chunks/_blog_layout-f7458fd2.js",
+  "__blog_layout-a73ee55d.js": {
+    "file": "_app/immutable/chunks/_blog_layout-a73ee55d.js",
     "imports": [
-      "_index-3043342b.js"
+      "_index-8e6002e7.js"
     ],
     "css": [
       "_app/immutable/assets/_blog_layout-43b38724.css"
     ]
   },
-  "__author_layout.svelte_svelte_type_style_lang-963aa9ac.js": {
-    "file": "_app/immutable/chunks/_author_layout.svelte_svelte_type_style_lang-963aa9ac.js",
+  "__author_layout.svelte_svelte_type_style_lang-af98074c.js": {
+    "file": "_app/immutable/chunks/_author_layout.svelte_svelte_type_style_lang-af98074c.js",
     "imports": [
-      "_index-3043342b.js"
+      "_index-8e6002e7.js"
     ],
     "css": [
       "_app/immutable/assets/_author_layout-eac5edf9.css"
@@ -314,9 +321,25 @@
     "file": "_app/immutable/assets/__layout-b987f6a3.css",
     "src": "src/routes/__layout.css"
   },
+  "_IndexPage.css": {
+    "file": "_app/immutable/assets/_IndexPage-0f5bb2fa.css",
+    "src": "_IndexPage.css"
+  },
+  "hidden-surface-removal.css": {
+    "file": "_app/immutable/assets/hidden-surface-removal-81e92fff.css",
+    "src": "hidden-surface-removal.css"
+  },
   "local-and-world-space.css": {
     "file": "_app/immutable/assets/local-and-world-space-b338497d.css",
     "src": "local-and-world-space.css"
+  },
+  "src/routes/index.css": {
+    "file": "_app/immutable/assets/index-98e3fc46.css",
+    "src": "src/routes/index.css"
+  },
+  "_author_layout.css": {
+    "file": "_app/immutable/assets/_author_layout-eac5edf9.css",
+    "src": "_author_layout.css"
   },
   "texture-mapping.css": {
     "file": "_app/immutable/assets/texture-mapping-8ab8a7e3.css",
@@ -325,21 +348,5 @@
   "_blog_layout.css": {
     "file": "_app/immutable/assets/_blog_layout-43b38724.css",
     "src": "_blog_layout.css"
-  },
-  "src/routes/index.css": {
-    "file": "_app/immutable/assets/index-98e3fc46.css",
-    "src": "src/routes/index.css"
-  },
-  "hidden-surface-removal.css": {
-    "file": "_app/immutable/assets/hidden-surface-removal-81e92fff.css",
-    "src": "hidden-surface-removal.css"
-  },
-  "_IndexPage.css": {
-    "file": "_app/immutable/assets/_IndexPage-0f5bb2fa.css",
-    "src": "_IndexPage.css"
-  },
-  "_author_layout.css": {
-    "file": "_app/immutable/assets/_author_layout-eac5edf9.css",
-    "src": "_author_layout.css"
   }
 }

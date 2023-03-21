@@ -25,6 +25,7 @@
         height: auto;
         margin: auto;
         border: 1px solid black;
+        touch-action: none;
     }
 </style>
 <script>
@@ -42,6 +43,7 @@
         canvas.addEventListener("pointerdown", pd);
         canvas.addEventListener("pointerup", pu);
         canvas.addEventListener("pointermove", pm);
+        canvas.addEventListener("pointercancel", pu);
 
         image.addEventListener("load", e => render(mappingInformation, uvWorld));
     });
@@ -306,20 +308,19 @@
     }
 
     function pd(e) {
-        e.preventDefault();
         if (!pointerId) {
             pointerId = e.pointerId;
             movedVertex = setPointerLocation(e.clientX, e.clientY);
         }
     }
+
     function pm(e) {
-        e.preventDefault();
         updateMouseCoords(e.clientX, e.clientY);
         if (e.pointerId == pointerId) setPointerLocation(e.clientX, e.clientY);
         render(mappingInformation, uvWorld);
     }
+
     function pu(e) {
-        e.preventDefault();
         if (e.pointerId == pointerId) {
             pointerId = undefined;
             movedVertex = undefined;

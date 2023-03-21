@@ -5,15 +5,15 @@
 		<link rel="icon" href="../../../favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content=""><title>boraini.com - Hidden Surface Removal</title><script src="/scripts/dark-mode.js" data-svelte="svelte-1svid1p"></script><meta name="description" content="Introduction to methods of hidden surface removal in contemporary 3D computer graphics" data-svelte="svelte-15wtgav"><link rel="stylesheet" href="/stylesheets/prism-duotone-dark.css" data-svelte="svelte-15wtgav"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" data-svelte="svelte-15wtgav">
-	<link rel="stylesheet" href="/_app/immutable/assets/__layout-b987f6a3.css">
+	<link rel="stylesheet" href="/_app/immutable/assets/__layout-8845564c.css">
 	<link rel="stylesheet" href="/_app/immutable/assets/_blog_layout-5741a32b.css">
-	<link rel="stylesheet" href="/_app/immutable/assets/hidden-surface-removal-81e92fff.css">
-	<link rel="modulepreload" href="/_app/immutable/start-00b1d136.js">
+	<link rel="stylesheet" href="/_app/immutable/assets/hidden-surface-removal-0bafbe17.css">
+	<link rel="modulepreload" href="/_app/immutable/start-fa989621.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/index-8e6002e7.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-2b157ca7.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/blog/computer-graphics/hidden-surface-removal.md-3fba512a.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-339dc6cd.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/blog/computer-graphics/hidden-surface-removal.md-120a93b9.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/_blog_layout-7e7a0e1d.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/hidden-surface-removal-31c81a28.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/hidden-surface-removal-9ad67db1.js">
 	</head>
 	<body>
 		<div>
@@ -23,16 +23,16 @@
 
 
 
-<div class="app"><nav class="navbar svelte-i9ah0n"><a class="flex-grow svelte-i9ah0n" href="/"><img class="logo dark svelte-i9ah0n" src="/images/logo-full-dark.svg" alt="logo">
-		<img class="logo light svelte-i9ah0n" src="/images/logo-full-light.svg" alt="logo"></a>
-	<label for="dark-mode-toggle" class="svelte-i9ah0n">toggle between light and dark mode</label>
-	<input id="dark-mode-toggle" class="dark-mode-toggle svelte-i9ah0n" type="checkbox">
-	<label for="links-button" class="svelte-i9ah0n">show or hide links pop-up</label>
-	<input id="links-button" class="links-button svelte-i9ah0n" type="checkbox">
-	<ul class="links svelte-i9ah0n"><li class="svelte-i9ah0n"><a href="/" class="svelte-i9ah0n">HOME</a></li>
-		<li class="svelte-i9ah0n"><a href="/cv/" class="svelte-i9ah0n">CV</a></li>
-		<li class="svelte-i9ah0n"><a href="/blog/" class="svelte-i9ah0n">BLOG</a></li>
-		<li class="svelte-i9ah0n"><a href="./.." class="svelte-i9ah0n">PARENT</a></li></ul>
+<div class="app"><nav class="navbar svelte-xy5ery"><a class="flex-grow svelte-xy5ery" href="/"><img class="logo dark svelte-xy5ery" src="/images/logo-full-dark.svg" alt="logo">
+		<img class="logo light svelte-xy5ery" src="/images/logo-full-light.svg" alt="logo"></a>
+	<label for="dark-mode-toggle" class="svelte-xy5ery">toggle between light and dark mode</label>
+	<input id="dark-mode-toggle" class="dark-mode-toggle svelte-xy5ery" type="checkbox">
+	<label for="links-button" class="svelte-xy5ery">show or hide links pop-up</label>
+	<input id="links-button" class="links-button svelte-xy5ery" type="checkbox">
+	<ul class="links svelte-xy5ery"><li class="svelte-xy5ery"><a href="/" class="svelte-xy5ery">HOME</a></li>
+		<li class="svelte-xy5ery"><a href="/cv/" class="svelte-xy5ery">CV</a></li>
+		<li class="svelte-xy5ery"><a href="/blog/" class="svelte-xy5ery">BLOG</a></li>
+		<li class="svelte-xy5ery"><a href="./.." class="svelte-xy5ery">PARENT</a></li></ul>
 </nav>
 
 
@@ -81,7 +81,7 @@ say we are seeing the front side of it and render.</p>
 	<span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
 <p>In the following applet, the blue vector is atoc and the red vector is atob. You can follow the direction of the right arrow to determine if the triangle is clockwise or anticlockwise.</p>
-<div class="applet"><svg class="compass-menu svelte-s9mvsj" xmlns="w3.org/2000/svg" viewBox="-12 -12 24 24"><defs><marker id="arrow1" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="50" markerHeight="25" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" style="fill: red;"></path></marker><marker id="arrow2" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="50" markerHeight="25" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" style="fill: var(--page-foreground);"></path></marker><marker id="arrow3" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="50" markerHeight="25" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" style="fill: aqua;"></path></marker></defs><g id="trianglelayer" style="transform: scaleY(-1);"><line x1="-5" y1="-5" x2="-4" y2="8" style="--stroke-color: red; stroke: var(--stroke-color); marker-end: url(#arrow1); stroke-width: 0.1"></line><line x1="-4" y1="8" x2="5" y2="-3" style="--stroke-color: var(--page-foreground); stroke: var(--stroke-color); marker-end: url(#arrow2); stroke-width: 0.1"></line><line x1="5" y1="-3" x2="-5" y2="-5" style="--stroke-color: aqua; stroke: var(--stroke-color); marker-start: url(#arrow3); stroke-width: 0.1"></line></g><text x="-10" y="10" font-size="1.6" style="fill: var(--page-foreground)">Try dragging the red dots.</text><g id="pointerlayer" style="transform: scaleY(-1);"><circle id="pointer-1" cx="-5" cy="-5" r="0.8" fill="#f00" stroke="#000" stroke-width="0.1"></circle><circle id="pointer-2" cx="-4" cy="8" r="0.8" fill="#f00" stroke="#000" stroke-width="0.1"></circle><circle id="pointer-3" cx="5" cy="-3" r="0.8" fill="#f00" stroke="#000" stroke-width="0.1"></circle></g></svg>
+<div class="applet"><svg class="compass-menu svelte-x8va08" xmlns="w3.org/2000/svg" viewBox="-12 -12 24 24"><defs><marker id="arrow1" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="50" markerHeight="25" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" style="fill: red;"></path></marker><marker id="arrow2" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="50" markerHeight="25" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" style="fill: var(--page-foreground);"></path></marker><marker id="arrow3" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="50" markerHeight="25" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" style="fill: aqua;"></path></marker></defs><g id="trianglelayer" style="transform: scaleY(-1);"><line x1="-5" y1="-5" x2="-4" y2="8" style="--stroke-color: red; stroke: var(--stroke-color); marker-end: url(#arrow1); stroke-width: 0.1"></line><line x1="-4" y1="8" x2="5" y2="-3" style="--stroke-color: var(--page-foreground); stroke: var(--stroke-color); marker-end: url(#arrow2); stroke-width: 0.1"></line><line x1="5" y1="-3" x2="-5" y2="-5" style="--stroke-color: aqua; stroke: var(--stroke-color); marker-start: url(#arrow3); stroke-width: 0.1"></line></g><text x="-10" y="10" font-size="1.6" style="fill: var(--page-foreground)">Try dragging the red dots.</text><g id="pointerlayer" style="transform: scaleY(-1);"><circle id="pointer-1" cx="-5" cy="-5" r="0.8" fill="#f00" stroke="#000" stroke-width="0.1"></circle><circle id="pointer-2" cx="-4" cy="8" r="0.8" fill="#f00" stroke="#000" stroke-width="0.1"></circle><circle id="pointer-3" cx="5" cy="-3" r="0.8" fill="#f00" stroke="#000" stroke-width="0.1"></circle></g></svg>
 </div>
 <h2>Managing Overlapping Parts</h2>
 <p>This works great to correctly hide the necessary faces of convex shapes like spheres or cubes, but struggles for shapes which have complex shapes whose parts may overlap each other when projected at certain orientations.</p>
@@ -126,13 +126,13 @@ triangles<span class="token punctuation">.</span><span class="token function">so
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="1n0a9cz">
-		import { set_public_env, start } from "/_app/immutable/start-00b1d136.js";
+		<script type="module" data-sveltekit-hydrate="nkk6bt">
+		import { set_public_env, start } from "/_app/immutable/start-fa989621.js";
 
 		set_public_env({});
 
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="1n0a9cz"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="nkk6bt"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: false,

@@ -28,7 +28,7 @@
     "src": "src/routes/blog/computer-graphics/linear-and-affine-transformations.png"
   },
   ".svelte-kit/runtime/client/start.js": {
-    "file": "_app/immutable/start-00b1d136.js",
+    "file": "_app/immutable/start-fa989621.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -40,11 +40,11 @@
       "src/routes/blog/[...slug].svelte",
       "_boraini-a8f150d1.js",
       "src/routes/blog/authors/index.svelte",
-      "_hidden-surface-removal-31c81a28.js",
+      "_hidden-surface-removal-9ad67db1.js",
       "_linear-and-affine-transformations-d2fb14e1.js",
       "_local-and-world-space-eb2e15b5.js",
       "_projective-space-1d6982d8.js",
-      "_texture-mapping-ad28a901.js",
+      "_texture-mapping-bca9d9f5.js",
       "src/routes/blog/index.svelte",
       "src/routes/cv.svx",
       "src/routes/index.svelte",
@@ -52,7 +52,7 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "_app/immutable/pages/__layout.svelte-2b157ca7.js",
+    "file": "_app/immutable/pages/__layout.svelte-339dc6cd.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -60,7 +60,7 @@
       "_index-8e6002e7.js"
     ],
     "css": [
-      "_app/immutable/assets/__layout-b987f6a3.css"
+      "_app/immutable/assets/__layout-8845564c.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
@@ -73,7 +73,7 @@
     ]
   },
   "src/routes/blog/[...slug].svelte": {
-    "file": "_app/immutable/pages/blog/_...slug_.svelte-8a87847b.js",
+    "file": "_app/immutable/pages/blog/_...slug_.svelte-6e513223.js",
     "src": "src/routes/blog/[...slug].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -81,10 +81,10 @@
       "_boraini-a8f150d1.js",
       "_local-and-world-space-eb2e15b5.js",
       "_projective-space-1d6982d8.js",
-      "__IndexPage-ffb3670d.js",
-      "_hidden-surface-removal-31c81a28.js",
+      "__IndexPage-965f8664.js",
+      "_hidden-surface-removal-9ad67db1.js",
       "_linear-and-affine-transformations-d2fb14e1.js",
-      "_texture-mapping-ad28a901.js",
+      "_texture-mapping-bca9d9f5.js",
       "_index-8e6002e7.js",
       "__author_layout.svelte_svelte_type_style_lang-1d56dbad.js",
       "__blog_layout-7e7a0e1d.js"
@@ -100,7 +100,7 @@
     ]
   },
   "src/routes/blog/index.svelte": {
-    "file": "_app/immutable/pages/blog/index.svelte-87695f7e.js",
+    "file": "_app/immutable/pages/blog/index.svelte-6b9ba765.js",
     "src": "src/routes/blog/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -108,10 +108,10 @@
       "_boraini-a8f150d1.js",
       "_local-and-world-space-eb2e15b5.js",
       "_projective-space-1d6982d8.js",
-      "__IndexPage-ffb3670d.js",
-      "_hidden-surface-removal-31c81a28.js",
+      "__IndexPage-965f8664.js",
+      "_hidden-surface-removal-9ad67db1.js",
       "_linear-and-affine-transformations-d2fb14e1.js",
-      "_texture-mapping-ad28a901.js",
+      "_texture-mapping-bca9d9f5.js",
       "_index-8e6002e7.js",
       "__author_layout.svelte_svelte_type_style_lang-1d56dbad.js",
       "__blog_layout-7e7a0e1d.js"
@@ -179,13 +179,13 @@
     ]
   },
   "src/routes/blog/computer-graphics/hidden-surface-removal.md": {
-    "file": "_app/immutable/pages/blog/computer-graphics/hidden-surface-removal.md-3fba512a.js",
+    "file": "_app/immutable/pages/blog/computer-graphics/hidden-surface-removal.md-120a93b9.js",
     "src": "src/routes/blog/computer-graphics/hidden-surface-removal.md",
     "isEntry": true,
     "imports": [
       "_index-8e6002e7.js",
       "__blog_layout-7e7a0e1d.js",
-      "_hidden-surface-removal-31c81a28.js"
+      "_hidden-surface-removal-9ad67db1.js"
     ]
   },
   "src/routes/blog/computer-graphics/linear-and-affine-transformations.md": {
@@ -199,13 +199,13 @@
     ]
   },
   "src/routes/blog/computer-graphics/texture-mapping.md": {
-    "file": "_app/immutable/pages/blog/computer-graphics/texture-mapping.md-30fcc01c.js",
+    "file": "_app/immutable/pages/blog/computer-graphics/texture-mapping.md-72832b3a.js",
     "src": "src/routes/blog/computer-graphics/texture-mapping.md",
     "isEntry": true,
     "imports": [
       "_index-8e6002e7.js",
       "__blog_layout-7e7a0e1d.js",
-      "_texture-mapping-ad28a901.js"
+      "_texture-mapping-bca9d9f5.js"
     ]
   },
   "_index-8e6002e7.js": {
@@ -249,15 +249,15 @@
       "_app/immutable/assets/frustum-be4be6a3.svg"
     ]
   },
-  "__IndexPage-ffb3670d.js": {
-    "file": "_app/immutable/chunks/_IndexPage-ffb3670d.js",
+  "__IndexPage-965f8664.js": {
+    "file": "_app/immutable/chunks/_IndexPage-965f8664.js",
     "imports": [
       "_boraini-a8f150d1.js",
-      "_hidden-surface-removal-31c81a28.js",
+      "_hidden-surface-removal-9ad67db1.js",
       "_linear-and-affine-transformations-d2fb14e1.js",
       "_local-and-world-space-eb2e15b5.js",
       "_projective-space-1d6982d8.js",
-      "_texture-mapping-ad28a901.js",
+      "_texture-mapping-bca9d9f5.js",
       "_index-8e6002e7.js",
       "__blog_layout-7e7a0e1d.js"
     ],
@@ -269,15 +269,15 @@
       "_app/immutable/assets/linear-and-affine-transformations-95adcc8c.png"
     ]
   },
-  "_hidden-surface-removal-31c81a28.js": {
-    "file": "_app/immutable/chunks/hidden-surface-removal-31c81a28.js",
+  "_hidden-surface-removal-9ad67db1.js": {
+    "file": "_app/immutable/chunks/hidden-surface-removal-9ad67db1.js",
     "isDynamicEntry": true,
     "imports": [
       "_index-8e6002e7.js",
       "__blog_layout-7e7a0e1d.js"
     ],
     "css": [
-      "_app/immutable/assets/hidden-surface-removal-81e92fff.css"
+      "_app/immutable/assets/hidden-surface-removal-0bafbe17.css"
     ]
   },
   "_linear-and-affine-transformations-d2fb14e1.js": {
@@ -288,15 +288,15 @@
       "__blog_layout-7e7a0e1d.js"
     ]
   },
-  "_texture-mapping-ad28a901.js": {
-    "file": "_app/immutable/chunks/texture-mapping-ad28a901.js",
+  "_texture-mapping-bca9d9f5.js": {
+    "file": "_app/immutable/chunks/texture-mapping-bca9d9f5.js",
     "isDynamicEntry": true,
     "imports": [
       "_index-8e6002e7.js",
       "__blog_layout-7e7a0e1d.js"
     ],
     "css": [
-      "_app/immutable/assets/texture-mapping-8ab8a7e3.css"
+      "_app/immutable/assets/texture-mapping-97e64aa2.css"
     ]
   },
   "__blog_layout-7e7a0e1d.js": {
@@ -318,20 +318,20 @@
     ]
   },
   "src/routes/__layout.css": {
-    "file": "_app/immutable/assets/__layout-b987f6a3.css",
+    "file": "_app/immutable/assets/__layout-8845564c.css",
     "src": "src/routes/__layout.css"
   },
-  "hidden-surface-removal.css": {
-    "file": "_app/immutable/assets/hidden-surface-removal-81e92fff.css",
-    "src": "hidden-surface-removal.css"
+  "_IndexPage.css": {
+    "file": "_app/immutable/assets/_IndexPage-0f5bb2fa.css",
+    "src": "_IndexPage.css"
   },
   "local-and-world-space.css": {
     "file": "_app/immutable/assets/local-and-world-space-8d2ee48f.css",
     "src": "local-and-world-space.css"
   },
-  "_IndexPage.css": {
-    "file": "_app/immutable/assets/_IndexPage-0f5bb2fa.css",
-    "src": "_IndexPage.css"
+  "src/routes/index.css": {
+    "file": "_app/immutable/assets/index-76c458cb.css",
+    "src": "src/routes/index.css"
   },
   "_blog_layout.css": {
     "file": "_app/immutable/assets/_blog_layout-5741a32b.css",
@@ -341,12 +341,12 @@
     "file": "_app/immutable/assets/_author_layout-81621e66.css",
     "src": "_author_layout.css"
   },
-  "texture-mapping.css": {
-    "file": "_app/immutable/assets/texture-mapping-8ab8a7e3.css",
-    "src": "texture-mapping.css"
+  "hidden-surface-removal.css": {
+    "file": "_app/immutable/assets/hidden-surface-removal-0bafbe17.css",
+    "src": "hidden-surface-removal.css"
   },
-  "src/routes/index.css": {
-    "file": "_app/immutable/assets/index-76c458cb.css",
-    "src": "src/routes/index.css"
+  "texture-mapping.css": {
+    "file": "_app/immutable/assets/texture-mapping-97e64aa2.css",
+    "src": "texture-mapping.css"
   }
 }

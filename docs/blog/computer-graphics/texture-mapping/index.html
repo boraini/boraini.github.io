@@ -5,15 +5,15 @@
 		<link rel="icon" href="../../../favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content=""><title>boraini.com - Texture Mapping</title><script src="/scripts/dark-mode.js" data-svelte="svelte-1svid1p"></script><meta name="description" content="All to know about how to map textures onto a 3D surface" data-svelte="svelte-15wtgav"><link rel="stylesheet" href="/stylesheets/prism-duotone-dark.css" data-svelte="svelte-15wtgav"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" data-svelte="svelte-15wtgav">
-	<link rel="stylesheet" href="/_app/immutable/assets/__layout-b987f6a3.css">
+	<link rel="stylesheet" href="/_app/immutable/assets/__layout-8845564c.css">
 	<link rel="stylesheet" href="/_app/immutable/assets/_blog_layout-5741a32b.css">
-	<link rel="stylesheet" href="/_app/immutable/assets/texture-mapping-8ab8a7e3.css">
-	<link rel="modulepreload" href="/_app/immutable/start-00b1d136.js">
+	<link rel="stylesheet" href="/_app/immutable/assets/texture-mapping-97e64aa2.css">
+	<link rel="modulepreload" href="/_app/immutable/start-fa989621.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/index-8e6002e7.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-2b157ca7.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/blog/computer-graphics/texture-mapping.md-30fcc01c.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-339dc6cd.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/blog/computer-graphics/texture-mapping.md-72832b3a.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/_blog_layout-7e7a0e1d.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/texture-mapping-ad28a901.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/texture-mapping-bca9d9f5.js">
 	</head>
 	<body>
 		<div>
@@ -23,16 +23,16 @@
 
 
 
-<div class="app"><nav class="navbar svelte-i9ah0n"><a class="flex-grow svelte-i9ah0n" href="/"><img class="logo dark svelte-i9ah0n" src="/images/logo-full-dark.svg" alt="logo">
-		<img class="logo light svelte-i9ah0n" src="/images/logo-full-light.svg" alt="logo"></a>
-	<label for="dark-mode-toggle" class="svelte-i9ah0n">toggle between light and dark mode</label>
-	<input id="dark-mode-toggle" class="dark-mode-toggle svelte-i9ah0n" type="checkbox">
-	<label for="links-button" class="svelte-i9ah0n">show or hide links pop-up</label>
-	<input id="links-button" class="links-button svelte-i9ah0n" type="checkbox">
-	<ul class="links svelte-i9ah0n"><li class="svelte-i9ah0n"><a href="/" class="svelte-i9ah0n">HOME</a></li>
-		<li class="svelte-i9ah0n"><a href="/cv/" class="svelte-i9ah0n">CV</a></li>
-		<li class="svelte-i9ah0n"><a href="/blog/" class="svelte-i9ah0n">BLOG</a></li>
-		<li class="svelte-i9ah0n"><a href="./.." class="svelte-i9ah0n">PARENT</a></li></ul>
+<div class="app"><nav class="navbar svelte-xy5ery"><a class="flex-grow svelte-xy5ery" href="/"><img class="logo dark svelte-xy5ery" src="/images/logo-full-dark.svg" alt="logo">
+		<img class="logo light svelte-xy5ery" src="/images/logo-full-light.svg" alt="logo"></a>
+	<label for="dark-mode-toggle" class="svelte-xy5ery">toggle between light and dark mode</label>
+	<input id="dark-mode-toggle" class="dark-mode-toggle svelte-xy5ery" type="checkbox">
+	<label for="links-button" class="svelte-xy5ery">show or hide links pop-up</label>
+	<input id="links-button" class="links-button svelte-xy5ery" type="checkbox">
+	<ul class="links svelte-xy5ery"><li class="svelte-xy5ery"><a href="/" class="svelte-xy5ery">HOME</a></li>
+		<li class="svelte-xy5ery"><a href="/cv/" class="svelte-xy5ery">CV</a></li>
+		<li class="svelte-xy5ery"><a href="/blog/" class="svelte-xy5ery">BLOG</a></li>
+		<li class="svelte-xy5ery"><a href="./.." class="svelte-xy5ery">PARENT</a></li></ul>
 </nav>
 
 
@@ -131,7 +131,7 @@ l0,-144c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
 -470,-1265c-4.7,-6,-9.7,-11.7,-15,-17c-0.7,-0.7,-6.7,-1,-18,-1z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span></span></span></span></span></span><!-- HTML_TAG_END -->
 <p>To get rid of the 2x3 matrix, it can be represented as an 3x3 matrix with the last row all zeroes, and then the resulting zero in the final 3D vector can be dropped.</p>
 <p>Here is an applet that demonstrates how this UV mapping behaves. You can drag the corners of both triangles and follow the red and aqua markers to see which points are mapped to each other (if you complete the parallelogram).</p>
-<div class="applet svelte-5sqtue"><canvas class="canvas svelte-5sqtue" id="demo-canvas" width="800" height="400"></canvas>
+<div class="applet svelte-1jhl62f"><canvas class="canvas svelte-1jhl62f" id="demo-canvas" width="800" height="400"></canvas>
     <form><input id="linear-interpolation-mode-bilinear" name="image-interpolation-mode" type="radio" value="true" selected>
         <label for="linear-interpolation-mode-bilinear">Bilinear</label>
         <input id="linear-interpolation-mode-nearest-neighbour" name="image-interpolation-mode" type="radio" value="false">
@@ -195,13 +195,13 @@ b_perspective = b_perspective_scaled / sum_of_components(b_perspective_scaled)</
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="1rva3jq">
-		import { set_public_env, start } from "/_app/immutable/start-00b1d136.js";
+		<script type="module" data-sveltekit-hydrate="1fat297">
+		import { set_public_env, start } from "/_app/immutable/start-fa989621.js";
 
 		set_public_env({});
 
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="1rva3jq"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="1fat297"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: false,

@@ -103,8 +103,8 @@
 	%nav-button {
 		appearance: none;
 		margin: 0 0.25em;
+		width: 1.25em;
 		height: 1.25em;
-		aspect-ratio: 1;
 	}
 
 	.navbar .links-button {

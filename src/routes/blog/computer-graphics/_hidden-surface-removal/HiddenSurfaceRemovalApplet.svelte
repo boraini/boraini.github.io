@@ -50,7 +50,6 @@
 	var pointerId = undefined;
 
 	function pd(e) {
-		e.preventDefault();
 		if (!pointerId) {
 			pointerId = e.pointerId;
 			console.log(pointerId);
@@ -58,11 +57,9 @@
 		}
 	}
 	function pm(e) {
-		e.preventDefault();
 		if (e.pointerId == pointerId) setPointerLocation(e.clientX, e.clientY);
 	}
 	function pu(e) {
-		e.preventDefault();
 		if (e.pointerId == pointerId) pointerId = undefined;
 	}
 
@@ -149,4 +146,5 @@
         max-width: 30em
         height: auto
         border: 1px solid var(--page-foreground)
+        touch-action: none
 </style>

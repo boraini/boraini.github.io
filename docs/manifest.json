@@ -27,8 +27,12 @@
     "file": "_app/immutable/assets/linear-and-affine-transformations-95adcc8c.png",
     "src": "src/routes/blog/computer-graphics/linear-and-affine-transformations.png"
   },
+  "src/routes/blog/personal/_personal/thumbnail.svg": {
+    "file": "_app/immutable/assets/thumbnail-16ffd84f.svg",
+    "src": "src/routes/blog/personal/_personal/thumbnail.svg"
+  },
   ".svelte-kit/runtime/client/start.js": {
-    "file": "_app/immutable/start-fa989621.js",
+    "file": "_app/immutable/start-554c27bc.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -46,6 +50,7 @@
       "_projective-space-1d6982d8.js",
       "_texture-mapping-bca9d9f5.js",
       "src/routes/blog/index.svelte",
+      "_just-go-for-it-6a810600.js",
       "src/routes/cv.svx",
       "src/routes/index.svelte",
       "src/routes/sveltekit.svelte"
@@ -73,7 +78,7 @@
     ]
   },
   "src/routes/blog/[...slug].svelte": {
-    "file": "_app/immutable/pages/blog/_...slug_.svelte-6e513223.js",
+    "file": "_app/immutable/pages/blog/_...slug_.svelte-1d602c7a.js",
     "src": "src/routes/blog/[...slug].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -81,10 +86,11 @@
       "_boraini-a8f150d1.js",
       "_local-and-world-space-eb2e15b5.js",
       "_projective-space-1d6982d8.js",
-      "__IndexPage-965f8664.js",
+      "__IndexPage-fbaa64fd.js",
       "_hidden-surface-removal-9ad67db1.js",
       "_linear-and-affine-transformations-d2fb14e1.js",
       "_texture-mapping-bca9d9f5.js",
+      "_just-go-for-it-6a810600.js",
       "_index-8e6002e7.js",
       "__author_layout.svelte_svelte_type_style_lang-1d56dbad.js",
       "__blog_layout-7e7a0e1d.js"
@@ -100,7 +106,7 @@
     ]
   },
   "src/routes/blog/index.svelte": {
-    "file": "_app/immutable/pages/blog/index.svelte-6b9ba765.js",
+    "file": "_app/immutable/pages/blog/index.svelte-89a3da19.js",
     "src": "src/routes/blog/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -108,10 +114,11 @@
       "_boraini-a8f150d1.js",
       "_local-and-world-space-eb2e15b5.js",
       "_projective-space-1d6982d8.js",
-      "__IndexPage-965f8664.js",
+      "__IndexPage-fbaa64fd.js",
       "_hidden-surface-removal-9ad67db1.js",
       "_linear-and-affine-transformations-d2fb14e1.js",
       "_texture-mapping-bca9d9f5.js",
+      "_just-go-for-it-6a810600.js",
       "_index-8e6002e7.js",
       "__author_layout.svelte_svelte_type_style_lang-1d56dbad.js",
       "__blog_layout-7e7a0e1d.js"
@@ -208,6 +215,16 @@
       "_texture-mapping-bca9d9f5.js"
     ]
   },
+  "src/routes/blog/personal/just-go-for-it.md": {
+    "file": "_app/immutable/pages/blog/personal/just-go-for-it.md-c713100c.js",
+    "src": "src/routes/blog/personal/just-go-for-it.md",
+    "isEntry": true,
+    "imports": [
+      "_index-8e6002e7.js",
+      "__blog_layout-7e7a0e1d.js",
+      "_just-go-for-it-6a810600.js"
+    ]
+  },
   "_index-8e6002e7.js": {
     "file": "_app/immutable/chunks/index-8e6002e7.js"
   },
@@ -249,8 +266,8 @@
       "_app/immutable/assets/frustum-be4be6a3.svg"
     ]
   },
-  "__IndexPage-965f8664.js": {
-    "file": "_app/immutable/chunks/_IndexPage-965f8664.js",
+  "__IndexPage-fbaa64fd.js": {
+    "file": "_app/immutable/chunks/_IndexPage-fbaa64fd.js",
     "imports": [
       "_boraini-a8f150d1.js",
       "_hidden-surface-removal-9ad67db1.js",
@@ -258,6 +275,7 @@
       "_local-and-world-space-eb2e15b5.js",
       "_projective-space-1d6982d8.js",
       "_texture-mapping-bca9d9f5.js",
+      "_just-go-for-it-6a810600.js",
       "_index-8e6002e7.js",
       "__blog_layout-7e7a0e1d.js"
     ],
@@ -266,7 +284,8 @@
     ],
     "assets": [
       "_app/immutable/assets/snowboarder_original-cab17ecb.png",
-      "_app/immutable/assets/linear-and-affine-transformations-95adcc8c.png"
+      "_app/immutable/assets/linear-and-affine-transformations-95adcc8c.png",
+      "_app/immutable/assets/thumbnail-16ffd84f.svg"
     ]
   },
   "_hidden-surface-removal-9ad67db1.js": {
@@ -299,6 +318,14 @@
       "_app/immutable/assets/texture-mapping-97e64aa2.css"
     ]
   },
+  "_just-go-for-it-6a810600.js": {
+    "file": "_app/immutable/chunks/just-go-for-it-6a810600.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-8e6002e7.js",
+      "__blog_layout-7e7a0e1d.js"
+    ]
+  },
   "__blog_layout-7e7a0e1d.js": {
     "file": "_app/immutable/chunks/_blog_layout-7e7a0e1d.js",
     "imports": [
@@ -321,17 +348,17 @@
     "file": "_app/immutable/assets/__layout-8845564c.css",
     "src": "src/routes/__layout.css"
   },
-  "_IndexPage.css": {
-    "file": "_app/immutable/assets/_IndexPage-0f5bb2fa.css",
-    "src": "_IndexPage.css"
+  "hidden-surface-removal.css": {
+    "file": "_app/immutable/assets/hidden-surface-removal-0bafbe17.css",
+    "src": "hidden-surface-removal.css"
   },
   "local-and-world-space.css": {
     "file": "_app/immutable/assets/local-and-world-space-8d2ee48f.css",
     "src": "local-and-world-space.css"
   },
-  "src/routes/index.css": {
-    "file": "_app/immutable/assets/index-76c458cb.css",
-    "src": "src/routes/index.css"
+  "texture-mapping.css": {
+    "file": "_app/immutable/assets/texture-mapping-97e64aa2.css",
+    "src": "texture-mapping.css"
   },
   "_blog_layout.css": {
     "file": "_app/immutable/assets/_blog_layout-5741a32b.css",
@@ -341,12 +368,12 @@
     "file": "_app/immutable/assets/_author_layout-81621e66.css",
     "src": "_author_layout.css"
   },
-  "hidden-surface-removal.css": {
-    "file": "_app/immutable/assets/hidden-surface-removal-0bafbe17.css",
-    "src": "hidden-surface-removal.css"
+  "src/routes/index.css": {
+    "file": "_app/immutable/assets/index-76c458cb.css",
+    "src": "src/routes/index.css"
   },
-  "texture-mapping.css": {
-    "file": "_app/immutable/assets/texture-mapping-97e64aa2.css",
-    "src": "texture-mapping.css"
+  "_IndexPage.css": {
+    "file": "_app/immutable/assets/_IndexPage-0f5bb2fa.css",
+    "src": "_IndexPage.css"
   }
 }

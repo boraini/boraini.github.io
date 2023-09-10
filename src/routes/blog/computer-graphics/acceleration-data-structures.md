@@ -1,7 +1,8 @@
 ---
 title: Acceleration Data Structures
-description: How to get spatial information about the scene efficiently
+excerpt: How to get spatial information about the scene efficiently
 author: boraini
+thumbnail: ./_acceleration-data-structures/ads-thumbnail.svg
 date: 2023-09-05
 ---
 

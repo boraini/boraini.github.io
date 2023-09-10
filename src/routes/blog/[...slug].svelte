@@ -11,7 +11,6 @@
         const metadata = {...metadata2};
 
         if (metadata.thumbnail) {
-            console.log("./" + path.join(metadata.assetPath, metadata.thumbnail));
             metadata.thumbnail = pageImport["./" + path.join(metadata.assetPath, metadata.thumbnail)].default;
         }
         

@@ -52,7 +52,6 @@
 	function pd(e) {
 		if (!pointerId) {
 			pointerId = e.pointerId;
-			console.log(pointerId);
 			setPointerLocation(e.clientX, e.clientY);
 		}
 	}

@@ -18,12 +18,12 @@
 </PortfolioItem>
 
 <PortfolioItem title="AI Chatbot for Discord" link="https://github.com/boraini/sayabot/">
-    This bot is written in Python 3 and uses the Disnake to interface with the Discord bot API. It also uses the Hugging Face Inference API to 
+    This bot is written in Python 3 and uses Disnake to interface with the Discord bot API. It also uses the Hugging Face Inference API to 
     generate text using different GPT models.
 </PortfolioItem>
 
 <PortfolioItem title="Frog Girl Adventures" link="https://github.com/boraini/frog-girl-adventures/" image="/images/portfolio-frog-girl-adventures.png">
-    This is a browser puzzle game where you have to move the cute Frog Girl through a maze where she needs to manipulate objects in human
+    This is a browser puzzle game where you have to move the protagonist Frog Girl through a maze where she needs to manipulate objects in human
     form in order to progress, or can jump on lilypads in frog form. The game is powered by Three.JS and has algorithms like for pathfinding.
 </PortfolioItem>
 

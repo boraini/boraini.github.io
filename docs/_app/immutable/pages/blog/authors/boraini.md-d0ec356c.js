@@ -1,0 +1,1 @@
+import"../../../chunks/index-2fdc1048.js";import{B as r,m as e}from"../../../chunks/boraini-21d826a9.js";import"../../../chunks/_author_layout.svelte_svelte_type_style_lang-f8232355.js";export{r as default,e as metadata};

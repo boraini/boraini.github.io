@@ -7,10 +7,6 @@
     "file": "_app/immutable/assets/bvh-midpoint-6ce7fca5.svg",
     "src": "src/routes/blog/computer-graphics/_acceleration-data-structures/bvh-midpoint.svg"
   },
-  "src/routes/blog/computer-graphics/_projective-space/frustum.svg": {
-    "file": "_app/immutable/assets/frustum-be4be6a3.svg",
-    "src": "src/routes/blog/computer-graphics/_projective-space/frustum.svg"
-  },
   "src/routes/blog/computer-graphics/_local-and-world-space/character-arm.svg": {
     "file": "_app/immutable/assets/character-arm-f96a1a9e.svg",
     "src": "src/routes/blog/computer-graphics/_local-and-world-space/character-arm.svg"
@@ -27,9 +23,13 @@
     "file": "_app/immutable/assets/trilizard-sleeping-a87042bc.svg",
     "src": "src/routes/blog/authors/trilizard-sleeping.svg"
   },
-  "src/routes/blog/computer-graphics/_acceleration-data-structures/ads-thumbnail.svg": {
-    "file": "_app/immutable/assets/ads-thumbnail-a92b3ece.svg",
-    "src": "src/routes/blog/computer-graphics/_acceleration-data-structures/ads-thumbnail.svg"
+  "src/routes/blog/computer-graphics/_projective-space/frustum.svg": {
+    "file": "_app/immutable/assets/frustum-be4be6a3.svg",
+    "src": "src/routes/blog/computer-graphics/_projective-space/frustum.svg"
+  },
+  "src/routes/blog/computer-graphics/_acceleration-data-structures/accel-thumbnail.svg": {
+    "file": "_app/immutable/assets/accel-thumbnail-a92b3ece.svg",
+    "src": "src/routes/blog/computer-graphics/_acceleration-data-structures/accel-thumbnail.svg"
   },
   "src/routes/blog/computer-graphics/_texture-mapping/snowboarder_original.png": {
     "file": "_app/immutable/assets/snowboarder_original-cab17ecb.png",
@@ -44,7 +44,7 @@
     "src": "src/routes/blog/personal/_personal/thumbnail.svg"
   },
   ".svelte-kit/runtime/client/start.js": {
-    "file": "_app/immutable/start-597fbb42.js",
+    "file": "_app/immutable/start-b9128fb8.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -56,8 +56,8 @@
       "src/routes/blog/[...slug].svelte",
       "_boraini-21d826a9.js",
       "src/routes/blog/authors/index.svelte",
-      "_acceleration-data-structures-f16aa0cc.js",
-      "_hidden-surface-removal-c75dc3e4.js",
+      "_acceleration-data-structures-ef696428.js",
+      "_hidden-surface-removal-d4a1617a.js",
       "_linear-and-affine-transformations-2b942b9f.js",
       "_local-and-world-space-e91077a2.js",
       "_projective-space-382acdea.js",
@@ -92,17 +92,17 @@
     ]
   },
   "src/routes/blog/[...slug].svelte": {
-    "file": "_app/immutable/pages/blog/_...slug_.svelte-421fdcdd.js",
+    "file": "_app/immutable/pages/blog/_...slug_.svelte-4886ee3d.js",
     "src": "src/routes/blog/[...slug].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_boraini-21d826a9.js",
-      "__IndexPage-d60c63cd.js",
-      "_acceleration-data-structures-f16aa0cc.js",
+      "__IndexPage-6b880476.js",
+      "_acceleration-data-structures-ef696428.js",
       "_local-and-world-space-e91077a2.js",
       "_projective-space-382acdea.js",
-      "_hidden-surface-removal-c75dc3e4.js",
+      "_hidden-surface-removal-d4a1617a.js",
       "_linear-and-affine-transformations-2b942b9f.js",
       "_texture-mapping-e1788145.js",
       "_just-go-for-it-cff11bdf.js",
@@ -121,17 +121,17 @@
     ]
   },
   "src/routes/blog/index.svelte": {
-    "file": "_app/immutable/pages/blog/index.svelte-8342782a.js",
+    "file": "_app/immutable/pages/blog/index.svelte-840620c5.js",
     "src": "src/routes/blog/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_boraini-21d826a9.js",
-      "__IndexPage-d60c63cd.js",
-      "_acceleration-data-structures-f16aa0cc.js",
+      "__IndexPage-6b880476.js",
+      "_acceleration-data-structures-ef696428.js",
       "_local-and-world-space-e91077a2.js",
       "_projective-space-382acdea.js",
-      "_hidden-surface-removal-c75dc3e4.js",
+      "_hidden-surface-removal-d4a1617a.js",
       "_linear-and-affine-transformations-2b942b9f.js",
       "_texture-mapping-e1788145.js",
       "_just-go-for-it-cff11bdf.js",
@@ -194,13 +194,13 @@
     ]
   },
   "src/routes/blog/computer-graphics/acceleration-data-structures.md": {
-    "file": "_app/immutable/pages/blog/computer-graphics/acceleration-data-structures.md-907cde68.js",
+    "file": "_app/immutable/pages/blog/computer-graphics/acceleration-data-structures.md-53894513.js",
     "src": "src/routes/blog/computer-graphics/acceleration-data-structures.md",
     "isEntry": true,
     "imports": [
       "_index-2fdc1048.js",
       "__blog_layout-34b26a2e.js",
-      "_acceleration-data-structures-f16aa0cc.js"
+      "_acceleration-data-structures-ef696428.js"
     ]
   },
   "src/routes/blog/computer-graphics/local-and-world-space.md": {
@@ -224,13 +224,13 @@
     ]
   },
   "src/routes/blog/computer-graphics/hidden-surface-removal.md": {
-    "file": "_app/immutable/pages/blog/computer-graphics/hidden-surface-removal.md-38b7d642.js",
+    "file": "_app/immutable/pages/blog/computer-graphics/hidden-surface-removal.md-3e5dfeec.js",
     "src": "src/routes/blog/computer-graphics/hidden-surface-removal.md",
     "isEntry": true,
     "imports": [
       "_index-2fdc1048.js",
       "__blog_layout-34b26a2e.js",
-      "_hidden-surface-removal-c75dc3e4.js"
+      "_hidden-surface-removal-d4a1617a.js"
     ]
   },
   "src/routes/blog/computer-graphics/linear-and-affine-transformations.md": {
@@ -277,12 +277,12 @@
       "_app/immutable/assets/trilizard-sleeping-a87042bc.svg"
     ]
   },
-  "__IndexPage-d60c63cd.js": {
-    "file": "_app/immutable/chunks/_IndexPage-d60c63cd.js",
+  "__IndexPage-6b880476.js": {
+    "file": "_app/immutable/chunks/_IndexPage-6b880476.js",
     "imports": [
       "_boraini-21d826a9.js",
-      "_acceleration-data-structures-f16aa0cc.js",
-      "_hidden-surface-removal-c75dc3e4.js",
+      "_acceleration-data-structures-ef696428.js",
+      "_hidden-surface-removal-d4a1617a.js",
       "_linear-and-affine-transformations-2b942b9f.js",
       "_local-and-world-space-e91077a2.js",
       "_projective-space-382acdea.js",
@@ -295,14 +295,14 @@
       "_app/immutable/assets/_IndexPage-0f5bb2fa.css"
     ],
     "assets": [
-      "_app/immutable/assets/ads-thumbnail-a92b3ece.svg",
+      "_app/immutable/assets/accel-thumbnail-a92b3ece.svg",
       "_app/immutable/assets/snowboarder_original-cab17ecb.png",
       "_app/immutable/assets/linear-and-affine-transformations-95adcc8c.png",
       "_app/immutable/assets/thumbnail-16ffd84f.svg"
     ]
   },
-  "_acceleration-data-structures-f16aa0cc.js": {
-    "file": "_app/immutable/chunks/acceleration-data-structures-f16aa0cc.js",
+  "_acceleration-data-structures-ef696428.js": {
+    "file": "_app/immutable/chunks/acceleration-data-structures-ef696428.js",
     "isDynamicEntry": true,
     "imports": [
       "_index-2fdc1048.js",
@@ -340,8 +340,8 @@
       "_app/immutable/assets/frustum-be4be6a3.svg"
     ]
   },
-  "_hidden-surface-removal-c75dc3e4.js": {
-    "file": "_app/immutable/chunks/hidden-surface-removal-c75dc3e4.js",
+  "_hidden-surface-removal-d4a1617a.js": {
+    "file": "_app/immutable/chunks/hidden-surface-removal-d4a1617a.js",
     "isDynamicEntry": true,
     "imports": [
       "_index-2fdc1048.js",
@@ -396,21 +396,21 @@
       "_app/immutable/assets/_author_layout-81621e66.css"
     ]
   },
-  "_IndexPage.css": {
-    "file": "_app/immutable/assets/_IndexPage-0f5bb2fa.css",
-    "src": "_IndexPage.css"
-  },
   "src/routes/__layout.css": {
     "file": "_app/immutable/assets/__layout-95ca4ef6.css",
     "src": "src/routes/__layout.css"
   },
-  "local-and-world-space.css": {
-    "file": "_app/immutable/assets/local-and-world-space-8d2ee48f.css",
-    "src": "local-and-world-space.css"
+  "_IndexPage.css": {
+    "file": "_app/immutable/assets/_IndexPage-0f5bb2fa.css",
+    "src": "_IndexPage.css"
   },
   "hidden-surface-removal.css": {
     "file": "_app/immutable/assets/hidden-surface-removal-0bafbe17.css",
     "src": "hidden-surface-removal.css"
+  },
+  "local-and-world-space.css": {
+    "file": "_app/immutable/assets/local-and-world-space-8d2ee48f.css",
+    "src": "local-and-world-space.css"
   },
   "texture-mapping.css": {
     "file": "_app/immutable/assets/texture-mapping-97e64aa2.css",

@@ -16,7 +16,6 @@
         
         if (metadata.authors && typeof metadata.authors[0] == "string") {
             metadata.authors = await Promise.all(metadata.authors.map(name => fetch(`/blog/authorInfo?nickname=${name}`).then(r => r.json())));
-            console.log(metadata.authors);
         }
 
         return metadata;

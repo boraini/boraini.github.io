@@ -1,0 +1,34 @@
+<script>
+    import PortfolioItem from "$lib/components/portfolio/PortfolioItem.svelte";
+</script>
+
+<main style="margin: auto; max-width: 60rem;">
+<h1> Portfolio </h1>
+<PortfolioItem title="Personal Website" link="https://github.com/boraini/boraini.github.io/">
+    This website serves to show of my CV and portfolio, and maybe more in the future!
+
+    In the blog section, you can find interactive applications which seek to provide visual aid to understand a simple concept, or something
+    more complex. For example see the Hidden Surface Removal and Texture Mapping applets in my computer graphics blog.
+</PortfolioItem>
+
+<PortfolioItem title="Social Media Application">
+    This is an Instagram-like application where users and make friends with and chat with others. It uses Spring Boot with the Java language
+    for the back-end and has a front-end written with React Native in JavaScript. Due to not having the rights I can only provide the details 
+    if you contact me personally.
+</PortfolioItem>
+
+<PortfolioItem title="AI Chatbot for Discord" link="https://github.com/boraini/sayabot/">
+    This bot is written in Python 3 and uses the Disnake to interface with the Discord bot API. It also uses the Hugging Face Inference API to 
+    generate text using different GPT models.
+</PortfolioItem>
+
+<PortfolioItem title="Frog Girl Adventures" link="https://github.com/boraini/frog-girl-adventures/" image="/images/portfolio-frog-girl-adventures.png">
+    This is a browser puzzle game where you have to move the cute Frog Girl through a maze where she needs to manipulate objects in human
+    form in order to progress, or can jump on lilypads in frog form. The game is powered by Three.JS and has algorithms like for pathfinding.
+</PortfolioItem>
+
+<PortfolioItem title="ChemDraw" link="https://github.com/boraini/ChemDraw/" image="/images/portfolio-chemdraw.png">
+    This is a browser application in which the user can simulate the mixing of different aqueous solutions and watch the solute and temperature 
+    diffusion in real time. It is written using vanilla JavaScript.
+</PortfolioItem>
+</main>

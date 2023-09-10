@@ -14,6 +14,7 @@
         background-color: var(--page-background-highlight)
         color: var(--page-foreground-highlight)
         vertical-align: top
+        text-decoration: none
     
     .button-link:hover
         background-color: var(--page-background-highlight-lighter)

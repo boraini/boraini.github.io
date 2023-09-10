@@ -11,7 +11,8 @@
     # Mert Bora İnevi
 
     [github.com/boraini](https://github.com/boraini)
-
+    
+    [boraini.com/portfolio](/portfolio/)
 </section>
 <section id="education">
 

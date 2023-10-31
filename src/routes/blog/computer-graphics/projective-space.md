@@ -5,8 +5,9 @@ author: boraini
 date: 2023-01-09
 thumbnail: ./_projective-space/frustum.svg
 ---
+> This article was modified on 2023-10-30 in order to have the proper theory about perspective projection matrices. You can find the old version on GitHub as of 2023-10-30 if you look at the File History.
 
-In my article about linear and affine transformations ı have talked about how CG people were so clever that they added a (n + 1)th dimension to their position vectors to enable translation. Well, this is still correct, but there is something more this is used for.
+In my article about linear and affine transformations I have talked about how CG people were so clever that they added a (n + 1)th dimension to their position vectors to enable translation. Well, this is still correct, but there is something more this is used for.
 
 If you have looked into perspective before, you know that it makes farther objects shrink when they are perspective projected. This is achieved by dividing each point on the surface by its depth, something foreign to the linear transformations employed in 3D graphics, where every component of vectors are independently transformed.
 
@@ -70,41 +71,84 @@ Frustum in 2D with the simulated camera obscura box.
 The near plane is what we have told about above — the cut face of the frustum. The frustum will be mapped onto n normalized coordinates between -1 and 1. If we map the points on the near plane to depth coordinate 1, we map some to -1; the latter points will be on the far plane. Points on the other faces of the frustum will have -1 or 1 as other mapped coordinates. By the way, to get actual projection, we just drop the depth coordinate after finding the representative point.
 
 
-To derive the projection matrix, let’s start with how w is calculated for a 3D point. Let’s say the near plane is at a distance n and the far plane is at a distance f to the focal point. We aim for the points on the near plane to keep their coordinates other than the depth the same, so we want w to be 1 for these points. We also want z’ (the mapped depth coordinate) to be 1 for the near plane and -1 for the far plane.
+To derive the projection matrix, let’s start with how w is calculated for a 3D point. Let’s say the near plane is at a distance n and the far plane is at a distance f to the focal point. We would like to divide the x and y coordinates by the depth value which is done by setting the w value to the unprojected z coordinate. We also want z’ (the mapped depth coordinate) to be 1 for the near plane and -1 for the far plane.
 
 
-z’ = -1 for points on near
-z’ = 1 for points on far
-w = 1 for points on near and w is linearly proportional to the depth.
+- z’ = -1 for points on near
+- z’ = 1 for points on far
+- w = -z
 
 
-First, the equation for w is -z/n. The negative is because z is negative for points in front of the camera.
+First, the equation for w is -z. The negative sign is there because z is negative for points in front of the camera.
 
 
-Let midpoint be (near + far)/2. z’ is (signed distance from midpoint)/(signed distance of far from midpoint)
+We would like z' to be inversely proportional to the z value. This will allow us to do screen-space operations with the perspectively scaled z coordinate, so, for example, we can have greater parallax difference in screen space for object pairs closer to the camera.
 
+Let's set up an equation z' = A/z + b.
 
-The equation would be
-
+For the near and far planes, this becomes the following. Note that n and f are positive while their plane z coordinates would be negative if they are in front of the camera.
 ```math
-z’ = -\frac{z - \frac{n + f}{2}}{\frac{n - f}{2}}\\
-\\
-z’ = -\frac{2z}{n - f} + \frac{n + f}{n - f}
+\begin{split}
+-1 = A/(-n) + B\\
+1 = A/(-f) + B
+\end{split}
 ```
 
-a nice linear function. But here is the catch: the pipeline will divide everything by w afterwards so we need to scale everything by w. We gotta read the z’ value before such division occurs.
+If we add them together and apply some algebra:
 
+```math
+B = -\frac{A(n+f)}{-2nf}
+```
 
-Since we made sure nothing on the near plane will be perspective divided, the transformation for the coordinates other than depth can stay as identity.
+Then, we plug this in into the near plane equation as B.
 
+```math
+\begin{split}
+-1 &= \frac{A}{-n} + -\frac{A(n+f)}{-2nf}\\
+-1 &= \frac{A(2f-n-f)}{-2nf}\\
+2nf &= A(f-n)\\
+A &= \frac{2nf}{f-n}
+\end{split}
+```
 
-Oh hey, we have got the OpenGL perspective projection matrix! Note that this is slightly different than the original and there is usually an aspect ratio involved on the ones you would find on the Internet. This matrix works comparedly fine.
+Then we can plug it into the equation for B in order to get A.
+
+```math
+\begin{split}
+B &= -\frac{2nf(f+n)}{-2nf(f-n)}\\
+B &= \frac{f+n}{f-n}
+\end{split}
+```
+
+Now, this might scare us since it is not a linear equation i. e. we can't put it into the projection matrix and expect it to work.
+However, we should not forget to scale everything up by w = -z, which is necessary since the graphics pipeline will divide every coordinate by w.
+
+```math
+\begin{split}
+z'&= \frac{2nf}{(f-n)z} + \frac{f+n}{f-n}\\
+wz' &= \frac{2nf(-z)}{(f-n)z} + \frac{-z(f+n)}{f-n}\\
+wz' &= -\frac{2nf}{f-n} + -\frac{z(f+n)}{f-n}\\
+\end{split}
+```
+
+And the other coordinates are given as below. The aspect ratio is the screen width divided by screen height.
+The camera that we are simulating will always have the image sensor shaped like a square, and the pipeline will stretch the projected 
+objects horizontally in order to cover the screen. We could also instead scale down in the vertical direction but let's choose to do it the former way. We fit the vertical coordinates one to one to the screen in that case. We still have to divide instead of multiplying since aspect ratio is scaling of the horizontal compared to the vertical, not the other way.
+```math
+\begin{split}
+wx' &= x\\
+wy' &= \frac{y}{\textup{aspect ratio}}
+\end{split}
+```
+
+Oh hey, we have got the OpenGL perspective projection matrix! This time it should be correct, if you have read the old version of this article.
 
 ```math
 \begin{pmatrix}
 1&0&0&0\\
-0&1&0&0\\
-0&0&-\frac{2}{n - f}&\frac{n - f}{n + f}\\
-0&0&-1/n&0\\
+0&\frac{1}{\textup{aspect ratio}}&0&0\\
+0&0&-\frac{f+n}{f-n}&-\frac{2nf}{f-n}\\
+0&0&-1&0\\
 \end{pmatrix}
 ```
+

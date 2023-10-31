@@ -19,13 +19,13 @@
     "file": "_app/immutable/assets/object-hierarchy-complete-19fc906e.svg",
     "src": "src/routes/blog/computer-graphics/_local-and-world-space/object-hierarchy-complete.svg"
   },
-  "src/routes/blog/authors/trilizard-sleeping.svg": {
-    "file": "_app/immutable/assets/trilizard-sleeping-a87042bc.svg",
-    "src": "src/routes/blog/authors/trilizard-sleeping.svg"
-  },
   "src/routes/blog/computer-graphics/_projective-space/frustum.svg": {
     "file": "_app/immutable/assets/frustum-be4be6a3.svg",
     "src": "src/routes/blog/computer-graphics/_projective-space/frustum.svg"
+  },
+  "src/routes/blog/authors/trilizard-sleeping.svg": {
+    "file": "_app/immutable/assets/trilizard-sleeping-a87042bc.svg",
+    "src": "src/routes/blog/authors/trilizard-sleeping.svg"
   },
   "src/routes/blog/computer-graphics/_acceleration-data-structures/accel-thumbnail.svg": {
     "file": "_app/immutable/assets/accel-thumbnail-a92b3ece.svg",
@@ -44,7 +44,7 @@
     "src": "src/routes/blog/personal/_personal/thumbnail.svg"
   },
   ".svelte-kit/runtime/client/start.js": {
-    "file": "_app/immutable/start-b9128fb8.js",
+    "file": "_app/immutable/start-bd473b25.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -60,7 +60,7 @@
       "_hidden-surface-removal-d4a1617a.js",
       "_linear-and-affine-transformations-2b942b9f.js",
       "_local-and-world-space-e91077a2.js",
-      "_projective-space-382acdea.js",
+      "_projective-space-68139259.js",
       "_texture-mapping-e1788145.js",
       "src/routes/blog/index.svelte",
       "_just-go-for-it-cff11bdf.js",
@@ -92,16 +92,16 @@
     ]
   },
   "src/routes/blog/[...slug].svelte": {
-    "file": "_app/immutable/pages/blog/_...slug_.svelte-4886ee3d.js",
+    "file": "_app/immutable/pages/blog/_...slug_.svelte-7799beac.js",
     "src": "src/routes/blog/[...slug].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_boraini-21d826a9.js",
-      "__IndexPage-6b880476.js",
+      "__IndexPage-4a5de937.js",
       "_acceleration-data-structures-ef696428.js",
       "_local-and-world-space-e91077a2.js",
-      "_projective-space-382acdea.js",
+      "_projective-space-68139259.js",
       "_hidden-surface-removal-d4a1617a.js",
       "_linear-and-affine-transformations-2b942b9f.js",
       "_texture-mapping-e1788145.js",
@@ -121,16 +121,16 @@
     ]
   },
   "src/routes/blog/index.svelte": {
-    "file": "_app/immutable/pages/blog/index.svelte-840620c5.js",
+    "file": "_app/immutable/pages/blog/index.svelte-26565245.js",
     "src": "src/routes/blog/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_boraini-21d826a9.js",
-      "__IndexPage-6b880476.js",
+      "__IndexPage-4a5de937.js",
       "_acceleration-data-structures-ef696428.js",
       "_local-and-world-space-e91077a2.js",
-      "_projective-space-382acdea.js",
+      "_projective-space-68139259.js",
       "_hidden-surface-removal-d4a1617a.js",
       "_linear-and-affine-transformations-2b942b9f.js",
       "_texture-mapping-e1788145.js",
@@ -214,13 +214,13 @@
     ]
   },
   "src/routes/blog/computer-graphics/projective-space.md": {
-    "file": "_app/immutable/pages/blog/computer-graphics/projective-space.md-6b7e44e3.js",
+    "file": "_app/immutable/pages/blog/computer-graphics/projective-space.md-4499264d.js",
     "src": "src/routes/blog/computer-graphics/projective-space.md",
     "isEntry": true,
     "imports": [
       "_index-2fdc1048.js",
       "__blog_layout-34b26a2e.js",
-      "_projective-space-382acdea.js"
+      "_projective-space-68139259.js"
     ]
   },
   "src/routes/blog/computer-graphics/hidden-surface-removal.md": {
@@ -277,15 +277,15 @@
       "_app/immutable/assets/trilizard-sleeping-a87042bc.svg"
     ]
   },
-  "__IndexPage-6b880476.js": {
-    "file": "_app/immutable/chunks/_IndexPage-6b880476.js",
+  "__IndexPage-4a5de937.js": {
+    "file": "_app/immutable/chunks/_IndexPage-4a5de937.js",
     "imports": [
       "_boraini-21d826a9.js",
       "_acceleration-data-structures-ef696428.js",
       "_hidden-surface-removal-d4a1617a.js",
       "_linear-and-affine-transformations-2b942b9f.js",
       "_local-and-world-space-e91077a2.js",
-      "_projective-space-382acdea.js",
+      "_projective-space-68139259.js",
       "_texture-mapping-e1788145.js",
       "_just-go-for-it-cff11bdf.js",
       "_index-2fdc1048.js",
@@ -329,8 +329,8 @@
       "_app/immutable/assets/object-hierarchy-complete-19fc906e.svg"
     ]
   },
-  "_projective-space-382acdea.js": {
-    "file": "_app/immutable/chunks/projective-space-382acdea.js",
+  "_projective-space-68139259.js": {
+    "file": "_app/immutable/chunks/projective-space-68139259.js",
     "isDynamicEntry": true,
     "imports": [
       "_index-2fdc1048.js",
@@ -400,18 +400,6 @@
     "file": "_app/immutable/assets/__layout-95ca4ef6.css",
     "src": "src/routes/__layout.css"
   },
-  "_IndexPage.css": {
-    "file": "_app/immutable/assets/_IndexPage-0f5bb2fa.css",
-    "src": "_IndexPage.css"
-  },
-  "hidden-surface-removal.css": {
-    "file": "_app/immutable/assets/hidden-surface-removal-0bafbe17.css",
-    "src": "hidden-surface-removal.css"
-  },
-  "local-and-world-space.css": {
-    "file": "_app/immutable/assets/local-and-world-space-8d2ee48f.css",
-    "src": "local-and-world-space.css"
-  },
   "texture-mapping.css": {
     "file": "_app/immutable/assets/texture-mapping-97e64aa2.css",
     "src": "texture-mapping.css"
@@ -420,16 +408,28 @@
     "file": "_app/immutable/assets/_blog_layout-5741a32b.css",
     "src": "_blog_layout.css"
   },
-  "_author_layout.css": {
-    "file": "_app/immutable/assets/_author_layout-81621e66.css",
-    "src": "_author_layout.css"
+  "src/routes/portfolio.css": {
+    "file": "_app/immutable/assets/portfolio-2082efe3.css",
+    "src": "src/routes/portfolio.css"
+  },
+  "local-and-world-space.css": {
+    "file": "_app/immutable/assets/local-and-world-space-8d2ee48f.css",
+    "src": "local-and-world-space.css"
+  },
+  "_IndexPage.css": {
+    "file": "_app/immutable/assets/_IndexPage-0f5bb2fa.css",
+    "src": "_IndexPage.css"
   },
   "src/routes/index.css": {
     "file": "_app/immutable/assets/index-d9dab796.css",
     "src": "src/routes/index.css"
   },
-  "src/routes/portfolio.css": {
-    "file": "_app/immutable/assets/portfolio-2082efe3.css",
-    "src": "src/routes/portfolio.css"
+  "hidden-surface-removal.css": {
+    "file": "_app/immutable/assets/hidden-surface-removal-0bafbe17.css",
+    "src": "hidden-surface-removal.css"
+  },
+  "_author_layout.css": {
+    "file": "_app/immutable/assets/_author_layout-81621e66.css",
+    "src": "_author_layout.css"
   }
 }

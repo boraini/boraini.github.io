@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="159"
+   height="77"
+   version="1.1"
+   id="svg56"
+   sodipodi:docname="HexaLzard.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   inkscape:export-filename="/Users/boris/Desktop/hexalizard.png"
+   inkscape:export-xdpi="1811"
+   inkscape:export-ydpi="1811"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata
+     id="metadata62">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs60">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4811">
+      <rect
+         style="fill:#a32bff;fill-opacity:1;stroke:#8900f2;stroke-width:2;stroke-opacity:1"
+         id="rect4813"
+         ry="3"
+         rx="3"
+         height="28"
+         width="78"
+         y="19"
+         x="26" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1407"
+     inkscape:window-height="714"
+     id="namedview58"
+     showgrid="false"
+     inkscape:zoom="3.6896469"
+     inkscape:cx="52.0375"
+     inkscape:cy="43.364583"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer4"
+     inkscape:object-nodes="false"
+     inkscape:snap-others="false"
+     inkscape:snap-nodes="false"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-bottom="5"
+     fit-margin-right="5"
+     showguides="false"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <desc
+     id="desc2">TriLizard character. Created and drewn by boraini.</desc>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="bg" />
+  <g
+     id="g54"
+     transform="translate(6,6)"
+     inkscape:groupmode="layer">
+    <g
+       name="tail"
+       id="g6">
+      <path
+         d="m 100,31 h 20 q 2,0 2,-2 V 18 q 0,-2 2,-2 h 22 c 2,0 2,4 0,4 h -18 q -2,0 -2,2 v 11 q 0,2 -2,2 h -24"
+         id="path4"
+         inkscape:connector-curvature="0"
+         style="fill:#27ff15;fill-opacity:1;stroke:#12e500;stroke-opacity:1" />
+    </g>
+    <g
+       name="feet"
+       id="g24">
+      <rect
+         x="30"
+         y="44"
+         width="10"
+         height="20"
+         id="rect8"
+         style="fill:#27ff15;fill-opacity:1;stroke:#12e500;stroke-opacity:1" />
+      <path
+         d="m 30,65 v -2.5 c 0,-5 5,-5 5,0 V 65 62.5 c 0,-5 5,-5 5,0 V 65 Z"
+         id="path10"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;stroke:#aaaaaa;stroke-width:2" />
+      <rect
+         x="45"
+         y="44"
+         width="10"
+         height="20"
+         id="rect12"
+         style="fill:#27ff15;fill-opacity:1;stroke:#12e500;stroke-opacity:1" />
+      <path
+         d="m 45,65 v -2.5 c 0,-5 5,-5 5,0 V 65 62.5 c 0,-5 5,-5 5,0 V 65 Z"
+         id="path14"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;stroke:#aaaaaa;stroke-width:2" />
+      <rect
+         x="90"
+         y="44"
+         width="10"
+         height="20"
+         id="rect16"
+         style="fill:#27ff15;fill-opacity:1;stroke:#12e500;stroke-opacity:1" />
+      <path
+         d="m 90,65 v -2.5 c 0,-5 5,-5 5,0 V 65 62.5 c 0,-5 5,-5 5,0 V 65 Z"
+         id="path18"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;stroke:#aaaaaa;stroke-width:2" />
+      <rect
+         x="75"
+         y="44"
+         width="10"
+         height="20"
+         id="rect20"
+         style="fill:#27ff15;fill-opacity:1;stroke:#12e500;stroke-opacity:1" />
+      <path
+         d="m 75,65 v -2.5 c 0,-5 5,-5 5,0 V 65 62.5 c 0,-5 5,-5 5,0 V 65 Z"
+         id="path22"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;stroke:#aaaaaa;stroke-width:2" />
+    </g>
+    <g
+       name="body"
+       id="g32"
+       clip-path="url(#clipPath4811)">
+      <rect
+         x="26"
+         y="19"
+         width="78"
+         height="28"
+         rx="3"
+         ry="3"
+         id="rect26"
+         style="fill:#a32bff;fill-opacity:1;stroke:#8900f2;stroke-width:2;stroke-opacity:1" />
+      <path
+         d="m 106.37599,24.111041 5.95338,10.311562 -5.95338,10.311563 -11.906766,10e-7 -5.953383,-10.311563 5.953382,-10.311563 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="true"
+         sodipodi:arg2="-0.52359878"
+         sodipodi:arg1="-1.0471976"
+         sodipodi:r2="10.311562"
+         sodipodi:r1="11.906767"
+         sodipodi:cy="34.422604"
+         sodipodi:cx="100.42261"
+         sodipodi:sides="6"
+         id="path4821"
+         style="opacity:1;fill:#27ff15;fill-opacity:1;fill-rule:evenodd;stroke:#8900f2;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         sodipodi:type="star" />
+      <path
+         d="m 87.594664,13.378853 5.953384,10.311563 -5.953383,10.311563 -11.906767,0 -5.953384,-10.311562 5.953383,-10.311563 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="true"
+         sodipodi:arg2="-0.52359878"
+         sodipodi:arg1="-1.0471976"
+         sodipodi:r2="10.311562"
+         sodipodi:r1="11.906767"
+         sodipodi:cy="23.690416"
+         sodipodi:cx="81.641281"
+         sodipodi:sides="6"
+         id="path4819"
+         style="opacity:1;fill:#27ff15;fill-opacity:1;fill-rule:evenodd;stroke:#8900f2;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         sodipodi:type="star" />
+      <path
+         d="m 68.813334,24.111041 5.953384,10.311562 -5.953383,10.311563 -11.906767,10e-7 -5.953384,-10.311563 5.953383,-10.311563 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="true"
+         sodipodi:arg2="-0.52359878"
+         sodipodi:arg1="-1.0471976"
+         sodipodi:r2="10.311562"
+         sodipodi:r1="11.906767"
+         sodipodi:cy="34.422604"
+         sodipodi:cx="62.859951"
+         sodipodi:sides="6"
+         id="path4817"
+         style="opacity:1;fill:#27ff15;fill-opacity:1;fill-rule:evenodd;stroke:#8900f2;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         sodipodi:type="star" />
+      <path
+         d="m 50.032008,13.378855 5.953384,10.311563 -5.953383,10.311563 -11.906767,0 -5.953384,-10.311562 5.953383,-10.311563 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="true"
+         sodipodi:arg2="-0.52359878"
+         sodipodi:arg1="-1.0471976"
+         sodipodi:r2="10.311562"
+         sodipodi:r1="11.906767"
+         sodipodi:cy="23.690418"
+         sodipodi:cx="44.078625"
+         sodipodi:sides="6"
+         id="path4815"
+         style="opacity:1;fill:#27ff15;fill-opacity:1;fill-rule:evenodd;stroke:#8900f2;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         sodipodi:type="star" />
+      <path
+         sodipodi:type="star"
+         style="opacity:1;fill:#27ff15;fill-opacity:1;fill-rule:evenodd;stroke:#8900f2;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path4783"
+         sodipodi:sides="6"
+         sodipodi:cx="25.680593"
+         sodipodi:cy="35.189186"
+         sodipodi:r1="11.906767"
+         sodipodi:r2="10.311562"
+         sodipodi:arg1="-1.0471976"
+         sodipodi:arg2="-0.52359878"
+         inkscape:flatsided="true"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="m 31.633976,24.877623 5.953384,10.311563 -5.953383,10.311562 -11.906766,10e-7 -5.953384,-10.311562 5.953383,-10.311563 z" />
+      <!--<rect x="25" y="18" width="80" height="30" fill="none" stroke="#22f" stroke-width="2" rx="3" ry="3"></rect>-->
+    </g>
+    <g
+       name="head"
+       onclick="alert('Tiyze n\'aptin?!', 'TriLizard diyor ki:');"
+       id="g52">
+      <rect
+         x="10"
+         y="0"
+         width="10"
+         height="15"
+         rx="3"
+         ry="3"
+         id="rect34"
+         style="fill:#27ff15;fill-opacity:1;stroke:#12e500;stroke-width:2;stroke-opacity:1" />
+      <rect
+         x="30"
+         y="0"
+         width="10"
+         height="15"
+         rx="3"
+         ry="3"
+         id="rect36"
+         style="fill:#27ff15;fill-opacity:1;stroke:#16ea04;stroke-width:2;stroke-opacity:1" />
+      <rect
+         x="12"
+         y="3"
+         width="6"
+         height="6"
+         rx="2"
+         ry="2"
+         id="rect38"
+         style="fill:#ffffff;stroke:none" />
+      <rect
+         x="32"
+         y="3"
+         width="6"
+         height="6"
+         rx="2"
+         ry="2"
+         id="rect40"
+         style="fill:#ffffff;stroke:none" />
+      <rect
+         x="13"
+         y="4"
+         width="4"
+         height="4"
+         rx="2"
+         ry="2"
+         id="rect42"
+         style="fill:#a32bff;fill-opacity:1;stroke:none" />
+      <rect
+         x="33"
+         y="4"
+         width="4"
+         height="4"
+         rx="2"
+         ry="2"
+         id="rect44"
+         style="fill:#a32bff;fill-opacity:1;stroke:none" />
+      <rect
+         x="0"
+         y="10"
+         width="50"
+         height="15"
+         rx="3"
+         ry="3"
+         id="rect46"
+         style="fill:#a32bff;fill-opacity:1;stroke:#8900f2;stroke-width:2;stroke-opacity:1" />
+      <rect
+         x="3"
+         y="13"
+         width="44"
+         height="9"
+         rx="3"
+         ry="3"
+         id="rect48"
+         style="fill:#ffffff;stroke:none" />
+      <path
+         d="m 3,22 5.5,-9 5.5,9 5.5,-9 5.5,9 5.5,-9 5.5,9 5.5,-9 5.5,9"
+         id="path50"
+         inkscape:connector-curvature="0"
+         style="fill:none;stroke:#000000;stroke-width:2" />
+    </g>
+  </g>
+</svg>

@@ -10,22 +10,16 @@ const config = {
 	extensions: [...mdsvexConfig.extensions, ".svelte"],
 
 	preprocess: [
-		sveltePreprocess(),
 		mdsvex(mdsvexConfig),
+		sveltePreprocess(),
 	],
 
 	kit: {
 		adapter: adapter({
 			pages: "docs",
 			assets: "docs",
+			fallback: "index.html",
 		}),
-		prerender: {
-			default: true
-		},
-		browser: {
-			router: false,
-		},
-		trailingSlash: "always",
 	},
 };
 

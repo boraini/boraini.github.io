@@ -1,25 +1,12 @@
-<script context="module">
-    const ownerNickname = "boraini";
-
-	export async function load({ fetch }) {
-		return {
-			props: {
-                ownerInfo: await fetch(`/blog/authorInfo?nickname=${ownerNickname}`).then(r => r.json()),
-                newArticle: await fetch("/blog/articles?trait=newest").then(r => r.json())
-            }
-		};
-	}
-</script>
-
 <script>
 	import CarouselPageCard from '$lib/components/blog/CarouselPageCard.svelte';
 	import Carousel from '$lib/components/Carousel.svelte';
 	import WebsiteIntroduction from './_website-introduction.md';
 
     export let newsScroll = false;
-
-    export let newArticle;
-    export let ownerInfo;
+    export let data;
+    
+    export let { newArticle, ownerInfo } = data;
 
     function onMouseInNews(e) {
         newsScroll = false;

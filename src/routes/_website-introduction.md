@@ -1,7 +1,6 @@
 <script>
     import SocialLinks from "$lib/components/SocialLinks.svelte";
     import ButtonLink from "$lib/components/ButtonLink.svelte";
-    import boraini from "./blog/authors/boraini.md";
 
     export let ownerInfo;
 </script>

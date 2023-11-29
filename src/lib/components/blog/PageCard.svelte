@@ -5,7 +5,7 @@
 </script>
 
 <div class="page-card">
-	<img class="thumbnail" src={data.thumbnail} />
+	<img class="thumbnail" src={data.thumbnail} alt={data.title} />
 	<div class="min-height-section">
 		<h1 class="title">{data.title}</h1>
 		<p class="description">{data.excerpt}</p>

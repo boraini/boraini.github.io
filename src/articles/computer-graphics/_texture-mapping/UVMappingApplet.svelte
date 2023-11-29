@@ -30,6 +30,8 @@
 </style>
 <script>
     import { onMount } from "svelte";
+    import textureImage from "./snowboarder_original.png";
+    
     export let canvas, settingsForm;
     let ctx, image;
 
@@ -37,7 +39,7 @@
         ctx = canvas.getContext("2d");
 
         image = new Image(3500, 3500);
-        image.src = "../_texture-mapping/snowboarder_original.png";
+        image.src = textureImage;
         getBRect();
 
         canvas.addEventListener("pointerdown", pd);

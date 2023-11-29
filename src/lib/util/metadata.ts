@@ -10,7 +10,7 @@ export type Metadata = {
     assetPath?: string,
     filePath?: string,
     tags?: string[],
-    thumbnail?: string | SvelteComponent,
+    thumbnail?: string,
 };
 
 export type WithMetadata = {

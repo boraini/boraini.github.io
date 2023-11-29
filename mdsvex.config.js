@@ -1,6 +1,7 @@
 import relativeImages from "mdsvex-relative-images";
 import yaml from "yaml";
 import fs from "node:fs";
+import path from "node:path/posix";
 import katex from "katex";
 import rehype_katex from 'rehype-katex';
 import { visit } from 'unist-util-visit';
@@ -76,6 +77,15 @@ const katex_blocks = () => (tree) => {
 };
 /* end of code from github.com/pngwn/mdsvex-math/blob/main/mdsvex.config.js */
 
+// This is only used during the rendering of the md pages.
+// It should yield functionally compatible paths with the load-directory asset paths.
+export const setAssetPath = () => (_, file) => {
+    if (file.data.fm) {
+        const filePath = file.filename.substring(path.join(file.cwd, "/src/articles/").length, file.filename.lastIndexOf("/"));
+        file.data.fm.assetPath = filePath;
+    }
+}
+
 /** @type {import('mdsvex').MdsvexOptions} */
 export default {
     extensions: [".md", ".svx"],
@@ -86,7 +96,8 @@ export default {
     },
     remarkPlugins: [
         relativeImages,
-				katex_blocks,
+		katex_blocks,
+        setAssetPath,
     ],
     rehypePlugins: [
         correct_hast_tree,

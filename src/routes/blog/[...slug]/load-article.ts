@@ -1,4 +1,4 @@
-import { pageImport } from "../page-import";
+import { pageImport, urlImport } from "../page-import";
 
 /** Load an article as a Svelte component and metadata.
  * 
@@ -13,9 +13,26 @@ export async function loadArticle({ params }) {
     }
 
     const article = pageImport[mySlug + ".md"];
+    const metadata = { ...article.metadata };
+    let pageType = "article";
+
+    if (mySlug.startsWith("authors")) {
+        pageType = "author";
+    }
+
+    if (metadata.thumbnail) {
+        let thumbnail;
+        if (metadata.thumbnail.startsWith("./")) {
+            thumbnail = urlImport[article.metadata.assetPath + (article.metadata.assetPath?.endsWith("/") ? "" : "/") + metadata.thumbnail.replace("./", "")];
+        } else {
+            thumbnail = article.metadata.thumbnail;
+        }
+        metadata.thumbnail = thumbnail;
+    }
 
     return {
         component: article.default,
-        metadata: article.metadata,
+        metadata: metadata,
+        pageType: pageType,
     };
 }

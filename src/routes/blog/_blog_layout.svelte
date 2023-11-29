@@ -5,18 +5,18 @@
 
 <script>
     import AuthorCard from '$lib/components/blog/AuthorCard.svelte';
-
+	
 	export let title;
 	export let excerpt;
 	export let author;
 	export let thumbnail;
 	export let tags;
 	export let date;
+	export let assetPath;
 </script>
 
 <svelte:head>
 	<title>boraini.com - {title}</title>
-	<meta name="description" content={excerpt}>
 	<link rel="stylesheet" href="/stylesheets/prism-duotone-dark.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" />
 </svelte:head>

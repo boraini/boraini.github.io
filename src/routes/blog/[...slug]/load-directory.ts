@@ -1,6 +1,6 @@
 import path from "node:path/posix";
 import { dummyDirectoryMetadata, type Metadata } from '$lib/util/metadata';
-import { pageImport } from "../page-import";
+import { pageImport, urlImport } from "../page-import";
 
 export const hydrate = false;
 
@@ -14,7 +14,7 @@ async function preprocessMetadata(metadata2: Metadata, fetch: any) {
     const metadata = {...metadata2};
 
     if (metadata.thumbnail) {
-        metadata.thumbnail = pageImport[path.join(metadata.assetPath!, metadata.thumbnail as string)].default;
+        metadata.thumbnail = urlImport[path.join(metadata.assetPath!, metadata.thumbnail as string)];
     }
     
     if (metadata.authors && typeof metadata.authors[0] == "string") {
@@ -38,14 +38,15 @@ export async function loadDirectory({ params, fetch }: { params: { slug: string 
             pageImport[index.pages[item].filePath]
         ).metadata || dummyDirectoryMetadata(item);
 
-        metadata.assetPath = index.pages[item].assetPath;
+        // it is now set by mdsvex.config.js setAssetPath
+        //metadata.assetPath = index.pages[item].assetPath;
 
         index.pages[item] = await preprocessMetadata(metadata, fetch);
     }
 
     for (let item in index.subdirectories) {
         let metadata = index.subdirectories[item];
-        
+
         index.subdirectories[item] = await preprocessMetadata(metadata, fetch);
     }
 

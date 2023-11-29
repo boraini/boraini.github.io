@@ -8,7 +8,6 @@
 
 <svelte:head>
 	<title>boraini.com - {name}'s Profile</title>
-	<meta name="description" content={`About ${name}`}>
 </svelte:head>
 
 <div class="post-margin">

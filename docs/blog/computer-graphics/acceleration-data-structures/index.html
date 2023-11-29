@@ -4,130 +4,84 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="../../../favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="content-security-policy" content=""><title>boraini.com - Acceleration Data Structures</title><script src="/scripts/dark-mode.js" data-svelte="svelte-1svid1p"></script><meta name="description" content="How to get spatial information about the scene efficiently" data-svelte="svelte-15wtgav"><link rel="stylesheet" href="/stylesheets/prism-duotone-dark.css" data-svelte="svelte-15wtgav"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" data-svelte="svelte-15wtgav">
-	<link rel="stylesheet" href="/_app/immutable/assets/__layout-95ca4ef6.css">
-	<link rel="stylesheet" href="/_app/immutable/assets/_blog_layout-5741a32b.css">
-	<link rel="modulepreload" href="/_app/immutable/start-bd473b25.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/index-2fdc1048.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-38a8e4ca.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/blog/computer-graphics/acceleration-data-structures.md-53894513.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/_blog_layout-34b26a2e.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/acceleration-data-structures-ef696428.js">
+		
+		<link href="../../../_app/immutable/assets/0.4dca5195.css" rel="stylesheet">
+		<link href="../../../_app/immutable/assets/3.2cfcb7fa.css" rel="stylesheet">
+		<link href="../../../_app/immutable/assets/SocialLinks.859404ad.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.0492e1f9.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/scheduler.014bc20e.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.a4b9ae52.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.91fa70cd.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.bf2c274e.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.2aef0778.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.12d2e59d.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/SocialLinks.9bbde2fd.js"><title>boraini.com - Acceleration Data Structures</title><!-- HEAD_svelte-1svid1p_START --><script src="/scripts/dark-mode.js" data-svelte-h="svelte-v38j0s"></script><!-- HEAD_svelte-1svid1p_END --><!-- HEAD_svelte-lltxvr_START --><meta name="title" property="og:title" content="Acceleration Data Structures"> <meta name="description" property="og:description" content="How to get spatial information about the scene efficiently"> <meta property="og:type" content="article"> <meta property="article:author" content="/blog/authors/boraini/"> <meta property="og:image" content="/_app/immutable/assets/accel-thumbnail.a92b3ece.svg"> <meta property="og:image:alt" content="Acceleration Data Structures"> <!-- HEAD_svelte-lltxvr_END --><!-- HEAD_svelte-1h8nol6_START --><link rel="stylesheet" href="/stylesheets/prism-duotone-dark.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css"><!-- HEAD_svelte-1h8nol6_END -->
 	</head>
 	<body>
-		<div>
-
-
-
-
-
-
-<div class="app"><nav class="navbar svelte-xy5ery"><a class="flex-grow svelte-xy5ery" href="/"><img class="logo dark svelte-xy5ery" src="/images/logo-full-dark.svg" alt="logo">
-		<img class="logo light svelte-xy5ery" src="/images/logo-full-light.svg" alt="logo"></a>
-	<label for="dark-mode-toggle" class="svelte-xy5ery">toggle between light and dark mode</label>
-	<input id="dark-mode-toggle" class="dark-mode-toggle svelte-xy5ery" type="checkbox">
-	<label for="links-button" class="svelte-xy5ery">show or hide links pop-up</label>
-	<input id="links-button" class="links-button svelte-xy5ery" type="checkbox">
-	<ul class="links svelte-xy5ery"><li class="svelte-xy5ery"><a href="/" class="svelte-xy5ery">HOME</a></li>
-		<li class="svelte-xy5ery"><a href="/cv/" class="svelte-xy5ery">CV</a></li>
-		<li class="svelte-xy5ery"><a href="/blog/" class="svelte-xy5ery">BLOG</a></li>
-		<li class="svelte-xy5ery"><a href="./.." class="svelte-xy5ery">PARENT</a></li></ul>
-</nav>
-
-
-<div class="post-margin svelte-13i6uah"><article class="post svelte-13i6uah"><h1 class="post-title svelte-13i6uah">Acceleration Data Structures</h1>
-		<h2 class="post-description svelte-13i6uah">How to get spatial information about the scene efficiently</h2>
-		<p class="svelte-13i6uah">on 2023-09-05
-		by <a href="/blog/authors/boraini/"><span class="author-card svelte-1pnfsom">Mert Bora İnevi</span></a></p>
-		<p>When rendering triangle meshes, calculating phaser hits, or finding out if the character falls on the ground,
+		<div>    <div class="app"><nav class="navbar svelte-xy5ery" data-svelte-h="svelte-snnb64"><a class="flex-grow svelte-xy5ery" href="/"><img class="logo dark svelte-xy5ery" src="/images/logo-full-dark.svg" alt="logo"> <img class="logo light svelte-xy5ery" src="/images/logo-full-light.svg" alt="logo"></a> <label for="dark-mode-toggle" class="svelte-xy5ery">toggle between light and dark mode</label> <input id="dark-mode-toggle" class="dark-mode-toggle svelte-xy5ery" type="checkbox"> <label for="links-button" class="svelte-xy5ery">show or hide links pop-up</label> <input id="links-button" class="links-button svelte-xy5ery" type="checkbox"> <ul class="links svelte-xy5ery"><li class="svelte-xy5ery"><a href="/" class="svelte-xy5ery">HOME</a></li> <li class="svelte-xy5ery"><a href="/cv/" class="svelte-xy5ery">CV</a></li> <li class="svelte-xy5ery"><a href="/blog/" class="svelte-xy5ery">BLOG</a></li> <li class="svelte-xy5ery"><a href="./.." class="svelte-xy5ery">PARENT</a></li></ul> </nav>   <div class="post-margin svelte-13i6uah"><article class="post svelte-13i6uah"><h1 class="post-title svelte-13i6uah">Acceleration Data Structures</h1> <h2 class="post-description svelte-13i6uah">How to get spatial information about the scene efficiently</h2> <p class="svelte-13i6uah">on 2023-09-05 by <a href="/blog/authors/boraini/"><span class="author-card svelte-1pnfsom">Mert Bora İnevi</span></a></p> <p data-svelte-h="svelte-1cay7co">When rendering triangle meshes, calculating phaser hits, or finding out if the character falls on the ground,
 we have to shoot many different rays and see if they hit anything. We can easily react thousands of rays to
 render a single frame of our real-time application. To get acceptable frame-rates, we have to make raycasting
-rather efficient.</p>
-<p>Here, algorithms and data structures come to our rescue. We form data structures called the acceleration data
+rather efficient.</p> <p data-svelte-h="svelte-bvb3m1">Here, algorithms and data structures come to our rescue. We form data structures called the acceleration data
 structures for the current state of the frame, and use this for the rendering or other raycasting operations.
 These structures are usually specialised tree data structures, and we run binary search over them. They bring
-the closest-object operation from linear time to logarithmic time.</p>
-<h1>Bounding Volume Hierarchy</h1>
-<p>A bounding volume hierarchy (BVH) is a tree data structure where each leaf node contains a scene object or a set of
+the closest-object operation from linear time to logarithmic time.</p> <h1 data-svelte-h="svelte-tngfp1">Bounding Volume Hierarchy</h1> <p data-svelte-h="svelte-w65j38">A bounding volume hierarchy (BVH) is a tree data structure where each leaf node contains a scene object or a set of
 objects that we want to handle together. Other than that, each node contains a bounding volume description.
-These can be cuboids, spheres etc. something that is easy to find ray intersections with.</p>
-<h2>Generation</h2>
-<p>The recursion happens until we reach the desired number of objects inside a leaf or we reach a certain number
+These can be cuboids, spheres etc. something that is easy to find ray intersections with.</p> <h2 data-svelte-h="svelte-xb6jes">Generation</h2> <p data-svelte-h="svelte-yhz8zr">The recursion happens until we reach the desired number of objects inside a leaf or we reach a certain number
 of levels. Each step sorts the objects according to their coordinates, splits the sorted list into two, assigns
 their bounding volumes, and keeps building each subtree. During the split, if we split at a given object, the
 object goes to the lower partition. This is because we usually use integer division which will produce more even
-partitions if we add the middle item to the lower partition instead of the upper. 0-based indices are assumed.</p>
-<p>The bounding volume assignment has to make sure that all objects within the partition are enclosed completely
+partitions if we add the middle item to the lower partition instead of the upper. 0-based indices are assumed.</p> <p data-svelte-h="svelte-zfki5o">The bounding volume assignment has to make sure that all objects within the partition are enclosed completely
 by the volume. It is better to optimise to have minimally sized volumes, but we don’t have to; it could be hard
-to do with spherical bounding volumes, for example.</p>
-<h2>Traversal</h2>
-<p>Each step intersects the ray with the both bounding volumes under the current node, then keeps traversing the
+to do with spherical bounding volumes, for example.</p> <h2 data-svelte-h="svelte-17qjj5w">Traversal</h2> <p data-svelte-h="svelte-1skxye0">Each step intersects the ray with the both bounding volumes under the current node, then keeps traversing the
 closer volume. If no hit happens, it has to traverse the farther volume also. When we reach the leaves we
-try to intersect with each object in the leaf; if no hit happens we return a null distance to report no hit. </p>
-<p>If a hit happens within the closer volume, the step also traverses the farther volume if its bounding volume
+try to intersect with each object in the leaf; if no hit happens we return a null distance to report no hit.</p> <p data-svelte-h="svelte-dw16dv">If a hit happens within the closer volume, the step also traverses the farther volume if its bounding volume
 distance is closer than the reported intersection distance of the closer node. This happens a lot if our chosen
-splitting method (read below) have produced a hierarchy with a lot of intersecting bounding volumes.</p>
-<h2>Splitting Methods</h2>
-<p>The best node splitting method depends on how the scene is laid out. The key thing we want to achieve is the
+splitting method (read below) have produced a hierarchy with a lot of intersecting bounding volumes.</p> <h2 data-svelte-h="svelte-17lip20">Splitting Methods</h2> <p data-svelte-h="svelte-7js642">The best node splitting method depends on how the scene is laid out. The key thing we want to achieve is the
 bounding volumes being spread as apart as possible at each level, so we have as much no-hit space as possible
 when raycasting, allowing us to stop traversing at upper levels in this case. One method can in general be
-better than the other but you can choose whichever is more performant in your specific application.</p>
-<p>For the demonstrations, the first level of the bounding volumes is shown on the left hand side and the second
+better than the other but you can choose whichever is more performant in your specific application.</p> <p data-svelte-h="svelte-aor39r">For the demonstrations, the first level of the bounding volumes is shown on the left hand side and the second
 level of the bounding volumes on the right-hand-side. <em>There would also be the root bounding volume which would
-enclose all objects but is omitted.</em></p>
-<p><strong>Median Object</strong></p>
-<p>If we split at the median triangle, we will get the most balanced tree. The tree height will be log(n) where n
-is the number of objects.</p>
-<p><img src="/_app/immutable/assets/bvh-median-322652fd.svg" alt="Two-Level BVH Demonstration for Median Split"></p>
-<p><strong>Midpoint</strong></p>
-<p>If we split at the geometric midpoint, we get a tree where regions with more triangles get themselves a taller
+enclose all objects but is omitted.</em></p> <p data-svelte-h="svelte-tri6fc"><strong>Median Object</strong></p> <p data-svelte-h="svelte-1hp2haj">If we split at the median triangle, we will get the most balanced tree. The tree height will be log(n) where n
+is the number of objects.</p> <p data-svelte-h="svelte-1yk4kle"><img src="/_app/immutable/assets/bvh-median.322652fd.svg" alt="Two-Level BVH Demonstration for Median Split"></p> <p data-svelte-h="svelte-a9fd01"><strong>Midpoint</strong></p> <p data-svelte-h="svelte-1ravf2i">If we split at the geometric midpoint, we get a tree where regions with more triangles get themselves a taller
 subtree. This will make situations where one object covers a lot of triangles from the ray’s point of view
-much faster to compute intersection for.</p>
-<p><img src="/_app/immutable/assets/bvh-midpoint-6ce7fca5.svg" alt="Two-Level BVH Demonstration for Midpoint Split"></p>
-<p>As seen here, a midpoint split can yield unbalanced but much more spread-apart bounding volumes. If the rays
-just pass in between the topmost bounding volumes we don’t need to waste as much computation time in this case.</p>
-<h2>Optimisation</h2>
-<p>First, the BVH can be reused for any raycasting as long as any object doesn’t change in between.</p>
-<p>The generation can be implemented similarly to an in-place merge sort, so we should use data structures that
-will make it indeed in-place. For traversal there isn’t much to do.</p>
-<p>One thing to note is that the splitting method I have described above creates nodes that are allocated in a
+much faster to compute intersection for.</p> <p data-svelte-h="svelte-5bikrq"><img src="/_app/immutable/assets/bvh-midpoint.6ce7fca5.svg" alt="Two-Level BVH Demonstration for Midpoint Split"></p> <p data-svelte-h="svelte-1rvpw7m">As seen here, a midpoint split can yield unbalanced but much more spread-apart bounding volumes. If the rays
+just pass in between the topmost bounding volumes we don’t need to waste as much computation time in this case.</p> <h2 data-svelte-h="svelte-2rmpsy">Optimisation</h2> <p data-svelte-h="svelte-1dlycd8">First, the BVH can be reused for any raycasting as long as any object doesn’t change in between.</p> <p data-svelte-h="svelte-fuyv4k">The generation can be implemented similarly to an in-place merge sort, so we should use data structures that
+will make it indeed in-place. For traversal there isn’t much to do.</p> <p data-svelte-h="svelte-aemokr">One thing to note is that the splitting method I have described above creates nodes that are allocated in a
 depth-first manner. You can also allocate the nodes then traverse to get pairs of bounding volumes next to each
 other in memory. This is assuming you are allocating memory from athe lower to a higher address, e. g. by
-appending to a list.</p>
-<h1>Objects outside of the Acceleration Data Structure</h1>
-<p>We always have the method of linear iteration in our hands, so we can use this whenever an object we want to
+appending to a list.</p> <h1 data-svelte-h="svelte-1yudk1i">Objects outside of the Acceleration Data Structure</h1> <p data-svelte-h="svelte-14ffi6p">We always have the method of linear iteration in our hands, so we can use this whenever an object we want to
 intersect is not in the acceleration data structure. If we have moving characters in a scene for an FPS game,
 for example, we can first render the scene, also store its depth buffer, then blit the character renders onto
 the background according to the background and character depth buffers. If we really need to test ray
 intersection on the backgrounds and the character, we treat the background BVH as a single object, intersect
-both the character and the background, and report the closest hit result among these tests.</p>
-<p>Rigged meshes are very hard to generate acceleration data structures for. If the deformation happens before the
+both the character and the background, and report the closest hit result among these tests.</p> <p data-svelte-h="svelte-1nt4jc0">Rigged meshes are very hard to generate acceleration data structures for. If the deformation happens before the
 data is sent to the GPU, then the BVH can be generated each frame, including the character mesh triangles. This
-seems like <a href="https://docs.unrealengine.com/5.0/en-US/ray-tracing-performance-guide-in-unreal-engine/#toplevelaccelerationstructurebuild" rel="nofollow">how Epic Games’ Unreal Engine Version 5 seems to work.</a></p></article>
-</div>
-</div>
+seems like <a href="https://docs.unrealengine.com/5.0/en-US/ray-tracing-performance-guide-in-unreal-engine/#toplevelaccelerationstructurebuild" rel="nofollow">how Epic Games’ Unreal Engine Version 5 seems to work.</a></p></article> </div> </div> 
+			
+			<script>
+				{
+					__sveltekit_ghcuo = {
+						base: new URL("../../..", location).pathname.slice(0, -1),
+						env: {}
+					};
 
+					const element = document.currentScript.parentElement;
 
-		<script type="module" data-sveltekit-hydrate="1wj1ugd">
-		import { set_public_env, start } from "/_app/immutable/start-bd473b25.js";
+					const data = [null,{"type":"data","data":{isArticle:true,index:false},"uses":{"params":["slug"]}}];
 
-		set_public_env({});
-
-		start({
-			target: document.querySelector('[data-sveltekit-hydrate="1wj1ugd"]').parentNode,
-			paths: {"base":"","assets":""},
-			session: {},
-			route: false,
-			spa: false,
-			trailing_slash: "always",
-			hydrate: {
-				status: 200,
-				error: null,
-				nodes: [0, 5],
-				params: {},
-				routeId: "blog/computer-graphics/acceleration-data-structures"
-			}
-		});
-	</script></div>
+					Promise.all([
+						import("../../../_app/immutable/entry/start.0492e1f9.js"),
+						import("../../../_app/immutable/entry/app.91fa70cd.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 3],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
 	</body>
 </html>

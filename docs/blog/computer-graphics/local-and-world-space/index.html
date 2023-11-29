@@ -4,48 +4,21 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="../../../favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="content-security-policy" content=""><title>boraini.com - Local and World Spaces</title><script src="/scripts/dark-mode.js" data-svelte="svelte-1svid1p"></script><meta name="description" content="An attempt to explain how local and world spaces work in computer graphics scene hierarchies" data-svelte="svelte-15wtgav"><link rel="stylesheet" href="/stylesheets/prism-duotone-dark.css" data-svelte="svelte-15wtgav"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" data-svelte="svelte-15wtgav">
-	<link rel="stylesheet" href="/_app/immutable/assets/__layout-95ca4ef6.css">
-	<link rel="stylesheet" href="/_app/immutable/assets/_blog_layout-5741a32b.css">
-	<link rel="stylesheet" href="/_app/immutable/assets/local-and-world-space-8d2ee48f.css">
-	<link rel="modulepreload" href="/_app/immutable/start-bd473b25.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/index-2fdc1048.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-38a8e4ca.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/blog/computer-graphics/local-and-world-space.md-53ab5f4f.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/_blog_layout-34b26a2e.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/local-and-world-space-e91077a2.js">
+		
+		<link href="../../../_app/immutable/assets/0.4dca5195.css" rel="stylesheet">
+		<link href="../../../_app/immutable/assets/3.2cfcb7fa.css" rel="stylesheet">
+		<link href="../../../_app/immutable/assets/SocialLinks.859404ad.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.0492e1f9.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/scheduler.014bc20e.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.a4b9ae52.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.91fa70cd.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.bf2c274e.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.2aef0778.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.12d2e59d.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/SocialLinks.9bbde2fd.js"><title>boraini.com - Local and World Spaces</title><!-- HEAD_svelte-1svid1p_START --><script src="/scripts/dark-mode.js" data-svelte-h="svelte-v38j0s"></script><!-- HEAD_svelte-1svid1p_END --><!-- HEAD_svelte-lltxvr_START --><meta name="title" property="og:title" content="Local and World Spaces"> <meta name="description" property="og:description" content="An attempt to explain how local and world spaces work in computer graphics scene hierarchies"> <meta property="og:type" content="article"> <meta property="article:author" content="/blog/authors/boraini/"> <meta property="og:image" content="/_app/immutable/assets/character-arm.f96a1a9e.svg"> <meta property="og:image:alt" content="Local and World Spaces"> <!-- HEAD_svelte-lltxvr_END --><!-- HEAD_svelte-1h8nol6_START --><link rel="stylesheet" href="/stylesheets/prism-duotone-dark.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css"><!-- HEAD_svelte-1h8nol6_END -->
 	</head>
 	<body>
-		<div>
-
-
-
-
-
-
-<div class="app"><nav class="navbar svelte-xy5ery"><a class="flex-grow svelte-xy5ery" href="/"><img class="logo dark svelte-xy5ery" src="/images/logo-full-dark.svg" alt="logo">
-		<img class="logo light svelte-xy5ery" src="/images/logo-full-light.svg" alt="logo"></a>
-	<label for="dark-mode-toggle" class="svelte-xy5ery">toggle between light and dark mode</label>
-	<input id="dark-mode-toggle" class="dark-mode-toggle svelte-xy5ery" type="checkbox">
-	<label for="links-button" class="svelte-xy5ery">show or hide links pop-up</label>
-	<input id="links-button" class="links-button svelte-xy5ery" type="checkbox">
-	<ul class="links svelte-xy5ery"><li class="svelte-xy5ery"><a href="/" class="svelte-xy5ery">HOME</a></li>
-		<li class="svelte-xy5ery"><a href="/cv/" class="svelte-xy5ery">CV</a></li>
-		<li class="svelte-xy5ery"><a href="/blog/" class="svelte-xy5ery">BLOG</a></li>
-		<li class="svelte-xy5ery"><a href="./.." class="svelte-xy5ery">PARENT</a></li></ul>
-</nav>
-
-
-<div class="post-margin svelte-13i6uah"><article class="post svelte-13i6uah"><h1 class="post-title svelte-13i6uah">Local and World Spaces</h1>
-		<h2 class="post-description svelte-13i6uah">An attempt to explain how local and world spaces work in computer graphics scene hierarchies</h2>
-		<p class="svelte-13i6uah">on 2022-09-20
-		by <a href="/blog/authors/boraini/"><span class="author-card svelte-1pnfsom">Mert Bora İnevi</span></a></p>
-		<p>When we start talking about relative positions of different objects in 2D/3D space, we see that they form a hierarchy where the children are related to their parent by the fact that their independent transformation is given relative to their parent.</p>
-<p>We can think of this hierarchy as a tree structure. The root of the tree would be the world. The camera and all the other objects would be descendants of world. Additionally we could parent camera to the player object, the arm of the player to the player’s torso etc.</p>
-<p>The edges of this tree would store a transformation from the child’s <em>local space</em> to the parent’s <em>local space</em>, or vice versa. You just have to know what you are doing. For this article we will store the transformation from the local space to the parent - so we have to multiply the local space matrices from the RHS.</p>
-<p>By convention and since it makes applying parent-child relationships easy, we usually run a depth-first traversal over such hierarchy to calculate how objects local parts transform from the object’s local space to the <em>world space</em> - the local space of the root of our tree.</p>
-<p>What data structure do you use for a depth-first traversal? A stack, of course!</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">matrixStack = []
+		<div>    <div class="app"><nav class="navbar svelte-xy5ery" data-svelte-h="svelte-snnb64"><a class="flex-grow svelte-xy5ery" href="/"><img class="logo dark svelte-xy5ery" src="/images/logo-full-dark.svg" alt="logo"> <img class="logo light svelte-xy5ery" src="/images/logo-full-light.svg" alt="logo"></a> <label for="dark-mode-toggle" class="svelte-xy5ery">toggle between light and dark mode</label> <input id="dark-mode-toggle" class="dark-mode-toggle svelte-xy5ery" type="checkbox"> <label for="links-button" class="svelte-xy5ery">show or hide links pop-up</label> <input id="links-button" class="links-button svelte-xy5ery" type="checkbox"> <ul class="links svelte-xy5ery"><li class="svelte-xy5ery"><a href="/" class="svelte-xy5ery">HOME</a></li> <li class="svelte-xy5ery"><a href="/cv/" class="svelte-xy5ery">CV</a></li> <li class="svelte-xy5ery"><a href="/blog/" class="svelte-xy5ery">BLOG</a></li> <li class="svelte-xy5ery"><a href="./.." class="svelte-xy5ery">PARENT</a></li></ul> </nav>   <div class="post-margin svelte-13i6uah"><article class="post svelte-13i6uah"><h1 class="post-title svelte-13i6uah">Local and World Spaces</h1> <h2 class="post-description svelte-13i6uah">An attempt to explain how local and world spaces work in computer graphics scene hierarchies</h2> <p class="svelte-13i6uah">on 2022-09-20 by <a href="/blog/authors/boraini/"><span class="author-card svelte-1pnfsom">Mert Bora İnevi</span></a></p> <p data-svelte-h="svelte-1rtc87x">When we start talking about relative positions of different objects in 2D/3D space, we see that they form a hierarchy where the children are related to their parent by the fact that their independent transformation is given relative to their parent.</p> <p data-svelte-h="svelte-zo6j4m">We can think of this hierarchy as a tree structure. The root of the tree would be the world. The camera and all the other objects would be descendants of world. Additionally we could parent camera to the player object, the arm of the player to the player’s torso etc.</p> <p data-svelte-h="svelte-6kepl9">The edges of this tree would store a transformation from the child’s <em>local space</em> to the parent’s <em>local space</em>, or vice versa. You just have to know what you are doing. For this article we will store the transformation from the local space to the parent - so we have to multiply the local space matrices from the RHS.</p> <p data-svelte-h="svelte-1dnzpjo">By convention and since it makes applying parent-child relationships easy, we usually run a depth-first traversal over such hierarchy to calculate how objects local parts transform from the object’s local space to the <em>world space</em> - the local space of the root of our tree.</p> <p data-svelte-h="svelte-19dcbu7">What data structure do you use for a depth-first traversal? A stack, of course!</p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">matrixStack = []
 currentTransformation = indentityMatrix()
 
 // Note that we have the call stack also
@@ -57,22 +30,8 @@ for (child in tree.children) traverse(child)
 currentTransformation = matrixStack.pop()
 &#125;
 
-traverse(root)</code><!-- HTML_TAG_END --></pre>
-<p>This might seem like too much boilerplate, but you don’t need to explicitly write it and it ensures a few things:</p>
-<ul><li>The children can freely use any transformation.</li>
-<li>When writing the algorithm, you don’t have to worry about breaking the current transformation when you make draw calls for children.
-To give a possibly even more relatable analogy, the premises are pretty similar to x86 call conventions.</li></ul>
-<h2>Applying to a Real World situation</h2>
-<p>Let’s see how we can apply this to a scene that might occur in a Real World™ game/application. We are going to look at how to draw some blocky video game character’s arm.</p>
-<p><img src="/_app/immutable/assets/character-arm-f96a1a9e.svg" alt="Character Arm"></p>
-<p>The arm consists of four segments: upper and lower arm, palm, and finger. This way our character can hold things. We also can draw only two types of primitives: a rectangle that spans from (0, 0) to (2, 1) in the local space and a circle at the local origin with radius 1. We have to draw different sized rectangles for arm segments and circles to hide the tearing joints under rotation and the square tips of terminating segments.</p>
-<p>We can first try to draw the scene hierarchy tree. We won’t include the camera because it is beyond our scope right now.</p>
-<p><img src="/_app/immutable/assets/object-hierarchy-basic-c79f0bec.svg" alt="Basic Object Hierarchy"></p>
-<p>Now, since we can’t go and draw an upper arm, we have to parent the necessary primitives to different objects, which will also have their own local transformations to bring them to the shape we want. </p>
-<p><img src="/_app/immutable/assets/object-hierarchy-complete-19fc906e.svg" alt="Complete Object Hierarchy"></p>
-<p>Exploring what would happen if we didn’t add a layer of abstraction like this and added especially the scaling directly to the main objects is an exercise for the reader.</p>
-<p>Then we can look at how the depth first traversal would happen. There is a straight path from the shoulder to the finger so we can say that would be the main traversal.</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">draw arm (matrix) &#123;
+traverse(root)</code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-10igbi7">This might seem like too much boilerplate, but you don’t need to explicitly write it and it ensures a few things:</p> <ul data-svelte-h="svelte-14omn2"><li>The children can freely use any transformation.</li> <li>When writing the algorithm, you don’t have to worry about breaking the current transformation when you make draw calls for children.
+To give a possibly even more relatable analogy, the premises are pretty similar to x86 call conventions.</li></ul> <h2 data-svelte-h="svelte-1s7d9wk">Applying to a Real World situation</h2> <p data-svelte-h="svelte-q80zgz">Let’s see how we can apply this to a scene that might occur in a Real World™ game/application. We are going to look at how to draw some blocky video game character’s arm.</p> <p data-svelte-h="svelte-1c4578l"><img src="/_app/immutable/assets/character-arm.f96a1a9e.svg" alt="Character Arm"></p> <p data-svelte-h="svelte-73vk4b">The arm consists of four segments: upper and lower arm, palm, and finger. This way our character can hold things. We also can draw only two types of primitives: a rectangle that spans from (0, 0) to (2, 1) in the local space and a circle at the local origin with radius 1. We have to draw different sized rectangles for arm segments and circles to hide the tearing joints under rotation and the square tips of terminating segments.</p> <p data-svelte-h="svelte-exi2cx">We can first try to draw the scene hierarchy tree. We won’t include the camera because it is beyond our scope right now.</p> <p data-svelte-h="svelte-1kx2ix7"><img src="/_app/immutable/assets/object-hierarchy-basic.c79f0bec.svg" alt="Basic Object Hierarchy"></p> <p data-svelte-h="svelte-1a8dyk3">Now, since we can’t go and draw an upper arm, we have to parent the necessary primitives to different objects, which will also have their own local transformations to bring them to the shape we want.</p> <p data-svelte-h="svelte-124y207"><img src="/_app/immutable/assets/object-hierarchy-complete.19fc906e.svg" alt="Complete Object Hierarchy"></p> <p data-svelte-h="svelte-wfq5o8">Exploring what would happen if we didn’t add a layer of abstraction like this and added especially the scaling directly to the main objects is an exercise for the reader.</p> <p data-svelte-h="svelte-1tq696s">Then we can look at how the depth first traversal would happen. There is a straight path from the shoulder to the finger so we can say that would be the main traversal.</p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">draw arm (matrix) &#123;
 current = matrix
 
 draw shoulder(current)
@@ -100,10 +59,7 @@ pop current
 pop current
 pop current
 pop current
-&#125;</code><!-- HTML_TAG_END --></pre>
-<p>Since this was a linear traversal, we didn’t need to push and pop any matrix at this level. Anyways, we will remove these calls next time we use it.</p>
-<p>Now, we can look at how to draw segments. If you have noticed, we only have one type of segment which is made up of a rectangle and a circle, and which is distinguished by its thickness and length. We can write a function which will draw this.</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">draw segment (matrix, thickness, length) &#123;
+&#125;</code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-1jn5tma">Since this was a linear traversal, we didn’t need to push and pop any matrix at this level. Anyways, we will remove these calls next time we use it.</p> <p data-svelte-h="svelte-mbf5xk">Now, we can look at how to draw segments. If you have noticed, we only have one type of segment which is made up of a rectangle and a circle, and which is distinguished by its thickness and length. We can write a function which will draw this.</p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">draw segment (matrix, thickness, length) &#123;
 //remember, the rectangle primitive extends between (0, 0) and (2, 1)
 localScaling = S(length / 2, thickness)
 localTranslation = T(0, -0.5)
@@ -115,10 +71,7 @@ localScaling = S(thickness / 2)
 localTranslation = T(length, 0)
 loadMatrix(matrix * localTranslation * localScaling)
 drawCircle()
-&#125;</code><!-- HTML_TAG_END --></pre>
-<p>Then you can replace the draw upper arm() etc. with a call to this function with proper arguments. How this is related to all the depth-first traversal is, if we receive the matrix argument by value, we can’t change its value as it appears in the caller. This provides the encapsulation of the transformations that we want for the children.</p>
-<p>The final pseudocode for draw arm would look like</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">draw arm (matrix) &#123;
+&#125;</code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-1rbim4g">Then you can replace the draw upper arm() etc. with a call to this function with proper arguments. How this is related to all the depth-first traversal is, if we receive the matrix argument by value, we can’t change its value as it appears in the caller. This provides the encapsulation of the transformations that we want for the children.</p> <p data-svelte-h="svelte-1y2uln0">The final pseudocode for draw arm would look like</p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">draw arm (matrix) &#123;
 current = matrix
 
 draw circle(current)
@@ -137,31 +90,32 @@ current = current * T(0.7, 0)
 
 current = current * R(finger angle)
 draw segment(current, 0.2, 0.7)
-&#125;</code><!-- HTML_TAG_END --></pre></article>
-</div>
-</div>
+&#125;</code><!-- HTML_TAG_END --></pre></article> </div> </div> 
+			
+			<script>
+				{
+					__sveltekit_ghcuo = {
+						base: new URL("../../..", location).pathname.slice(0, -1),
+						env: {}
+					};
 
+					const element = document.currentScript.parentElement;
 
-		<script type="module" data-sveltekit-hydrate="zyyce">
-		import { set_public_env, start } from "/_app/immutable/start-bd473b25.js";
+					const data = [null,{"type":"data","data":{isArticle:true,index:false},"uses":{"params":["slug"]}}];
 
-		set_public_env({});
-
-		start({
-			target: document.querySelector('[data-sveltekit-hydrate="zyyce"]').parentNode,
-			paths: {"base":"","assets":""},
-			session: {},
-			route: false,
-			spa: false,
-			trailing_slash: "always",
-			hydrate: {
-				status: 200,
-				error: null,
-				nodes: [0, 8],
-				params: {},
-				routeId: "blog/computer-graphics/local-and-world-space"
-			}
-		});
-	</script></div>
+					Promise.all([
+						import("../../../_app/immutable/entry/start.0492e1f9.js"),
+						import("../../../_app/immutable/entry/app.91fa70cd.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 3],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
 	</body>
 </html>

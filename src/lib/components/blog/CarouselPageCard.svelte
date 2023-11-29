@@ -11,7 +11,7 @@
 
 <a href={`/blog/${Object.keys(index)[0]}`} class="page-card">
 <section class="page-card-inner">
-    <img class="thumbnail" src={`/blog/${Object.keys(index)[0]}/../${Object.values(index)[0].thumbnail}`} alt="Thumbnail"/>
+    <img class="thumbnail" src={Object.values(index)[0].thumbnail} alt="Thumbnail"/>
     <div class="content shade" />
     <div class="content">
     <h2>New Post</h2>

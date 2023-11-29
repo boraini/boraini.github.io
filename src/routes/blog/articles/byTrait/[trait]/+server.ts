@@ -2,8 +2,7 @@ import type { WithMetadata } from "$lib/util/metadata";
 import { pageImport } from "../../../page-import";
 import { json } from '@sveltejs/kit';
 import { shouldNotIndex } from "../../should-not-index";
-
-export const trailingSlash = "always";
+import { preprocessMetadata } from "../../../[...slug]/load-directory";
 
 /** Each value is a comparison function used for sorting. */
 const comparers: Record<string, (a: WithMetadata, b: WithMetadata) => boolean> = {
@@ -28,7 +27,7 @@ function getArticleDate(article: WithMetadata) {
  * 
  * The comparer is chosen out of the comparers by the trait argument.
  */
-function aggregateByTrait(trait: string) {
+async function aggregateByTrait(trait: string, fetch) {
     const comparer = comparers[trait];
 
     if (!comparer) return { status: 400 };
@@ -45,13 +44,13 @@ function aggregateByTrait(trait: string) {
             } satisfies WithMetadata]
         );
 
-    const result = {...result2[1].metadata};
+    const result = await preprocessMetadata({...result2[1].metadata}, fetch);
     
     return {
         [result2[0]!.replace(/\.md$/, "")]: result
     };
 }
 
-export async function GET({ params }) {
-    return json(aggregateByTrait(params.trait));
+export async function GET({ params, fetch }) {
+    return json(await aggregateByTrait(params.trait, fetch));
 }

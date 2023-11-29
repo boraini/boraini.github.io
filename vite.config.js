@@ -3,7 +3,7 @@ import { ghPagesPostprocessor } from "./gh-pages-postprocessor";
 
 /** @type {import('vite').UserConfig} */
 const config = {
-	plugins: [sveltekit(), ghPagesPostprocessor()]
+	plugins: [sveltekit(), ghPagesPostprocessor()],
 };
 
 export default config;

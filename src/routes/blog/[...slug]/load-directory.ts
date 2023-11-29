@@ -10,7 +10,7 @@ export const hydrate = false;
  * @param fetch the fetch function provided by Vite
  * @returns the new metadata object
  */
-async function preprocessMetadata(metadata2: Metadata, fetch: any) {
+export async function preprocessMetadata(metadata2: Metadata, fetch: any) {
     const metadata = {...metadata2};
 
     if (metadata.thumbnail) {
@@ -18,7 +18,7 @@ async function preprocessMetadata(metadata2: Metadata, fetch: any) {
     }
     
     if (metadata.authors && typeof metadata.authors[0] == "string") {
-        metadata.authors = await Promise.all(metadata.authors.map(name => fetch(`/blog/authorInfo/${name}/`).then(r => r.json())));
+        metadata.authors = await Promise.all(metadata.authors.map(name => fetch(`/blog/authorInfo/${name}`).then(r => r.json())));
     }
 
     return metadata;

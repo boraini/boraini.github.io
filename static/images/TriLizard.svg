@@ -1,0 +1,37 @@
+<?xml version="1.0" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="156px" height="90px" xmlns="http://www.w3.org/2000/svg">
+<desc>TriLizard character. Created and drewn by boraini.</desc>
+<g style="stroke width: 3px; transform: translate(3px, 3px);">
+<g name="tail">
+<path d="m 100,31 h 20 q 2,0 2,-2 V 18 q 0,-2 2,-2 h 22 c 2,0 2,4 0,4 h -18 q -2,0 -2,2 v 11 q 0,2 -2,2 h -24" stroke="#f80" fill="#f84"/>
+</g>
+<g name="feet">
+<rect x="30" y="44" width="10" height="20" fill="#f84" stroke="#f80"></rect>
+<path d="M 30 65 l 0 -2.5 c 0 -5, 5 -5, 5 0 l 0 2.5 l 0 -2.5 c 0 -5, 5 -5, 5 0 l 0 2.5 Z" fill="#fff" stroke="#aaa" stroke-width="2"></path>
+<rect x="45" y="44" width="10" height="20" fill="#f84" stroke="#f80"></rect>
+<path d="M 45 65 l 0 -2.5 c 0 -5, 5 -5, 5 0 l 0 2.5 l 0 -2.5 c 0 -5, 5 -5, 5 0 l 0 2.5 Z" fill="#fff" stroke="#aaa" stroke-width="2"></path>
+<rect x="90" y="44" width="10" height="20" fill="#f84" stroke="#f80"></rect>
+<path d="M 90 65 l 0 -2.5 c 0 -5, 5 -5, 5 0 l 0 2.5 l 0 -2.5 c 0 -5, 5 -5, 5 0 l 0 2.5 Z" fill="#fff" stroke="#aaa" stroke-width="2"></path>
+<rect x="75" y="44" width="10" height="20" fill="#f84" stroke="#f80"></rect>
+<path d="M 75 65 l 0 -2.5 c 0 -5, 5 -5, 5 0 l 0 2.5 l 0 -2.5 c 0 -5, 5 -5, 5 0 l 0 2.5 Z" fill="#fff" stroke="#aaa" stroke-width="2"></path>
+</g>
+<g name="body">
+<rect x="26" y="19" width="78" height="28" fill="#44f" stroke="#22f" stroke-width="2" rx="3" ry="3"></rect>
+<path d="M 36 19  l 8 21 l 8 -19 l 0 0 l 8 19 l 8 -19 l 0 0 l 8 19 l 8 -19 l 0 0 l 8 19 l 8 -21 Z" stroke="#f80" stroke-width="2" fill="#f84"></path>
+<!--<rect x="25" y="18" width="80" height="30" fill="none" stroke="#22f" stroke-width="2" rx="3" ry="3"></rect>-->
+<path d="M 45 19 l 55 0" stroke-width="2" stroke="#f80"></path>
+</g>
+<g name="head" onclick="alert('Tiyze n\'aptin?!', 'TriLizard diyor ki:');" style="cursor: grab;">
+<rect x="10" y="0" width="10" height="15" fill="#f84" stroke="#f80" stroke-width="2" rx="3" ry="3"></rect>
+<rect x="30" y="0" width="10" height="15" fill="#f84" stroke="#f80" stroke-width="2" rx="3" ry="3"></rect>
+<rect x="12" y="3" width="6" height="6" fill="#fff" stroke="none" rx="2" ry="2"></rect>
+<rect x="32" y="3" width="6" height="6" fill="#fff" stroke="none" rx="2" ry="2"></rect>
+<rect x="13" y="4" width="4" height="4" fill="#44f" stroke="none" rx="2" ry="2"></rect>
+<rect x="33" y="4" width="4" height="4" fill="#44f" stroke="none" rx="2" ry="2"></rect>
+<rect x="0" y="10" width="50" height="15" fill="#44f" stroke="#22f" stroke-width="2" rx="3" ry="3"></rect>
+<rect x="3" y="13" width="44" height="9" fill="#fff" stroke="none" rx="3" ry="3"></rect>
+<path d="M 3 22 L 8.5 13 L 14 22 L 19.5 13 L 25 22 L 30.5 13 L 36 22 L 41.5 13 L 47 22" stroke-width="2" stroke="black" fill="none"></path>
+</g>
+</g>
+</svg>

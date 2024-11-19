@@ -149,14 +149,14 @@ p = t p_2 + (1 - t) p_1
 
 Bilinear interpolation on a quadrilateral is just first linearly interpolating over opposing sides, then linearly interpolating between the resulting points.
 ```math
-​\begin{equation}
+\begin{equation}
 \begin{split}
 p_{v0} &= u p_1 + (1 - u) p_0\\
 p_{v1} &= u p_2 + (1 - u) p_3\\
 \\
 p &= v p_{v1} + (1 - u) p_{v0}\\
 \end{split}\nonumber
-​\end{equation}
+\end{equation}
 ```
 
 Where do we get u and v, though? After scaling the UV coordinate to the pixel dimensions of the texture, we choose the initial texel coordinate c0 as the floor of the coordinate. Then u and v become the fractional parts of the UV coordinate components. Also

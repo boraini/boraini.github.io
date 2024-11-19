@@ -4,7 +4,7 @@
 
 <ul class="social-links">
     {#each Object.keys(social) as codename}
-    <li><a href={social[codename]} target="_blank"><p class={`icon ${codename}`}>{codename}</p></a></li>
+    <li><a href={social[codename]} target="_blank" title={codename}><p class={`icon ${codename}`}>{codename}</p></a></li>
     {/each}
 </ul>
 
@@ -41,8 +41,50 @@
 
             a
                 display: block
+                position: relative
                 padding: 0
                 text-decoration: none
+
+                $arrow-size: 0.3em
+
+                @mixin tooltip
+                    position: absolute
+                    display: block
+                    opacity: 0
+                    left: 50%
+                    top: 90%
+                    font-size: 1rem
+                    color: var(--page-background-spectacle)
+                    transition: opacity 0.3s, transform 0.3s
+                    z-index: 2
+
+                &::before
+                    @include tooltip
+                    transform: translate(-50%, -50%) translateY(-1em)
+                    border-style: solid
+                    border-width: $arrow-size
+                    border-color: transparent transparent var(--page-foreground) transparent
+                    width: 0
+                    height: 0
+                    content: ""
+
+                &::after
+                    @include tooltip
+                    border-radius: 0.2em
+                    padding: 0.25em
+                    background-color: var(--page-foreground)
+                    transform: translate(-50%, $arrow-size) translateY(-1em)
+                    content: attr(title)
+
+                &:hover::before, &:hover::after
+                    display: block
+                    opacity: 1
+
+                &:hover::before
+                    transform: translate(-50%, -50%)
+
+                &:hover::after
+                    transform: translate(-50%, $arrow-size)
 
     @mixin social-icon($w, $h, $x, $y)
         @include icon($w, $h, $x, $y, $size, $size)

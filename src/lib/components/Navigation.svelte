@@ -1,17 +1,32 @@
-<nav class="navbar">
-	<a class="flex-grow" href="/">
-		<img class="logo dark" src="/images/logo-full-dark.svg" alt="logo" />
-		<img class="logo light" src="/images/logo-full-light.svg" alt="logo" />
-	</a>
+<script lang="ts">
+	export let linksButton: HTMLInputElement;
+
+	function onNavigation() {
+		linksButton.checked = false;
+	}
+</script>
+
+<nav class="navbar no-print">
+	<span class="flex-grow">
+		<a href="/">
+			<img class="logo dark" src="/images/logo-full-dark.svg" alt="logo" />
+			<img class="logo light" src="/images/logo-full-light.svg" alt="logo" />
+		</a>
+	</span>
 	<label for="dark-mode-toggle">toggle between light and dark mode</label>
 	<input id="dark-mode-toggle" class="dark-mode-toggle" type="checkbox" />
 	<label for="links-button">show or hide links pop-up</label>
-	<input id="links-button" class="links-button" type="checkbox" />
+	<input id="links-button" class="links-button" type="checkbox" bind:this={linksButton} />
 	<ul class="links">
-		<li><a href="/">HOME</a></li>
-		<li><a href="/cv/">CV</a></li>
-		<li><a href="/blog/">BLOG</a></li>
-		<li><a href="./..">PARENT</a></li>
+		{#each [
+			["/", "Home"],
+			["/cv/", "CV"],
+			["/apps/", "Apps"],
+			["/blog/", "Blog"],
+			["./..", "Parent"],
+		] as [ href, label ]}
+		    <li><a href={href} on:click={onNavigation}>{label}</a></li>
+		{/each}
 	</ul>
 </nav>
 
@@ -85,6 +100,7 @@
 		display: block;
 		padding: 0 0.5em;
 		text-align: center;
+		text-transform: uppercase;
 	}
 
 	.navbar .links li::before {
@@ -135,7 +151,7 @@
 		background-position: 0 100%;
 	}
 
-	@media (max-width: 50rem) {
+	@media (max-width: 60rem) {
 		.navbar .links-button {
 			display: block;
 		}

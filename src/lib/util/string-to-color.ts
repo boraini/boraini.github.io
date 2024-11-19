@@ -1,7 +1,5 @@
 // adapted from https://github.com/Gustu/string-to-color
 
-const MIXED_WEIGHT = 0.75;
-const TEXT_WEIGHT = 0.25;
 const SEED = 16777215;
 const FACTOR = 49979693;
 
@@ -22,7 +20,6 @@ function ensureLength(str: string, length: number, fill: string = " ") {
 
 function hexRgb(str: string) {
     str = ensureLength(str, 6, "0");
-    console.log(str);
 
     return [
         parseInt(str.substring(0, 2), 16),
@@ -32,7 +29,6 @@ function hexRgb(str: string) {
 }
 
 function rgbHex([r, g, b] : number[]) {
-    console.log(r);
     r = Math.round(r);
     g = Math.round(g);
     b = Math.round(b);
@@ -59,7 +55,6 @@ export function stringToColor(text: string) {
   var hex = ((b * text.length) % SEED).toString(16);
   hex = hex.padStart(6, "0");
   var rgb = hexRgb(hex);
-  console.log(text, rgb);
   return rgbHex(rgb);
 }
 
@@ -84,6 +79,5 @@ export function getForegroundColor(bkg: string, opt1: string = "000000", opt2: s
 }
 
 export function withForeground(bkg: string, opt1?: string, opt2?: string) {
-    console.log("called");
     return ["#" + bkg, "#" + getForegroundColor(bkg, opt1, opt2)];
 }

@@ -3,6 +3,8 @@ $grid-cells: 6 !default
 $grid-spacing: 1em
 $cell-padding: 1em
 
+@use 'sass:math'
+
 main
     display: grid
     max-width: 80em
@@ -16,7 +18,6 @@ main
             grid-template-columns: 1fr
             grid-template-rows: repeat($grid-cells - 1, auto)
 
-
     section
         margin: $grid-spacing
         border: 1px solid var(--page-foreground)
@@ -27,7 +28,8 @@ main
             grid-column: 1/-1
 
         &.span-vertical
-            grid-row-end: span 2
+            $span-cells: math.div($grid-cells, 2) - 1
+            grid-row-end: span $span-cells
 
         p
             margin-block: 0.4em

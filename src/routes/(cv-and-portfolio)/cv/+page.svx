@@ -1,0 +1,99 @@
+<svelte:head>
+    <title>boraini.com - CV</title>
+    <meta name="description" content="Mert Bora İnevi's CV">
+</svelte:head>
+
+<main>
+<section id="header" class="span-horizontal">
+    
+    <img src="/images/cv-profile.png" alt="Mert Bora İnevi" />
+
+    # Mert Bora İnevi
+
+    [github.com/boraini](https://github.com/boraini)
+    
+    [boraini.com/portfolio](/portfolio/)
+</section>
+<section id="summary">
+
+    # Main Interests
+
+    ## Web Development
+    I am especially proficient in Javascript and front-end development in general. You can find the source code of this website (which is developed with SvelteKit) and my other web projects on my Github account.
+
+    ## Embedded Systems Programming
+
+    I know how to make advanced devices using Arduino and its C++ dialect. In high school I have participated in the Robomasters AI Challenge as the engineer in charge of all the motion planning stuff and we worked with the ROS (Robot Operating System) where I programmed in Python.
+
+    ## Game Development
+
+    I have plenty of experience with Three.js and some with Unity 3D. Moreover, I am able to produce visual assets for my games using programs such as Blender 3D, Krita, Inkscape.
+</section>
+<section id="education">
+
+    # Education
+
+    - **Delft University of Technology** BSc in Computer Science and Engineering, Systems Variant, 2021 - 2024
+    - **American Robert College of Istanbul** 2016-2021
+    - **Oxbridge Advanced Studies Programme** Engineering and Marketing Electives, 2018 Summer
+
+</section>
+<section id="internship">
+
+    # Internship
+
+    At Sircle, we have developed a social media application used for organizing sports tournaments. I have worked on both the front end ant the back end. 
+</section>
+<section id="experience">
+
+    # Non-Academic Experience and Voluntary Work
+
+    - **Antalya Coding Community Involvement Project** We taught two groups of middle school students how to design and write computer programs and games. We used Scratch as our coding platform.
+    - **Kırşehir Coding Community Involvement Project** We taught couples of middle school students how to design and write website front-ends.
+    - **RC Makers** I have been a part of Robert College's maker subculture club between 2016 and 2020.
+
+</section>
+<section id="skills" class="span-vertical">
+
+    # Skills
+
+    ## Server Development
+    Java, Scala, Spring Boot, Spring Hibernate, Node.js, Express.js, React, Svelte, Sass, Tailwind, MongoDB, PostgreSQL, Django
+
+    ## Python
+    PyGame, MatPlotLib, Python
+
+    ## Front End
+    JavaFX, HTML5, CSS3, JavaScript, TypeScript
+
+    ## Computer Graphics
+    OpenGL, C++, WebGPU
+
+    ## Mobile App Development
+    Flutter, React Native
+
+    ## Software Testing
+    Junit, Jest, PMD, Jqwik
+
+    ## Cloud and Serverless Computing
+    Docker, Vercel, Heroku, AWS, Linux Administration
+
+    ## Scripting
+    Bash, Python
+
+    ## DevOps
+    SSH, Bash, Git, GitLab (GitLab CI), GitHub (GitHub Workflows)
+
+    ## Language
+
+    - Turkish - Native
+    - English - C1 (IELTS, 2020)
+    - German - A2
+    - Dutch - A2
+
+</section>
+
+<style lang="sass">
+    @use "src/lib/stylesheets/cv.sass" with ($grid-cells: 10)
+</style>
+</main>

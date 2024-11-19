@@ -17,7 +17,7 @@
     if you contact me personally.
 </PortfolioItem>
 
-<PortfolioItem title="AI Chatbot for Discord" link="https://github.com/boraini/sayabot/">
+<PortfolioItem title="AI Chatbot for Discord" link="https://github.com/boraini/sayabot-js/">
     This bot is written in Python 3 and uses Disnake to interface with the Discord bot API. It also uses the Hugging Face Inference API to 
     generate text using different GPT models.
 </PortfolioItem>

@@ -9,7 +9,8 @@
     .button-link
         display: inline-block
         border-radius: 0.25em
-        padding: 0.25em
+        margin: 0.25em
+        padding: 0.25em 0.5em
         font-size: 1.25em
         background-color: var(--page-background-highlight)
         color: var(--page-foreground-highlight)

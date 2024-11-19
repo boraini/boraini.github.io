@@ -37,7 +37,7 @@
         margin: 1em 1em
         padding: 0
         background-color: var(--page-background-spectacle)
-        box-shadow: 0 1em 1em black
+        box-shadow: 0 1em 1em transparentize(black, 0.5)
         		
         .min-height-section
             flex-grow: 1
